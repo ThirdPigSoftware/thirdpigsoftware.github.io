@@ -1,43 +1,44 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react'
 
-export function useScroll() {
+export function useScroll () {
+  const [_document, setDocument] = useState(null)
 
-    const [_document, setDocument] = useState(null)
+  useEffect(() => {
+    setDocument(document)
+  }, [])
 
-    useEffect(() => {
-        setDocument(document)
-    }, [])
+  const [lastScrollTop, setLastScrollTop] = useState(0)
 
-    const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [bodyOffset, setBodyOffset] = useState(
+    _document ?? _document?.body?.getBoundingClientRect()
+  )
 
-    const [bodyOffset, setBodyOffset] = useState(
-        _document ?? _document?.body?.getBoundingClientRect()
-    );
+  const [scrollY, setScrollY] = useState(bodyOffset?.top)
 
-    const [scrollY, setScrollY] = useState(bodyOffset?.top);
+  const [scrollX, setScrollX] = useState(bodyOffset?.left)
 
-    const [scrollX, setScrollX] = useState(bodyOffset?.left);
+  const [scrollDirection, setScrollDirection] = useState()
 
-    const [scrollDirection, setScrollDirection] = useState();
+  const listener = _e => {
+    if (_document) {
+      setBodyOffset(_document?.body?.getBoundingClientRect())
+      setScrollY(-bodyOffset?.top)
+      setScrollX(bodyOffset?.left)
+      setScrollDirection(lastScrollTop > -bodyOffset?.top ? 'down' : 'up')
+      setLastScrollTop(-bodyOffset?.top)
+    }
+  }
 
-    const listener = e => {
-        setBodyOffset(_document?.body?.getBoundingClientRect());
-        setScrollY(-bodyOffset?.top);
-        setScrollX(bodyOffset?.left);
-        setScrollDirection(lastScrollTop > -bodyOffset?.top ? "down" : "up");
-        setLastScrollTop(-bodyOffset?.top);
-    };
+  useEffect(() => {
+    window.addEventListener('scroll', listener)
+    return () => {
+      window.removeEventListener('scroll', listener)
+    }
+  })
 
-    useEffect(() => {
-        window.addEventListener("scroll", listener);
-        return () => {
-            window.removeEventListener("scroll", listener);
-        };
-    });
-
-    return {
-        scrollY,
-        scrollX,
-        scrollDirection
-    };
+  return {
+    scrollY,
+    scrollX,
+    scrollDirection
+  }
 }
