@@ -114,14 +114,17 @@ export default function IndexPage () {
             header={
               <h3
                 style={{ fontFamily: 'nickname', zIndex: 9999999 }}
-                className='text-3xl text-center md:text-left md:text-4xl pl-12 pb-10 text-accent-1'
+                className='text-3xl text-center md:text-left md:text-4xl p-12 pb-10 text-accent-1'
               >
                 What can we do for you?
               </h3>
             }
           >
             {whatWeDo.map((item, index) => (
-              <div className='xl:border-t-2 xl:border-r-2  px-2 items-center flex flex-col' key={index}>
+              <div
+                className='xl:border-t-2 xl:border-r-2 px-2 items-center flex flex-col'
+                key={index}
+              >
                 <Fade delay={index * 200}>
                   <FontAwesomeIcon
                     className='buzz-out-on-hover w-20 h-14 p-2 hover:text-accent-1 m-4 text-accent-2'
@@ -132,7 +135,9 @@ export default function IndexPage () {
                       <h3
                         style={{ fontFamily: 'nickname', zIndex: 9999999 }}
                         className={`text-2xl ${
-                          item?.title?.length > 15 ? 'md:text-xl' : 'md:text-3xl'
+                          item?.title?.length > 15
+                            ? 'md:text-xl'
+                            : 'md:text-3xl'
                         } text-center text-accent-1`}
                       >
                         {item.title}
@@ -161,8 +166,9 @@ export default function IndexPage () {
                 More than just another consultancy.
               </h3>
               <p className='text-accent-2 text-2xl font-semibold'>
-                Chums on seats, not bums on seats. We'll work to thoroughly understand
-                your business goals and act like a partner, not an outsourcer.
+                Chums on seats, not bums on seats. We'll work to thoroughly
+                understand your business goals and act like a partner, not an
+                outsourcer.
               </p>
             </div>
           </div>
@@ -172,20 +178,24 @@ export default function IndexPage () {
         <div className='bg-white'>
           <div className='py-20 px-20 container mx-auto text-gray-700 dark:text-gray-100'>
             <div className='md:p-10 md:py-20 flex flex-col flex-wrap justify-center content-center'>
-              <div className='px-4 py-4'>
+              <div className='w-full flex flex-row items-center justify-center flex-wrap text-2xl'>
                 <h3
                   style={{ fontFamily: 'nickname', zIndex: 9999999 }}
                   className='text-4xl md:text-6xl'
                 >
                   Want to Hear More?
                 </h3>
-              </div>
-              <div className='w-full flex flex-row flex-wrap text-2xl'>
-                <iframe
-                  className='w-full'
-                  height={850}
-                  src='https://share-eu1.hsforms.com/1Tk0yABENQ4uXugEOhJ4NUQezsvg'
-                />
+                <button
+                  style={{ fontFamily: 'nickname' }}
+                  className='p-10 py-5 bg-accent-1 m-5 md:text-4xl rounded-lg border-white buzz-out-on-hover text-white'
+                  onClick={() =>
+                    window.open(
+                      'https://share-eu1.hsforms.com/1Tk0yABENQ4uXugEOhJ4NUQezsvg'
+                    )
+                  }
+                >
+                  Yes Please!
+                </button>
               </div>
             </div>
           </div>
