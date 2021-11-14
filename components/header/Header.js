@@ -4,6 +4,9 @@ import Fade from 'react-reveal/Fade'
 import { useScroll } from '../../hooks/useScroll'
 import Clouds from '../clouds/Clouds'
 
+const FADE_OUT_THRESHOLD = 480
+const HIDE_THRESHOLD = 520
+
 export const Header = () => {
   const { scrollY } = useScroll()
   return (
@@ -95,12 +98,20 @@ export const Header = () => {
           </div>
         </div>
       </div>
-      <div className={`fixed md:-bottom-12 w-full transition-all ${scrollY > 500 ? 'opacity-0' : 'md:opacity-100'} `}>
+      <div
+        className={`fixed  ${
+          scrollY > HIDE_THRESHOLD ? 'hidden' : ''
+        } md:-bottom-12 w-full transition-all ${
+          scrollY > FADE_OUT_THRESHOLD ? 'opacity-0' : 'md:opacity-100'
+        } `}
+      >
         <Clouds />
       </div>
       <header
         style={{ zIndex: 999999999 }}
-        className={`fixed ${scrollY > 500 ? 'opacity-0' : 'opacity-100'} 
+        className={`fixed ${scrollY > HIDE_THRESHOLD ? 'hidden' : ''} ${
+          scrollY > FADE_OUT_THRESHOLD ? 'opacity-0' : 'opacity-100'
+        } 
         bottom-0 bg-white z-50 w-full px-5 py-4 flex justify-end items-center duration-500 transform transition-all`}
       >
         <p className='font-paragraph font-semibold text-accent-3 text-right'>

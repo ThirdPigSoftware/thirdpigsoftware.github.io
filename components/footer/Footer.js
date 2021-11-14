@@ -1,17 +1,7 @@
 export default function Footer () {
   return (
-    <footer className='text-gray-600 body-font'>
-      <div className='container px-5 py-24 mx-auto flex items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col'>
-        <div className='w-64 font-paragraph flex-shrink-0 md:mx-0 mx-auto text-center md:text-left'>
-          <p className='mt-2 text-sm text-white'>
-            <p className='uppercase font-brand'>Third Pig Software Ltd</p>
-            71-75 Shelton Street
-            <br />
-            LONDON
-            <br />
-            WC2H 9JQ
-          </p>
-        </div>
+    <footer className='text-gray-600 font-paragraph'>
+      <div className='container px-5 py-24 mx-auto flex items-center md:flex-row md:flex-nowrap flex-wrap flex-col'>
         <div className='flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center'>
           <div className='lg:w-1/4 md:w-1/2 w-full px-4'>
             {/* <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
@@ -64,41 +54,56 @@ export default function Footer () {
                         </li>
                     </nav> */}
           </div>
-          <div className='lg:w-1/4 md:w-1/2 w-full px-4'>
-            <a
-              href=''
-              className='flex title-font font-small items-center md:justify-center justify-center text-gray-900'
-            >
-              <img className='-ml-2 mr-2' width={50} src='/static/logo.png' />
+        </div>
+        <div className='w-64 font-paragraph flex-shrink-0 md:mx-0 mx-auto text-center md:text-right'>
+          <div className='mt-2 text-sm text-white'>
+            <p className='font-brand text-accent-3 text-xl'>
+              Third Pig Software Ltd
+            </p>
+            71-75 Shelton Street
+            <br />
+            LONDON
+            <br />
+            WC2H 9JQ
+            <div>
               <a
-               
-                className='text-white font-paragraph'
                 href='mailto:hello@thirdpigsoftware.com'
+                className='text-white'
               >
+                <i className='fa fa-envelope mr-2'></i>
                 hello@thirdpigsoftware.com
               </a>
-            </a>
+              <div>
+                <a
+                  href='https://twitter.com/ThirdPigTech'
+                  className='text-white'
+                >
+                  <i className='fab fa-twitter mr-2'></i>@ThirdPigTech
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div className='bg-gray-100 font-paragraph'>
-        <div className='ml-2 container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row'>
-          <p className='text-gray-500 text-sm text-center sm:text-left'>
+        <div className='container mx-auto py-4 px-5 flex items-center justify-center flex-wrap flex-col sm:flex-row'>
+          <p className='text-gray-500 text-sm text-center'>
             © 2021
             <a className='text-gray-600 uppercase font-brand' target='_blank'>
               {' '}
               Third Pig Software Ltd
             </a>
+            <div>
+              <p className='text-xs font-paragraph'>
+                Company Registration No. 13536155
+              </p>
+              <p className='text-xs font-paragraph'>
+                Registered in England &amp; Wales Copyright 2021 All Rights
+                Reserved
+              </p>
+            </div>
           </p>
-          <span className='inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start'>
-            <a
-              href='https://www.linkedin.com/company/third-pig-software/'
-              className='ml-3 text-gray-500'
-            >
-              <i className='fab fa-linkedin-in'></i>
-            </a>
-          </span>
         </div>
       </div>
     </footer>
