@@ -80,7 +80,7 @@ export const Header = () => {
                 Third Pig <i className='not-italic'>Software</i>
               </h3>
             </Fade>
-            <Fade delay={800}>
+            <Fade delay={700}>
               <p
                 style={{
                   zIndex: 9999999,
