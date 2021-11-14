@@ -2,61 +2,15 @@ import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Fade from 'react-reveal/Fade'
 import { useScroll } from '../../hooks/useScroll'
+import Clouds from '../clouds/Clouds'
 
 export const Header = () => {
   const { scrollY } = useScroll()
   return (
     <>
-      <div
-        style={{ zIndex: 9999999 }}
-        className={`text-2xl relative md:text-4xl text-center items-center flex flex-col transition-all transform`}
-      >
-        <div
-          className={`flex mt-12 md:mt-auto ml-12 mr-12 transition-all transform md:h-screen flex-row flex-wrap justify-center items-center`}
-        >
-          <div
-            className={`buzz-out-on-hover flex items-center md:w-3/4 flex-col justify-around transform scale-25`}
-          >
-            <Fade delay={200}>
-              <h3
-                style={{
-                  fontFamily: 'nickname',
-                  zIndex: 9999999,
-                  textShadow: '3px 3px #1a0041'
-                }}
-                className={`select-none text-white text-7xl md:text-8xl`}
-              >
-                Third Pig <i className='not-italic'>Software</i>{' '}
-                <i className='not-italic text-sm'>Ltd</i>
-              </h3>
-            </Fade>
-            <Fade delay={800}>
-              <p
-                style={{
-                  fontFamily: 'nickname',
-                  zIndex: 9999999,
-                  color: '#1a0041'
-                }}
-                className='p-2 md:p-0 text-2xl transition-all duration-500 opacity-80 select-none'
-              >
-                Experts in the delivery of high quality, high-impact, software
-                solutions.
-              </p>
-            </Fade>
-          </div>
-          <img
-            style={{ zIndex: 9999999 }}
-            className={`w-3/4 buzz-out-on-hover static top-0 md:w-1/4 mb-10 md:mb-0`}
-            src={'/static/logo.png'}
-          />
-        </div>
-      </div>
-
       <header
-        style={{ zIndex: 99999999 }}
-        class={`fixed top-0 bg-white shadow-sm z-50 w-full px-5 py-4 flex justify-between items-center duration-500 transform transition-all ${
-          scrollY < 300 ? '-translate-y-96' : ''
-        }`}
+        style={{ zIndex: 999999999 }}
+        className={`fixed top-0 bg-white z-50 w-full px-5 py-4 flex justify-between items-center duration-500 transform transition-all`}
       >
         <div className='flex flex-start items-center'>
           <img className={`w-12 ml-4 mr-2`} src={'/static/logo.png'} />
@@ -69,7 +23,7 @@ export const Header = () => {
             className={`select-none text-2xl`}
           >
             Third Pig <i className='not-italic'>Software</i>{' '}
-            <i className='ml-1 not-italic text-sm'>Ltd</i>
+            <i className='not-italic text-sm'>Ltd</i>
           </h3>
         </div>
         <div className='flex flex-row justify-center items-center opacity-0 w-0 h-0 md:w-auto transition-all md:opacity-100'>
@@ -97,6 +51,71 @@ export const Header = () => {
             07956 000 356
           </h3>
         </div>
+      </header>
+      <div className='fixed transition-all top-5 md:top-0 w-full'>
+        <Clouds flip />
+      </div>
+      <div
+        style={{ zIndex: 9999999 }}
+        className={`mt-24 w-full md:mt-12 transition-all text-2xl relative md:text-4xl text-center items-center flex flex-col transition-all transform`}
+      >
+        <div
+          className={`flex mt-12 md:mt-auto transition-all transform md:h-screen flex-row flex-wrap items-center`}
+        >
+          <div
+            className={`buzz-out-on-hover flex items-center flex-col justify-center`}
+          >
+            <img
+              style={{ zIndex: 9999999 }}
+              className={`w-1/2 md:-mt-12 buzz-out-on-hover md:w-1/4 mb-10 md:mb-0`}
+              src={'/static/logo.png'}
+            />
+            <Fade delay={200}>
+              <h3
+                style={{
+                  zIndex: 9999999
+                }}
+                className={`select-none font-brand text-accent-3 text-5xl md:text-7xl`}
+              >
+                Third Pig <i className='not-italic'>Software</i>
+              </h3>
+            </Fade>
+            <Fade delay={800}>
+              <p
+                style={{
+                  zIndex: 9999999,
+                  color: '#1a0041'
+                }}
+                className='p-2 md:p-0 text-xl font-brand transition-all duration-500 opacity-80 select-none'
+              >
+                Experts in the delivery of high quality, high-impact, software
+                solutions.
+              </p>
+            </Fade>
+          </div>
+        </div>
+      </div>
+      <div className={`fixed md:-bottom-12 w-full transition-all ${scrollY > 500 ? 'opacity-0' : 'md:opacity-100'} `}>
+        <Clouds />
+      </div>
+      <header
+        style={{ zIndex: 999999999 }}
+        className={`fixed ${scrollY > 500 ? 'opacity-0' : 'opacity-100'} 
+        bottom-0 bg-white z-50 w-full px-5 py-4 flex justify-end items-center duration-500 transform transition-all`}
+      >
+        <p className='font-paragraph font-semibold text-accent-3 text-right'>
+          See how we can help you with your project:
+        </p>
+        <button
+          className='p-10 py-2 ml-2 bg-accent-1 font-brand rounded-lg border-white buzz-out-on-hover text-white'
+          onClick={() =>
+            window.open(
+              'https://share-eu1.hsforms.com/1Tk0yABENQ4uXugEOhJ4NUQezsvg'
+            )
+          }
+        >
+          Contact Us!
+        </button>
       </header>
     </>
   )

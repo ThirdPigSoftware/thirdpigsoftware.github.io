@@ -2,9 +2,9 @@ export default function Footer () {
   return (
     <footer className='text-gray-600 body-font'>
       <div className='container px-5 py-24 mx-auto flex items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col'>
-        <div className='w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left'>
+        <div className='w-64 font-paragraph flex-shrink-0 md:mx-0 mx-auto text-center md:text-left'>
           <p className='mt-2 text-sm text-white'>
-            <p className='uppercase font-bold'>Third Pig Software Ltd</p>
+            <p className='uppercase font-brand'>Third Pig Software Ltd</p>
             71-75 Shelton Street
             <br />
             LONDON
@@ -71,8 +71,8 @@ export default function Footer () {
             >
               <img className='-ml-2 mr-2' width={50} src='/static/logo.png' />
               <a
-                style={{ fontFamily: 'nickname', zIndex: 9999999 }}
-                className='text-white text-lg'
+               
+                className='text-white font-paragraph'
                 href='mailto:hello@thirdpigsoftware.com'
               >
                 hello@thirdpigsoftware.com
@@ -82,11 +82,11 @@ export default function Footer () {
         </div>
       </div>
 
-      <div className='bg-gray-100'>
+      <div className='bg-gray-100 font-paragraph'>
         <div className='ml-2 container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row'>
           <p className='text-gray-500 text-sm text-center sm:text-left'>
             © 2021
-            <a className='text-gray-600 uppercase font-bold' target='_blank'>
+            <a className='text-gray-600 uppercase font-brand' target='_blank'>
               {' '}
               Third Pig Software Ltd
             </a>

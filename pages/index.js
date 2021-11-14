@@ -72,7 +72,7 @@ export default function IndexPage () {
       <div>
         <Header />
         <div
-          className={`transition-all transform -mt-24 transform transition-all duration-500 ${
+          className={`transition-all transform transform transition-all duration-500 ${
             scrollY > 50 ? 'md:-mt-96' : ''
           }`}
           style={{ zIndex: -999 }}
@@ -92,7 +92,7 @@ export default function IndexPage () {
             {whatWeDo.map((item, index) => (
               <div
                 className={`xl:border-t-2 xl:border-r-2 px-2 items-center flex flex-col transition-all transform duration-500 md:opacity-0 ${
-                  scrollY > 200 ? 'md:opacity-100' : ''
+                  scrollY > 150 ? 'md:opacity-100' : ''
                 }`}
                 key={index}
               >
@@ -116,8 +116,7 @@ export default function IndexPage () {
                     </div>
                   </div>
                   <p
-                    style={{ fontFamily: 'nickname', zIndex: 9999999 }}
-                    className='mt-4 mb-2 text-center'
+                    className='mt-4 mb-2 text-center font-paragraph font-semibold'
                   >
                     {item.subtitle}
                   </p>
@@ -136,7 +135,7 @@ export default function IndexPage () {
               >
                 More than just another consultancy.
               </h3>
-              <p className='text-accent-2 text-2xl font-semibold'>
+              <p  className='text-accent-2 text-center md:text-left text-2xl font-semibold font-paragraph'>
                 Chums on seats, not bums on seats. We'll work to thoroughly
                 understand your business goals and act like a partner, not an
                 outsourcer.
@@ -152,7 +151,7 @@ export default function IndexPage () {
               <div className='w-full flex flex-row items-center justify-center flex-wrap text-2xl'>
                 <h3
                   style={{ fontFamily: 'nickname', zIndex: 9999999 }}
-                  className='text-4xl md:text-6xl'
+                  className='text-4xl text-center md:text-6xl'
                 >
                   Want to Hear More?
                 </h3>

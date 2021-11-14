@@ -15,7 +15,8 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Jost'],
-      brandh: ['nickname']
+      paragraph: ['Poppins'],
+      brand: ['nickname']
     },
     extend: {
       colors: {
