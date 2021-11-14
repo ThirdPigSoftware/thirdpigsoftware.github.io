@@ -57,7 +57,7 @@ export default function Footer () {
         </div>
         <div className='w-64 font-paragraph flex-shrink-0 md:mx-0 mx-auto text-center md:text-right'>
           <div className='mt-2 text-sm text-white'>
-            <p className='font-brand text-accent-3 text-xl'>
+            <p className='font-brand text-gray-800 text-xl'>
               Third Pig Software Ltd
             </p>
             71-75 Shelton Street
@@ -65,22 +65,24 @@ export default function Footer () {
             LONDON
             <br />
             WC2H 9JQ
-            <div>
+            <div className="mt-2">
               <a
                 href='mailto:hello@thirdpigsoftware.com'
                 className='text-white'
               >
-                <i className='fa fa-envelope mr-2'></i>
                 hello@thirdpigsoftware.com
+                <i className='fa fa-envelope ml-2'></i>
               </a>
-              <div>
-                <a
-                  href='https://twitter.com/ThirdPigTech'
-                  className='text-white'
-                >
-                  <i className='fab fa-twitter mr-2'></i>@ThirdPigTech
-                </a>
-              </div>
+            </div>
+            <div >
+              <a href='https://twitter.com/ThirdPigTech' className='text-white'>
+                @ThirdPigTech<i className='fab fa-twitter ml-2'></i>
+              </a>
+            </div>
+            <div >
+              <a href='tel:07956000356' className='text-white'>
+                07956 000 356<i className='fa fa-phone ml-2'></i>
+              </a>
             </div>
           </div>
         </div>
@@ -99,8 +101,8 @@ export default function Footer () {
                 Company Registration No. 13536155
               </p>
               <p className='text-xs font-paragraph'>
-                Registered in England &amp; Wales Copyright 2021 All Rights
-                Reserved
+                Registered in England &amp; Wales. <br />
+                Copyright 2021 All Rights Reserved.
               </p>
             </div>
           </p>
