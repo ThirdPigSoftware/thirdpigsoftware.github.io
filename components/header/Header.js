@@ -26,7 +26,7 @@ export const Header = () => {
                 }}
                 className={`select-none text-white text-7xl md:text-8xl`}
               >
-                Third Pig <i className='not-italic'>Software</i>
+                Third Pig <i className='not-italic'>Software</i>{' '}
                 <i className='not-italic text-sm'>Ltd</i>
               </h3>
             </Fade>
@@ -68,7 +68,7 @@ export const Header = () => {
             }}
             className={`select-none text-2xl`}
           >
-            Third Pig <i className='not-italic'>Software</i>
+            Third Pig <i className='not-italic'>Software</i>{' '}
             <i className='ml-1 not-italic text-sm'>Ltd</i>
           </h3>
         </div>

@@ -86,7 +86,7 @@ export default function Footer () {
         <div className='ml-2 container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row'>
           <p className='text-gray-500 text-sm text-center sm:text-left'>
             © 2021
-            <a className='text-gray-600' target='_blank'>
+            <a className='text-gray-600 uppercase font-bold' target='_blank'>
               {' '}
               Third Pig Software Ltd
             </a>
