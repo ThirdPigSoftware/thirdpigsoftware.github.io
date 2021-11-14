@@ -1,6 +1,8 @@
 import '../styles/index.css'
 import Head from 'next/head'
 import Footer from '../components/footer/Footer'
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 function App ({ Component, pageProps }) {
   return (
@@ -20,6 +22,7 @@ function App ({ Component, pageProps }) {
           rel='stylesheet'
           href='https://use.fontawesome.com/releases/v5.11.2/css/all.css'
         />
+
       </Head>
       <Component {...pageProps} />
       <Footer />
