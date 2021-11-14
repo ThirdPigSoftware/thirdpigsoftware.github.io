@@ -50,7 +50,7 @@ const whatWeDo = [
   }
 ]
 
-const CloudSection = ({ children, header }) => (
+export const CloudSection = ({ children, header }) => (
   <>
     <Clouds />
     <div className='bg-white'>
@@ -79,51 +79,51 @@ export default function IndexPage () {
         >
           <CloudSection
             header={
-              <h3
-                style={{ fontFamily: 'nickname', zIndex: 9999999 }}
-                className={`text-3xl text-center md:text-left md:text-4xl p-12 pb-10 transform transition-all text-accent-1`}
-              >
-                What can we do for you?
-              </h3>
+              <>
+                <h3
+                  style={{ fontFamily: 'nickname', zIndex: 9999999 }}
+                  className={`text-2xl text-center md:text-left md:text-3xl p-12 pb-10 transform transition-all text-accent-1`}
+                >
+                  What can we do for you?
+                </h3>
+              </>
             }
           >
-
-              {whatWeDo.map((item, index) => (
-                <div
-                  className={`xl:border-t-2 xl:border-r-2 px-2 items-center flex flex-col transition-all transform duration-500 md:opacity-0 ${
-                    scrollY > 200 ? 'md:opacity-100' : ''
-                  }`}
-                  key={index}
-                >
-                  <Fade delay={index * 200}>
-                    <FontAwesomeIcon
-                      className='buzz-out-on-hover w-20 h-14 p-2 hover:text-accent-1 m-4 text-accent-1'
-                      icon={item.icon}
-                    />
-                    <div className='flex flex-row flex-wrap justify-evenly items-center'>
-                      <div>
-                        <h3
-                          style={{ fontFamily: 'nickname', zIndex: 9999999 }}
-                          className={`text-2xl ${
-                            item?.title?.length > 15
-                              ? 'md:text-xl'
-                              : 'md:text-3xl'
-                          } text-center text-accent-1`}
-                        >
-                          {item.title}
-                        </h3>
-                      </div>
+            {whatWeDo.map((item, index) => (
+              <div
+                className={`xl:border-t-2 xl:border-r-2 px-2 items-center flex flex-col transition-all transform duration-500 md:opacity-0 ${
+                  scrollY > 200 ? 'md:opacity-100' : ''
+                }`}
+                key={index}
+              >
+                <Fade delay={index * 200}>
+                  <FontAwesomeIcon
+                    className='buzz-out-on-hover w-20 h-14 p-2 hover:text-accent-1 m-4 text-accent-1'
+                    icon={item.icon}
+                  />
+                  <div className='flex flex-row flex-wrap justify-evenly items-center'>
+                    <div>
+                      <h3
+                        style={{ fontFamily: 'nickname', zIndex: 9999999 }}
+                        className={`text-2xl ${
+                          item?.title?.length > 15
+                            ? 'md:text-xl'
+                            : 'md:text-3xl'
+                        } text-center text-accent-1`}
+                      >
+                        {item.title}
+                      </h3>
                     </div>
-                    <p
-                      style={{ fontFamily: 'nickname', zIndex: 9999999 }}
-                      className='mt-4 mb-2 text-accent-3 text-center'
-                    >
-                      {item.subtitle}
-                    </p>
-                  </Fade>
-                </div>
-              ))}
-
+                  </div>
+                  <p
+                    style={{ fontFamily: 'nickname', zIndex: 9999999 }}
+                    className='mt-4 mb-2 text-center'
+                  >
+                    {item.subtitle}
+                  </p>
+                </Fade>
+              </div>
+            ))}
           </CloudSection>
         </div>
 
@@ -136,7 +136,7 @@ export default function IndexPage () {
               >
                 More than just another consultancy.
               </h3>
-              <p className='text-accent-3 text-2xl font-semibold'>
+              <p className='text-accent-2 text-2xl font-semibold'>
                 Chums on seats, not bums on seats. We'll work to thoroughly
                 understand your business goals and act like a partner, not an
                 outsourcer.
