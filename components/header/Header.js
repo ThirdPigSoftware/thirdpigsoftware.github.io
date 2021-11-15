@@ -91,7 +91,7 @@ export const Header = () => {
                 }}
                 className='p-2 md:p-0 text-xl font-brand transition-all duration-500 opacity-80 select-none'
               >
-                Experts in the delivery of high quality, high-impact, software
+                Experts in the delivery of high quality, high-impact software
                 solutions.
               </p>
             </Fade>

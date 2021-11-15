@@ -37,7 +37,7 @@ function App ({ Component, pageProps }) {
         <meta property='og:title' content='Third Pig Software Ltd' />
         <meta
           property='og:description'
-          content='Experts in the delivery of high quality, high-impact, software
+          content='Experts in the delivery of high quality, high-impact software
                 solutions.'
         />
 
@@ -46,7 +46,7 @@ function App ({ Component, pageProps }) {
         <meta property='twitter:title' content='Third Pig Software Ltd' />
         <meta
           property='twitter:description'
-          content='Experts in the delivery of high quality, high-impact, software
+          content='Experts in the delivery of high quality, high-impact software
                 solutions.'
         />
       </Head>
