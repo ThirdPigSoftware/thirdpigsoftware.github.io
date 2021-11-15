@@ -22,7 +22,7 @@ function App ({ Component, pageProps }) {
           rel='stylesheet'
           href='https://use.fontawesome.com/releases/v5.11.2/css/all.css'
         />
-
+        <title>Third Pig Software Ltd - Software Engineering and Technology Consultancy</title>
       </Head>
       <Component {...pageProps} />
       <Footer />
