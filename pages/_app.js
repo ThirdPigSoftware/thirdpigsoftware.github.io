@@ -26,22 +26,29 @@ function App ({ Component, pageProps }) {
           Third Pig Software Ltd - Software Engineering and Technology
           Consultancy
         </title>
-        <meta name='description' content='Experts in the delivery of high quality, high-impact, software
-                solutions.' />
+        <meta
+          name='description'
+          content='Experts in the delivery of high quality, high-impact, software
+                solutions.'
+        />
 
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://thirdpigsoftware.com/' />
         <meta property='og:title' content='Third Pig Software Ltd' />
-        <meta property='og:description' content='Experts in the delivery of high quality, high-impact, software
-                solutions.' />
-
+        <meta
+          property='og:description'
+          content='Experts in the delivery of high quality, high-impact, software
+                solutions.'
+        />
 
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='twitter:url' content='https://thirdpigsoftware.com/' />
         <meta property='twitter:title' content='Third Pig Software Ltd' />
-        <meta property='twitter:description' content='Experts in the delivery of high quality, high-impact, software
-                solutions.' />
-
+        <meta
+          property='twitter:description'
+          content='Experts in the delivery of high quality, high-impact, software
+                solutions.'
+        />
       </Head>
       <Component {...pageProps} />
       <Footer />
