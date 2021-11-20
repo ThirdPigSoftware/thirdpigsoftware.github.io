@@ -49,6 +49,20 @@ function App ({ Component, pageProps }) {
           content='Experts in the delivery of high quality, high-impact software
                 solutions.'
         />
+        <script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=G-LBHHSCG7JG'
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-LBHHSCG7JG');
+          `
+          }}
+        />
       </Head>
       <Component {...pageProps} />
       <Footer />
