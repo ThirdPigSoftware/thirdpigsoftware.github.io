@@ -2,7 +2,7 @@ import {
   faCodeBranch,
   faLaptopCode,
   faMedkit,
-  faPaintBrush,
+  faCloud,
   faRocket,
   faVials
 } from '@fortawesome/free-solid-svg-icons'
@@ -43,10 +43,10 @@ const whatWeDo = [
       'Get a solid testing harness for your existing product or platform.'
   },
   {
-    icon: faPaintBrush,
-    title: 'Website Design & Development',
+    icon: faCloud,
+    title: 'Cloud Migrations',
     subtitle:
-      'Creating clean, custom websites to launch and showcase your business.'
+      'Reach new heights with your platform in the cloud.'
   }
 ]
 
