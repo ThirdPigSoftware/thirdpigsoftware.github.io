@@ -14,30 +14,35 @@ export default function Footer () {
         <div className='container mx-auto py-4 px-5 flex items-center justify-center flex-wrap flex-col sm:flex-row'>
           <p className='text-gray-500 text-sm text-center'>
             <div className='mt-2 text-xs'>
-              <p className='font-brand text-lg'>
-                Third Pig Software Ltd
-              </p>
+              <p className='font-brand text-lg'>Third Pig Software Ltd</p>
               71-75 Shelton Street
               <br />
               LONDON
               <br />
               WC2H 9JQ
             </div>
-            <div className='mt-2 flex flex-row justify-evenly items-center'>
-              <div>
-                <a href='mailto:hello@thirdpigsoftware.com'>
-                  <i className='fa fa-envelope ml-2'></i>
-                </a>
-              </div>
-              <div>
-                <a href='https://twitter.com/ThirdPigTech'>
-                  <i className='fab fa-twitter ml-2'></i>
-                </a>
-              </div>
-              <div>
-                <a href='tel:07956000356'>
-                  <i className='fa fa-phone ml-2'></i>
-                </a>
+            <div>
+              <div className='mt-2 flex flex-row justify-evenly items-center'>
+                <div>
+                  <a href='mailto:hello@thirdpigsoftware.com'>
+                    <i className='fa fa-envelope ml-2'></i>
+                  </a>
+                </div>
+                <div>
+                  <a href='tel:07956000356'>
+                    <i className='fa fa-phone ml-2'></i>
+                  </a>
+                </div>
+                <div>
+                  <a href='https://twitter.com/ThirdPigTech'>
+                    <i className='fab fa-twitter ml-2'></i>
+                  </a>
+                </div>
+                <div>
+                  <a href='https://www.linkedin.com/company/third-pig-software/'>
+                    <i className='fab fa-linkedin-in ml-2'></i>
+                  </a>
+                </div>
               </div>
             </div>
             <div className='mt-4'>
