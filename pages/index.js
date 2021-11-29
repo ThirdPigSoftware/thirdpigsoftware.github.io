@@ -108,7 +108,7 @@ export default function IndexPage () {
                         className={`text-2xl ${
                           item?.title?.length > 15
                             ? 'md:text-xl'
-                            : 'md:text-3xl'
+                            : 'md:text-xl'
                         } text-center text-accent-1`}
                       >
                         {item.title}
@@ -116,7 +116,7 @@ export default function IndexPage () {
                     </div>
                   </div>
                   <p
-                    className='mt-4 mb-2 text-center font-paragraph font-semibold'
+                    className='mt-4 mb-2 text-center font-paragraph'
                   >
                     {item.subtitle}
                   </p>

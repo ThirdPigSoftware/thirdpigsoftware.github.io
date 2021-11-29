@@ -29,20 +29,14 @@ export const Header = () => {
             <i className='not-italic text-sm'>Ltd</i>
           </h3>
         </div>
-        <a href="tel:07956000356" className='flex flex-row justify-center items-center opacity-0 w-0 h-0 md:w-auto transition-all md:opacity-100'>
+        <a
+          href='tel:07956000356'
+          className='flex flex-row justify-center items-center opacity-0 w-0 h-0 md:w-auto transition-all md:opacity-100'
+        >
           <FontAwesomeIcon
             className='buzz-out-on-hover w-10 h-10 p-2 hover:text-accent-1 text-gray-700'
             icon={faPhoneAlt}
           />
-          <h3
-            style={{
-              fontFamily: 'nickname',
-              zIndex: 9999999
-            }}
-            className={`select-none text-gray-700 text-lg mr-4`}
-          >
-            Contact Us:
-          </h3>
           <h3
             style={{
               fontFamily: 'nickname',
