@@ -76,7 +76,7 @@ export const Header = () => {
         </div>
         <div
           className={`flex flex-col ${
-            isMobileHeaderOpen ? 'h-screen' : 'h-auto'
+            isMobileHeaderOpen ? 'h-3/4' : 'h-auto'
           } md:h-auto md:flex-row items-center text-center justify-evenly text-accent-3 font-semibold`}
         >
           <Navigation
