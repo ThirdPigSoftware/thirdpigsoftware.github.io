@@ -14,8 +14,8 @@ export const OurSkillSet = () => {
           task at hand.
         </p>
         <p className='text-center text-lg'>
-          We have plenty of well-honed skills and are always willing to
-          adopt more:
+          We have plenty of well-honed skills and are always willing to adopt
+          more:
         </p>
       </div>
       <div className='pt-0 md:p-12 pb-0 flex flex-row flex-wrap justify-center items-center'>
@@ -23,20 +23,18 @@ export const OurSkillSet = () => {
           .slice(0, showAll ? techSkills.length : 12)
           .map(techSkill => (
             <Fade>
-              <div className='md:h-48 select-none  md:w-1/6 flex flex-row items-center justify-center text-center p-10  mx-auto flex justify-center buzz-out-on-hover'>
-                <img
-                  className='mx-auto'
-                  width={60}
-                  src={`/static/images/${techSkill.url}`}
-                />
-                <p className='mt-1 text-sm md:text-lg font-semibold'>{techSkill.name}</p>
+              <div className='text-center md:h-48 w-1/2 select-none p-10 md:p-0  md:w-1/6 flex flex-col items-center justify-center'>
+                <img width={60} src={`/static/images/${techSkill.url}`} />
+                <p className='mt-1 text-md w-full md:text-lg font-semibold'>
+                  {techSkill.name}
+                </p>
               </div>
             </Fade>
           ))}
       </div>
       <StandardButton
         onClick={() => {
-            setShowAll(!showAll)
+          setShowAll(!showAll)
         }}
         text={showAll ? 'Show less' : 'Show more'}
       />
