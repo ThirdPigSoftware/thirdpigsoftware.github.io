@@ -16,7 +16,7 @@ export default function Footer () {
       <Clouds />
       <div className='bg-white font-paragraph'>
         <div className='container mx-auto py-4 px-5 flex items-center justify-center flex-wrap flex-col sm:flex-row'>
-          <p className='text-gray-500 text-sm text-center'>
+          <p className='text-prose text-sm text-center'>
             <div className='mt-2 text-xs'>
               <p className='font-brand text-lg'>Third Pig Software Ltd</p>
               71-75 Shelton Street

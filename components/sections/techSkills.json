@@ -83,6 +83,12 @@
     },
 
     {
+        "url": "golang.png",
+        "name": "Golang",
+        "type": "Languages"
+    },
+
+    {
         "url": "git.png",
         "name": "Git",
         "type": "Tooling"
@@ -312,6 +318,11 @@
     {
         "url": "kali.png",
         "name": "Kali",
+        "type": "OS"
+    },
+    {
+        "url": "windows.png",
+        "name": "Windows",
         "type": "OS"
     }
 ]

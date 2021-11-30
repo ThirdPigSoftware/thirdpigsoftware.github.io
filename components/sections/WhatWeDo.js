@@ -8,7 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
-import Fade from 'react-reveal/Fade'
+import Zoom from 'react-reveal/Zoom'
 import { useScroll } from '../../hooks/useScroll'
 
 const whatWeDo = [
@@ -25,15 +25,15 @@ const whatWeDo = [
       'Time sensitive project in need of a helping hand? See how we can help get you back on track.'
   },
   {
-    icon: faRocket,
-    title: 'Mobile Development',
-    subtitle: 'Take your idea to market quickly with a bespoke mobile app.'
-  },
-  {
     icon: faLaptopCode,
     title: 'Bespoke Software Development',
     subtitle:
       "We'll take your requirements and deliver an MLP (minimum 'loveable' product)!"
+  },
+  {
+    icon: faRocket,
+    title: 'Mobile Development',
+    subtitle: 'Take your idea to market quickly with a bespoke mobile app.'
   },
   {
     icon: faVials,
@@ -51,40 +51,40 @@ export const WhatWeDo = () => {
   const { scrollY } = useScroll()
 
   return (
-    <div className='w-full relative'>
+    <div className='w-full select-none relative'>
       <p className='text-center text-lg text-prose mx-2 px-12 pb-10'>
         A range of software services across multiple platforms - web, mobile and
         cloud. We're always looking for ways to improve our services, so if you
         can't see exactly what you need, contact us anyway to see if we can
         help.
       </p>
-      <div className='grid lg:grid-cols-3 gap-4 items-center text-gray-700 dark:text-gray-100'>
+      <div className='grid lg:grid-cols-3 gap-4 items-center text-white'>
         {whatWeDo.map((item, index) => (
-          <div
-            className={`h-64 bg-white md:shadow-lg rounded-xl justify-center px-8 items-center flex flex-col transition-all transform duration-500 md:opacity-0 ${
-              scrollY > 150 ? 'md:opacity-100' : ''
-            }`}
-            key={index}
-          >
-            <Fade delay={index * 200}>
-              <FontAwesomeIcon
-                className='w-20 buzz-out-on-hover  h-14 p-2 hover:text-accent-1 m-4 text-accent-1'
-                icon={item.icon}
-              />
+          <Zoom delay={index * 200}>
+            <div
+              className={`h-72 md:shadow-lg rounded-3xl justify-center px-8 items-center flex flex-col transition-all transform duration-500`}
+              key={index}
+            >
+              <div className='p-4 rounded-full bg-gray-100 m-4'>
+                <FontAwesomeIcon
+                  className='w-12 h-12 buzz-out-on-hover text-accent-1'
+                  icon={item.icon}
+                />
+              </div>
               <div className='flex flex-row flex-wrap justify-evenly items-center'>
                 <div>
                   <h3
-                    className={`text-3xl font-brand font-semibold text-center text-accent-1`}
+                    className={`text-3xl md:text-xl transition-all font-brand text-center text-accent-1`}
                   >
                     {item.title}
                   </h3>
                 </div>
               </div>
-              <p className='mt-4 mb-2 text-prose text-center font-paragraph'>
+              <p className='mt-4 mb-2 text-prose text-center'>
                 {item.subtitle}
               </p>
-            </Fade>
-          </div>
+            </div>
+          </Zoom>
         ))}
       </div>
     </div>
