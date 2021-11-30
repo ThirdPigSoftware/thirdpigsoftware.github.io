@@ -35,10 +35,11 @@
         "type": "Tooling"
     },
     {
-        "url": "docker-compose.png",
-        "name": "Docker Compose",
+        "url": "gitlab.png",
+        "name": "GitLab",
         "type": "Tooling"
     },
+
     {
         "url": "kube.png",
         "name": "Kubernetes",
@@ -59,11 +60,7 @@
         "name": "Lambda",
         "type": "Cloud"
     },
-    {
-        "url": "gitlab.png",
-        "name": "GitLab",
-        "type": "Tooling"
-    },
+
     {
         "url": "kafka.png",
         "name": "Apache Kafka",
@@ -112,6 +109,11 @@
     {
         "url": "fabric8.png",
         "name": "Fabric8",
+        "type": "Tooling"
+    },
+    {
+        "url": "docker-compose.png",
+        "name": "Docker Compose",
         "type": "Tooling"
     },
     {
