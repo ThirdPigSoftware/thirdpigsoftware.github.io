@@ -1,7 +1,6 @@
 import { ContactUsButton } from '../components/buttons/ContactUsButton'
 import Clouds from '../components/clouds/Clouds'
 import { Header } from '../components/header/Header'
-import { OurProcess } from '../components/sections/OurProcess'
 import { OurSkillSet } from '../components/sections/OurSkillSet'
 import { WhatWeDo } from '../components/sections/WhatWeDo'
 
@@ -32,7 +31,7 @@ export default function IndexPage () {
             header={
               <div>
                 <h3
-                  className={`text-2xl font-semibold text-center md:text-left md:text-3xl p-12 pb-10 transform transition-all text-accent-1`}
+                  className={`text-2xl font-semibold text-center md:text-center md:text-3xl p-12 pb-10 transform transition-all text-accent-1`}
                 >
                   What can we do for you?
                 </h3>
@@ -51,7 +50,7 @@ export default function IndexPage () {
               >
                 More than just another piggin' consultancy.
               </h3>
-              <p className='text-accent-2 text-center md:text-left text-2xl font-semibold font-paragraph'>
+              <p className='text-accent-2 text-center md:text-left text-2xl font-paragraph'>
                 Chums on seats, not bums on seats. We'll work to thoroughly
                 understand your business goals and act like a partner, not an
                 outsourcer.
@@ -76,7 +75,7 @@ export default function IndexPage () {
         </CloudSection>
         <CloudSection id='contact'>
           <div className='text-black p-12 md:p-24 flex flex-col items-center text-center justify-center md:rounded-2xl bg-white'>
-            <p className='text-3xl font-semibold'>Got a project?</p>
+            <p className='text-3xl text-accent-1 font-semibold'>Got a project?</p>
             <p className='mt-4 text-lg text-prose'>
               Get a quote from us within 36 hours.
             </p>

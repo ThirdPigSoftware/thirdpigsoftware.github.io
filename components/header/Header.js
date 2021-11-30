@@ -56,10 +56,7 @@ export const Header = () => {
       >
         <div className='flex flex-row w-full md:w-auto justify-between items-center'>
           <div>
-            <a
-              onClick={() => setIsMobileHeaderOpen(false)}
-              href='#top'
-            >
+            <a onClick={() => setIsMobileHeaderOpen(false)} href='#top'>
               <img
                 className={`select-none buzz-out-on-hover w-12 md:w-14 ml-4 mr-2`}
                 src={'/static/logo.png'}
@@ -92,7 +89,11 @@ export const Header = () => {
           </div>
         </div>
       </header>
-      <div className='fixed transition-all top-5 md:top-0 w-full'>
+      <div
+        className={`fixed transition-all duration-1000 top-5 transform md:top-0 w-full ${
+          scrollY > 500 ? '-translate-y-72' : ''
+        } `}
+      >
         <Clouds flip />
       </div>
       <div

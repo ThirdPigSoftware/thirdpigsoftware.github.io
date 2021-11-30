@@ -1,11 +1,9 @@
 [
-
     {
         "url": "nodejs.png",
         "name": "NodeJS",
         "type": "Languages"
     },
-
     {
         "url": "python.png",
         "name": "Python",
@@ -52,9 +50,9 @@
         "type": "Frameworks"
     },
     {
-        "url": "reactnative.png",
-        "name": "React Native",
-        "type": "Frameworks"
+        "url": "typescript.png",
+        "name": "TypeScript",
+        "type": "Languages"
     },
     {
         "url": "lambda.png",
@@ -72,6 +70,11 @@
         "type": "Messaging"
     },
     {
+        "url": "powershell.png",
+        "name": "PowerShell",
+        "type": "Languages"
+    },
+    {
         "url": "php.png",
         "name": "PHP",
         "type": "Languages"
@@ -81,23 +84,25 @@
         "name": "Scala",
         "type": "Languages"
     },
-
     {
         "url": "golang.png",
         "name": "Golang",
         "type": "Languages"
     },
-
     {
         "url": "git.png",
         "name": "Git",
         "type": "Tooling"
     },
-
     {
         "url": "javascript.png",
         "name": "JavaScript",
         "type": "Languages"
+    },
+    {
+        "url": "reactnative.png",
+        "name": "React Native",
+        "type": "Frameworks"
     },
     {
         "url": "jenkins.png",
@@ -234,7 +239,6 @@
         "name": "RDS",
         "type": "Cloud"
     },
-
     {
         "url": "ec2.png",
         "name": "EC2",
