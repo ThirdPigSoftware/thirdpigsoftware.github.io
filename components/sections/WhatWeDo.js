@@ -1,4 +1,7 @@
 import {
+  faBinoculars,
+  faBomb,
+  faChalkboardTeacher,
   faCloud,
   faCodeBranch,
   faLaptopCode,
@@ -9,7 +12,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import Zoom from 'react-reveal/Zoom'
-import { useScroll } from '../../hooks/useScroll'
+import Fade from 'react-reveal/Fade'
 
 const whatWeDo = [
   {
@@ -45,11 +48,27 @@ const whatWeDo = [
     icon: faCloud,
     title: 'Cloud Migrations',
     subtitle: 'Reach new heights with your platform in the cloud.'
+  },
+  {
+    icon: faChalkboardTeacher,
+    title: 'Agile Coaching',
+    subtitle:
+      'Want to become more agile, adaptable and responsive to your users needs? We will help you take your organisation to the next level.'
+  },
+  {
+    icon: faBomb,
+    title: 'Site Reliability Engineering',
+    subtitle:
+      "We'll help you create scalable and highly reliable software systems."
+  },
+  {
+    icon: faBinoculars,
+    title: 'Technical Leadership',
+    subtitle:
+      'Providing support for your organisation to help make better technical decisions.'
   }
 ]
 export const WhatWeDo = () => {
-  const { scrollY } = useScroll()
-
   return (
     <div className='w-full select-none relative'>
       <p className='text-center text-lg text-prose mx-2 px-12 pb-10'>
@@ -65,24 +84,28 @@ export const WhatWeDo = () => {
               className={`h-72 md:shadow-lg rounded-3xl justify-center px-8 items-center flex flex-col transition-all transform duration-500`}
               key={index}
             >
-              <div className='p-4 rounded-full bg-gray-100 m-4'>
-                <FontAwesomeIcon
-                  className='w-12 h-12 buzz-out-on-hover text-accent-1'
-                  icon={item.icon}
-                />
-              </div>
+              <Fade top delay={index * 450}>
+                <div className='p-4 rounded-full bg-gray-100 m-4'>
+                  <FontAwesomeIcon
+                    className='w-12 h-12 buzz-out-on-hover text-accent-1'
+                    icon={item.icon}
+                  />
+                </div>
+              </Fade>
               <div className='flex flex-row flex-wrap justify-evenly items-center'>
-                <div>
+                <Fade left delay={index * 300}>
                   <h3
                     className={`text-3xl md:text-xl transition-all font-brand text-center text-accent-1`}
                   >
                     {item.title}
                   </h3>
-                </div>
+                </Fade>
               </div>
-              <p className='mt-4 mb-2 text-prose text-center'>
-                {item.subtitle}
-              </p>
+              <Fade bottom delay={index * 500}>
+                <p className='mt-4 mb-2 text-prose text-center'>
+                  {item.subtitle}
+                </p>
+              </Fade>
             </div>
           </Zoom>
         ))}
