@@ -23,9 +23,9 @@ export const OurSkillSet = () => {
           .slice(0, showAll ? techSkills.length : 12)
           .map(techSkill => (
             <Fade>
-              <div className='text-center md:h-48 w-1/2 select-none p-10 md:p-0  md:w-1/6 flex flex-col items-center justify-center'>
+              <div className='text-center md:h-48 w-1/2 select-none p-10   md:w-1/6 flex flex-col items-center justify-center'>
                 <img width={60} src={`/static/images/${techSkill.url}`} />
-                <p className='mt-1 text-md w-full md:text-lg font-semibold'>
+                <p className='mt-1 text-lg w-full font-semibold'>
                   {techSkill.name}
                 </p>
               </div>

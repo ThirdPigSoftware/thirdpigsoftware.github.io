@@ -75,9 +75,9 @@ export default function IndexPage () {
           <OurSkillSet />
         </CloudSection>
         <CloudSection id='contact'>
-          <div className='text-black md:ml-48 md:mr-48 p-12 md:p-24 pt-12 pb-12 flex flex-col items-center text-center justify-center md:rounded-2xl bg-white'>
+          <div className='text-black p-12 md:p-24 flex flex-col items-center text-center justify-center md:rounded-2xl bg-white'>
             <p className='text-3xl font-semibold'>Got a project?</p>
-            <p className='text-lg text-prose'>
+            <p className='mt-4 text-lg text-prose'>
               Get a quote from us within 36 hours.
             </p>
             <div className='text-prose text-left p-4'>
