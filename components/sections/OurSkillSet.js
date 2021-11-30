@@ -18,18 +18,18 @@ export const OurSkillSet = () => {
           adopt more:
         </p>
       </div>
-      <div className='pt-0 p-12 pb-0 flex flex-row flex-wrap justify-center items-center'>
+      <div className='pt-0 md:p-12 pb-0 flex flex-row flex-wrap justify-center items-center'>
         {techSkills
           .slice(0, showAll ? techSkills.length : 12)
           .map(techSkill => (
             <Fade>
-              <div className='md:h-48 buzz-out-on-hover w-1/2 md:w-1/6 flex flex-row justify-center text-center p-10  mx-auto flex justify-center'>
+              <div className='md:h-48 buzz-out-on-hover md:w-1/6 flex flex-row items-center justify-center text-center p-10  mx-auto flex justify-center'>
                 <img
                   className='mx-auto'
                   width={60}
                   src={`/static/images/${techSkill.url}`}
                 />
-                <p className='mt-1 text-lg font-semibold'>{techSkill.name}</p>
+                <p className='mt-1 text-sm md:text-lg font-semibold'>{techSkill.name}</p>
               </div>
             </Fade>
           ))}

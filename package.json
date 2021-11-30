@@ -17,6 +17,7 @@
     "next": "11.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-dom-confetti": "^0.2.0",
     "react-reveal": "^1.2.2"
   },
   "devDependencies": {
