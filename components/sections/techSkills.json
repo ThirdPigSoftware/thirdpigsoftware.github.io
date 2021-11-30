@@ -1,0 +1,308 @@
+[
+    {
+        "url": "java.png",
+        "name": "Java",
+        "type": "Languages"
+    },
+    {
+        "url": "javascript.png",
+        "name": "JavaScript",
+        "type": "Languages"
+    },
+    {
+        "url": "python.png",
+        "name": "Python",
+        "type": "Languages"
+    },
+    {
+        "url": "bash.png",
+        "name": "BASH",
+        "type": "Languages"
+    },
+    {
+        "url": "ruby.png",
+        "name": "Ruby",
+        "type": "Languages"
+    },
+    {
+        "url": "aws.png",
+        "name": "AWS",
+        "type": "Cloud"
+    },
+    {
+        "url": "terraform.png",
+        "name": "Terraform",
+        "type": "Cloud"
+    },
+    {
+        "url": "docker.png",
+        "name": "Docker",
+        "type": "Tooling"
+    },
+    {
+        "url": "docker-compose.png",
+        "name": "Docker Compose",
+        "type": "Tooling"
+    },
+    {
+        "url": "kube.png",
+        "name": "Kubernetes",
+        "type": "Tooling"
+    },
+    {
+        "url": "php.png",
+        "name": "PHP",
+        "type": "Languages"
+    },
+    {
+        "url": "scala.png",
+        "name": "Scala",
+        "type": "Languages"
+    },
+    {
+        "url": "nodejs.png",
+        "name": "NodeJS",
+        "type": "Languages"
+    },
+    {
+        "url": "git.png",
+        "name": "Git",
+        "type": "Tooling"
+    },
+    {
+        "url": "gitlab.png",
+        "name": "GitLab",
+        "type": "Tooling"
+    },
+    {
+        "url": "jenkins.png",
+        "name": "Jenkins",
+        "type": "Tooling"
+    },
+    {
+        "url": "fabric8.png",
+        "name": "Fabric8",
+        "type": "Tooling"
+    },
+    {
+        "url": "yeoman.png",
+        "name": "Yeoman",
+        "type": "Tooling"
+    },
+    {
+        "url": "tomcat.png",
+        "name": "Tomcat",
+        "type": "Tooling"
+    },
+    {
+        "url": "spring.png",
+        "name": "Spring",
+        "type": "Frameworks"
+    },
+    {
+        "url": "symfony.png",
+        "name": "Symfony",
+        "type": "Frameworks"
+    },
+    {
+        "url": "react.png",
+        "name": "React",
+        "type": "Frameworks"
+    },
+    {
+        "url": "reactnative.png",
+        "name": "React Native",
+        "type": "Frameworks"
+    },
+    {
+        "url": "redux.png",
+        "name": "Redux",
+        "type": "Frameworks"
+    },
+    {
+        "url": "postgres.png",
+        "name": "PostgreSQL",
+        "type": "Databases"
+    },
+    {
+        "url": "mysql.png",
+        "name": "MySQL",
+        "type": "Databases"
+    },
+    {
+        "url": "mongodb.png",
+        "name": "MongoDB",
+        "type": "Databases"
+    },
+    {
+        "url": "jest.png",
+        "name": "Jest",
+        "type": "Testing"
+    },
+    {
+        "url": "mockito.png",
+        "name": "Mockito",
+        "type": "Testing"
+    },
+    {
+        "url": "junit.png",
+        "name": "JUnit",
+        "type": "Testing"
+    },
+    {
+        "url": "elasticsearch.png",
+        "name": "ElasticSearch",
+        "type": "Databases"
+    },
+    {
+        "url": "gruntjs.png",
+        "name": "GruntJS",
+        "type": "Tooling"
+    },
+    {
+        "url": "gradle.svg",
+        "name": "Gradle",
+        "type": "Tooling"
+    },
+    {
+        "url": "maven.png",
+        "name": "Maven",
+        "type": "Tooling"
+    },
+    {
+        "url": "vagrant.png",
+        "name": "Vagrant",
+        "type": "Tooling"
+    },
+    {
+        "url": "yarn.png",
+        "name": "Yarn",
+        "type": "Tooling"
+    },
+    {
+        "url": "dynamodb.png",
+        "name": "DynamoDB",
+        "type": "Cloud"
+    },
+    {
+        "url": "appsync.png",
+        "name": "AppSync",
+        "type": "Cloud"
+    },
+    {
+        "url": "sqws.png",
+        "name": "SQS",
+        "type": "Cloud"
+    },
+    {
+        "url": "cf.png",
+        "name": "CloudFormation",
+        "type": "Cloud"
+    },
+    {
+        "url": "s3.png",
+        "name": "S3",
+        "type": "Cloud"
+    },
+    {
+        "url": "apigateway.png",
+        "name": "API Gateway",
+        "type": "Cloud"
+    },
+    {
+        "url": "rds.png",
+        "name": "RDS",
+        "type": "Cloud"
+    },
+    {
+        "url": "lambda.png",
+        "name": "Lambda",
+        "type": "Cloud"
+    },
+    {
+        "url": "ec2.png",
+        "name": "EC2",
+        "type": "Cloud"
+    },
+    {
+        "url": "angular.svg",
+        "name": "Angular",
+        "type": "Frameworks"
+    },
+    {
+        "url": "ansible.png",
+        "name": "Ansible",
+        "type": "Frameworks"
+    },
+    {
+        "url": "hibernate.png",
+        "name": "Hibernate",
+        "type": "Frameworks"
+    },
+    {
+        "url": "openfaas.png",
+        "name": "OpenFaaS",
+        "type": "Frameworks"
+    },
+    {
+        "url": "tensorflow.png",
+        "name": "Tensorflow",
+        "type": "Frameworks"
+    },
+
+    {
+        "url": "storybook.png",
+        "name": "Storybook",
+        "type": "Testing"
+    },
+    {
+        "url": "mocha.png",
+        "name": "Mocha",
+        "type": "Testing"
+    },
+    {
+        "url": "intelliJ.png",
+        "name": "IntelliJ",
+        "type": "Tooling"
+    },
+    {
+        "url": "pycharm.png",
+        "name": "PyCharm",
+        "type": "Tooling"
+    },
+    {
+        "url": "vscode.png",
+        "name": "VSCode",
+        "type": "Tooling"
+    },
+    {
+        "url": "linux.png",
+        "name": "Linux",
+        "type": "OS"
+    },
+    {
+        "url": "raspberrypi.png",
+        "name": "Raspberry Pi",
+        "type": "OS"
+    },
+    {
+        "url": "selenium.png",
+        "name": "Selenium",
+        "type": "Testing"
+    },
+    {
+        "url": "ubuntu.png",
+        "name": "Ubuntu",
+        "type": "OS"
+    },
+    {
+        "url": "mac.png",
+        "name": "Mac OSX",
+        "type": "OS"
+    },
+    {
+        "url": "kali.png",
+        "name": "Kali",
+        "type": "OS"
+    }
+]

@@ -1,53 +1,92 @@
-import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react'
 import Fade from 'react-reveal/Fade'
 import { useScroll } from '../../hooks/useScroll'
+import { ContactUsButton } from '../buttons/ContactUsButton'
 import Clouds from '../clouds/Clouds'
 
 const FADE_OUT_THRESHOLD = 480
 const HIDE_THRESHOLD = 520
 
+const links = [
+  {
+    name: 'What we do',
+    href: '#wedo'
+  },
+  {
+    name: 'Our Skillset',
+    href: '#skillset'
+  },
+  {
+    name: 'Contact Us',
+    href: '#contact'
+  }
+]
+
+const Navigation = ({ isMobileHeaderOpen, setIsMobileHeaderOpen }) =>
+  links.map(link => (
+    <div
+      className={`${
+        isMobileHeaderOpen ? 'h-auto w-auto opacity-100' : 'h-0 w-0 opacity-0'
+      } md:opacity-100 md:h-auto md:w-auto select-none rounded-2xl transition-all`}
+    >
+      <a onClick={() => setIsMobileHeaderOpen(false)} href={link.href}>
+        <p className='hover:bg-gray-100 hover:text-accent-1 transition-all text-3xl md:text-lg duration-500 ml-2 mr-2 p-2 pl-4 pr-4 rounded-xl'>
+          {link.name}
+        </p>
+      </a>
+    </div>
+  ))
+
 export const Header = () => {
+  const [isMobileHeaderOpen, setIsMobileHeaderOpen] = React.useState(false)
   const { scrollY } = useScroll()
+  const clutchWidget =
+    '<div class="clutch-widget" style="overflow-y:hidden;" data-url="https://widget.clutch.co" data-widget-type="2" data-height="50" data-clutchcompany-id="1884678"></div>'
   return (
     <>
       <header
         style={{ zIndex: 999999999 }}
-        className={`fixed top-0 bg-white z-50 w-full px-5 py-4 flex justify-between items-center duration-500 transform transition-all`}
+        className={`fixed top-0 bg-white z-50 w-full px-5 py-4 flex flex-col md:flex-row justify-between items-center duration-500 transform transition-all`}
       >
-        <div className='flex flex-start items-center'>
-          <img className={`w-12 ml-4 mr-2`} src={'/static/logo.png'} />
-          <h3
-            style={{
-              fontFamily: 'nickname',
-              zIndex: 9999999,
-              color: '#663399'
-            }}
-            className={`select-none text-2xl`}
-          >
-            Third Pig <i className='not-italic'>Software</i>{' '}
-            <i className='not-italic text-sm'>Ltd</i>
-          </h3>
+        <div className='flex flex-row w-full md:w-auto justify-between items-center'>
+          <div>
+            <a
+              onClick={() => setIsMobileHeaderOpen(!isMobileHeaderOpen)}
+              href='#top'
+            >
+              <img
+                className={`buzz-out-on-hover w-12 md:w-14 ml-4 mr-2`}
+                src={'/static/logo.png'}
+              />
+            </a>
+          </div>
+          <div className='flex md:hidden'>
+            <button
+              className='bg-gray-200 p-3 rounded-lg'
+              onClick={() => setIsMobileHeaderOpen(!isMobileHeaderOpen)}
+            >
+              <FontAwesomeIcon
+                className='buzz-out-on-hover w-5 h-5 hover:text-accent-1 text-accent-1'
+                icon={faBars}
+              />
+            </button>
+          </div>
         </div>
-        <a
-          href='tel:07956000356'
-          className='flex flex-row justify-center items-center opacity-0 w-0 h-0 md:w-auto transition-all md:opacity-100'
+        <div
+          className={`flex flex-col ${
+            isMobileHeaderOpen ? 'h-screen' : 'h-auto'
+          } md:h-auto md:flex-row items-center text-center justify-evenly text-accent-3 font-semibold`}
         >
-          <FontAwesomeIcon
-            className='buzz-out-on-hover w-10 h-10 p-2 hover:text-accent-1 text-gray-700'
-            icon={faPhoneAlt}
+          <Navigation
+            setIsMobileHeaderOpen={setIsMobileHeaderOpen}
+            isMobileHeaderOpen={isMobileHeaderOpen}
           />
-          <h3
-            style={{
-              fontFamily: 'nickname',
-              zIndex: 9999999,
-              color: '#663399'
-            }}
-            className={`select-none text-xl mr-4`}
-          >
-            07956 000 356
-          </h3>
-        </a>
+          <div className='hidden md:block'>
+            <ContactUsButton />
+          </div>
+        </div>
       </header>
       <div className='fixed transition-all top-5 md:top-0 w-full'>
         <Clouds flip />
@@ -83,7 +122,7 @@ export const Header = () => {
                   zIndex: 9999999,
                   color: '#1a0041'
                 }}
-                className='p-2 md:p-0 text-xl font-brand transition-all duration-500 opacity-80 select-none'
+                className='p-2 md:p-0 text-xl transition-all duration-500 opacity-80 select-none'
               >
                 Experts in the delivery of high quality, high-impact software
                 solutions.
@@ -106,21 +145,15 @@ export const Header = () => {
         className={`fixed ${scrollY > HIDE_THRESHOLD ? 'hidden' : ''} ${
           scrollY > FADE_OUT_THRESHOLD ? 'opacity-0' : 'opacity-100'
         } 
-        bottom-0 bg-white z-50 w-full px-5 py-4 flex justify-end items-center duration-500 transform transition-all`}
+        bottom-0 bg-white z-50 w-full px-5 py-4 flex justify-between items-center duration-500 transform transition-all`}
       >
-        <p className='font-paragraph font-semibold text-accent-3 text-right'>
-          See how we can help you with your project:
-        </p>
-        <button
-          className='p-10 py-2 ml-2 bg-accent-1 font-brand rounded-lg border-white buzz-out-on-hover text-white'
-          onClick={() =>
-            window.open(
-              'https://share-eu1.hsforms.com/1Tk0yABENQ4uXugEOhJ4NUQezsvg'
-            )
-          }
-        >
-          Contact Us!
-        </button>
+        <div dangerouslySetInnerHTML={{ __html: clutchWidget }}></div>
+        <div className='flex justify-end items-center'>
+          <p className='hidden md:block transition-all opacity-0 md:opacity-100 font-paragraph font-semibold text-accent-3 text-right'>
+            See how we can help you with your project:
+          </p>
+          <ContactUsButton />
+        </div>
       </header>
     </>
   )

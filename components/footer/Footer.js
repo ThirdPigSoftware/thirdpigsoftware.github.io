@@ -1,3 +1,6 @@
+import { ContactUsButton } from '../buttons/ContactUsButton'
+import Clouds from '../clouds/Clouds'
+
 export default function Footer () {
   return (
     <footer className='text-gray-600 font-paragraph'>
@@ -10,7 +13,8 @@ export default function Footer () {
         <div className='w-64 font-paragraph flex-shrink-0 md:mx-0 mx-auto text-center md:text-right'></div>
       </div>
 
-      <div className='bg-gray-100 font-paragraph'>
+      <Clouds />
+      <div className='bg-white font-paragraph'>
         <div className='container mx-auto py-4 px-5 flex items-center justify-center flex-wrap flex-col sm:flex-row'>
           <p className='text-gray-500 text-sm text-center'>
             <div className='mt-2 text-xs'>
@@ -22,7 +26,7 @@ export default function Footer () {
               WC2H 9JQ
             </div>
             <div>
-              <div className='mt-2 flex flex-row justify-evenly items-center'>
+              <div className='mt-2 text-2xl flex flex-row justify-evenly items-center'>
                 <div>
                   <a href='mailto:hello@thirdpigsoftware.com'>
                     <i className='fa fa-envelope ml-2'></i>

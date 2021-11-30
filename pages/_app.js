@@ -22,6 +22,7 @@ function App ({ Component, pageProps }) {
           rel='stylesheet'
           href='https://use.fontawesome.com/releases/v5.11.2/css/all.css'
         />
+        <script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script>
         <title>
           Third Pig Software Ltd - Software Engineering and Technology
           Consultancy
