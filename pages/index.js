@@ -89,7 +89,7 @@ export default function IndexPage () {
               </div>
               <div>
                 <a href='tel:07956000356'>
-                  <i className='fa fa-phone mr-3'></i> 07956 000 356
+                  <i className='fa fa-phone mr-3'></i>07956 000 356
                 </a>
               </div>
             </div>
