@@ -52,7 +52,7 @@ export const WhatWeDo = () => {
 
   return (
     <div className='w-full'>
-      <p className='text-center text-lg text-prose px-12 pb-10'>A range of software services across multiple platforms - web, mobile and cloud. We're always looking for ways to improve our services, so if you can't see exactly what you need, contact us anyway to see if we can help.</p>
+      <p className='text-center text-lg text-prose mx-2 px-12 pb-10'>A range of software services across multiple platforms - web, mobile and cloud. We're always looking for ways to improve our services, so if you can't see exactly what you need, contact us anyway to see if we can help.</p>
       <div className='grid lg:grid-cols-3 gap-4 items-center text-gray-700 dark:text-gray-100'>
         {whatWeDo.map((item, index) => (
           <div
