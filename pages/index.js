@@ -48,7 +48,7 @@ export default function IndexPage () {
                 style={{ fontFamily: 'nickname', zIndex: 9999999 }}
                 className='text-4xl'
               >
-                More than just another consultancy.
+                More than just another piggin' consultancy.
               </h3>
               <p className='text-accent-2 text-center md:text-left text-2xl font-semibold font-paragraph'>
                 Chums on seats, not bums on seats. We'll work to thoroughly
