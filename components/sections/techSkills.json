@@ -1,27 +1,24 @@
 [
+
     {
-        "url": "java.png",
-        "name": "Java",
+        "url": "nodejs.png",
+        "name": "NodeJS",
         "type": "Languages"
     },
-    {
-        "url": "javascript.png",
-        "name": "JavaScript",
-        "type": "Languages"
-    },
+
     {
         "url": "python.png",
         "name": "Python",
         "type": "Languages"
     },
     {
-        "url": "bash.png",
-        "name": "BASH",
+        "url": "java.png",
+        "name": "Java",
         "type": "Languages"
     },
     {
-        "url": "ruby.png",
-        "name": "Ruby",
+        "url": "bash.png",
+        "name": "BASH",
         "type": "Languages"
     },
     {
@@ -50,6 +47,31 @@
         "type": "Tooling"
     },
     {
+        "url": "react.png",
+        "name": "React",
+        "type": "Frameworks"
+    },
+    {
+        "url": "reactnative.png",
+        "name": "React Native",
+        "type": "Frameworks"
+    },
+    {
+        "url": "lambda.png",
+        "name": "Lambda",
+        "type": "Cloud"
+    },
+    {
+        "url": "gitlab.png",
+        "name": "GitLab",
+        "type": "Tooling"
+    },
+    {
+        "url": "kafka.png",
+        "name": "Apache Kafka",
+        "type": "Messaging"
+    },
+    {
         "url": "php.png",
         "name": "PHP",
         "type": "Languages"
@@ -59,20 +81,17 @@
         "name": "Scala",
         "type": "Languages"
     },
-    {
-        "url": "nodejs.png",
-        "name": "NodeJS",
-        "type": "Languages"
-    },
+
     {
         "url": "git.png",
         "name": "Git",
         "type": "Tooling"
     },
+
     {
-        "url": "gitlab.png",
-        "name": "GitLab",
-        "type": "Tooling"
+        "url": "javascript.png",
+        "name": "JavaScript",
+        "type": "Languages"
     },
     {
         "url": "jenkins.png",
@@ -105,14 +124,9 @@
         "type": "Frameworks"
     },
     {
-        "url": "react.png",
-        "name": "React",
-        "type": "Frameworks"
-    },
-    {
-        "url": "reactnative.png",
-        "name": "React Native",
-        "type": "Frameworks"
+        "url": "ruby.png",
+        "name": "Ruby",
+        "type": "Languages"
     },
     {
         "url": "redux.png",
@@ -214,11 +228,7 @@
         "name": "RDS",
         "type": "Cloud"
     },
-    {
-        "url": "lambda.png",
-        "name": "Lambda",
-        "type": "Cloud"
-    },
+
     {
         "url": "ec2.png",
         "name": "EC2",
@@ -249,7 +259,6 @@
         "name": "Tensorflow",
         "type": "Frameworks"
     },
-
     {
         "url": "storybook.png",
         "name": "Storybook",

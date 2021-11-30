@@ -29,13 +29,13 @@ export default function IndexPage () {
           <CloudSection
             id='wedo'
             header={
-              <>
+              <div>
                 <h3
                   className={`text-2xl font-semibold text-center md:text-left md:text-3xl p-12 pb-10 transform transition-all text-accent-1`}
                 >
                   What can we do for you?
                 </h3>
-              </>
+              </div>
             }
           >
             <WhatWeDo />
@@ -77,7 +77,9 @@ export default function IndexPage () {
         <CloudSection id='contact'>
           <div className='text-black md:ml-48 md:mr-48 p-24 pt-12 pb-12 flex flex-col items-center text-center justify-center md:rounded-2xl bg-white'>
             <p className='text-3xl font-semibold'>Got a project?</p>
-            <p className='text-lg text-prose'>Get a quote from us within 36 hours.</p>
+            <p className='text-lg text-prose'>
+              Get a quote from us within 36 hours.
+            </p>
             <div className='mt-10'>
               <ContactUsButton />
             </div>
