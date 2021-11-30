@@ -56,7 +56,7 @@ export const Header = () => {
       >
         <div className='flex flex-row w-full md:w-auto justify-between items-center'>
           <div>
-            <a onClick={() => setIsMobileHeaderOpen(false)} href='#top'>
+            <a onClick={() => setIsMobileHeaderOpen(false)} href='#'>
               <img
                 className={`select-none buzz-out-on-hover w-12 md:w-14 ml-4 mr-2`}
                 src={'/static/logo.png'}
