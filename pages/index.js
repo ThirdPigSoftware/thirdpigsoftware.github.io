@@ -1,6 +1,6 @@
-import { ContactUsButton } from '../components/buttons/ContactUsButton'
 import Clouds from '../components/clouds/Clouds'
-import { Header } from '../components/header/Header'
+import { ContactSection } from '../components/sections/ContactSection'
+import { OurMission } from '../components/sections/OurMission'
 import { OurSkillSet } from '../components/sections/OurSkillSet'
 import { WhatWeDo } from '../components/sections/WhatWeDo'
 
@@ -17,86 +17,67 @@ export const CloudSection = ({ id, children, header }) => (
   </div>
 )
 
+const OurHeading = ({ title }) => (
+  <div className='select-none flex flex-row items-center justify-center'>
+    <h3
+      className={`text-2xl pr-2 pt-4  md:text-5xl uppercase font-brand text-center text-accent-1`}
+    >
+      Our
+    </h3>
+    <h3
+      className={`text-6xl font-brand pt-4 md:text-8xl uppercase text-center text-accent-1`}
+    >
+      {title}
+    </h3>
+  </div>
+)
+
 export default function IndexPage () {
   return (
-    <div id='top' className='text-white dark:text-white overflow-x-hidden'>
+    <div className='text-white dark:text-white overflow-x-hidden'>
       <div>
-        <Header />
         <div
           className={`transition-all transform transform transition-all duration-500`}
           style={{ zIndex: -999 }}
         >
-          <CloudSection
-            id='wedo'
-            header={
-              <div>
-                <h3
-                  className={`text-2xl font-semibold text-center md:text-center md:text-3xl p-12 pb-10 transform transition-all text-accent-1`}
-                >
-                  What can we do for you?
-                </h3>
-              </div>
-            }
-          >
+          <CloudSection header={<OurHeading title={'Services'} />}>
             <WhatWeDo />
           </CloudSection>
         </div>
-        <div>
-          <div className='py-20 px-20 container mx-auto'>
-            <div className='grid grid-cols-1 gap-4 items-center'>
-              <h3
-                style={{ fontFamily: 'nickname', zIndex: 9999999 }}
-                className='text-4xl'
-              >
-                More than just another piggin' consultancy.
-              </h3>
-              <p className='text-accent-2 text-center md:text-left text-2xl font-paragraph'>
-                Chums on seats, not bums on seats. We'll work to thoroughly
-                understand your business goals and act like a partner, not an
-                outsourcer.
-              </p>
-            </div>
-          </div>
-        </div>
 
         <CloudSection
-          id='skillset'
-          header={
-            <>
-              <h3
-                className={`text-2xl pt-4 md:text-3xl font-semibold text-center text-accent-1`}
-              >
-                Our Skillset
-              </h3>
-            </>
-          }
+          header={<OurHeading title={'Mission'} />}
         >
+          <OurMission />
+        </CloudSection>
+        <div>
+          <div className='py-20 px-20 md:px-96 container'>
+            <h3
+              style={{
+                zIndex: 9999999,
+                WebkitTextStrokeWidth: '2px',
+                WebkitTextStrokeColor: 'white'
+              }}
+              className='text-4xl font-bold uppercase text-center md:text-left'
+            >
+              More than just another piggin' consultancy.
+            </h3>
+            <p className='mt-5 text-accent-2 text-center md:text-left text-2xl font-paragraph'>
+              <b>Not just bums on seats</b>. We'll work to thoroughly understand
+              your business goals and act like a partner, not an outsourcer.
+            </p>
+          </div>
+        </div>
+        {/* <CloudSection
+          id='process'
+          header={<OurHeading title={'Process'} />}
+        ></CloudSection> */}
+        <CloudSection header={<OurHeading title={'Skillset'} />}>
           <OurSkillSet />
         </CloudSection>
-        <CloudSection id='contact'>
-          <div className='text-black p-12 md:p-24 flex flex-col items-center text-center justify-center md:rounded-2xl bg-white'>
-            <p className='text-3xl text-accent-1 font-semibold'>Got a project?</p>
-            <p className='mt-4 text-lg text-prose'>
-              Get a quote from us within 36 hours.
-            </p>
-            <div className='text-prose text-left p-4'>
-              <div className="mb-2">
-                <a href='mailto:hello@thirdpigsoftware.com'>
-                  <i className='fa fa-envelope mr-3'></i>
-                  hello@thirdpigsoftware.com
-                </a>
-              </div>
-              <div>
-                <a href='tel:07956000356'>
-                  <i className='fa fa-phone mr-3'></i>07956 000 356
-                </a>
-              </div>
-            </div>
-            <div className='mt-2'>
-              <ContactUsButton />
-            </div>
-          </div>
-        </CloudSection>
+        <div className='pt-72 -mt-72' id='contact'>
+          <ContactSection />
+        </div>
       </div>
     </div>
   )

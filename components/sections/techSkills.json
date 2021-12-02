@@ -39,7 +39,6 @@
         "name": "GitLab",
         "type": "Tooling"
     },
-
     {
         "url": "kube.png",
         "name": "Kubernetes",
@@ -60,16 +59,20 @@
         "name": "Lambda",
         "type": "Cloud"
     },
-
     {
         "url": "kafka.png",
         "name": "Apache Kafka",
         "type": "Messaging"
     },
     {
-        "url": "powershell.png",
-        "name": "PowerShell",
-        "type": "Languages"
+        "url": "spring.png",
+        "name": "Spring",
+        "type": "Frameworks"
+    },
+    {
+        "url": "postgres.png",
+        "name": "PostgreSQL",
+        "type": "Databases"
     },
     {
         "url": "php.png",
@@ -117,6 +120,11 @@
         "type": "Tooling"
     },
     {
+        "url": "powershell.png",
+        "name": "PowerShell",
+        "type": "Languages"
+    },
+    {
         "url": "yeoman.png",
         "name": "Yeoman",
         "type": "Tooling"
@@ -125,11 +133,6 @@
         "url": "tomcat.png",
         "name": "Tomcat",
         "type": "Tooling"
-    },
-    {
-        "url": "spring.png",
-        "name": "Spring",
-        "type": "Frameworks"
     },
     {
         "url": "symfony.png",
@@ -145,11 +148,6 @@
         "url": "redux.png",
         "name": "Redux",
         "type": "Frameworks"
-    },
-    {
-        "url": "postgres.png",
-        "name": "PostgreSQL",
-        "type": "Databases"
     },
     {
         "url": "mysql.png",

@@ -2,6 +2,7 @@ import '../styles/index.css'
 import Head from 'next/head'
 import Footer from '../components/footer/Footer'
 import { config } from '@fortawesome/fontawesome-svg-core'
+import { Header } from '../components/header/Header'
 config.autoAddCss = false
 
 function App ({ Component, pageProps }) {
@@ -19,10 +20,17 @@ function App ({ Component, pageProps }) {
           rel='stylesheet'
         />
         <link
+          href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap'
+          rel='stylesheet'
+        />
+        <link
           rel='stylesheet'
           href='https://use.fontawesome.com/releases/v5.11.2/css/all.css'
         />
-        <script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script>
+        <script
+          type='text/javascript'
+          src='https://widget.clutch.co/static/js/widget.js'
+        ></script>
         <title>
           Third Pig Software Ltd - Software Engineering and Technology
           Consultancy
@@ -65,6 +73,7 @@ function App ({ Component, pageProps }) {
           }}
         />
       </Head>
+      <Header />
       <Component {...pageProps} />
       <Footer />
     </>

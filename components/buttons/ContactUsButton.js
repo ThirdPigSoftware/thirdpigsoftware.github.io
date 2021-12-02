@@ -2,7 +2,7 @@ import { StandardButton } from './StandardButton'
 import Confetti from 'react-dom-confetti'
 import React from 'react'
 
-export const ContactUsButton = () => {
+export const ContactUsButton = ({ alt }) => {
   const [isClicked, setIsClicked] = React.useState(false)
 
   React.useEffect(() => {
@@ -22,7 +22,8 @@ export const ContactUsButton = () => {
     <>
       <Confetti active={isClicked} />
       <StandardButton
-        text={'Talk to Us'}
+        alt={alt}
+        text={"Let's talk"}
         onClick={() => {
           setIsClicked(true)
           setTimeout(

@@ -71,20 +71,21 @@ const whatWeDo = [
 export const WhatWeDo = () => {
   return (
     <div className='w-full select-none relative'>
-      <p className='text-center text-lg text-prose mx-2 px-12 pb-10'>
+      <div id='wedo' className='pt-48 -mt-48' />
+      <p className='text-center text-lg text-prose py-10 mx-2 px-12 pb-10  font-paragraph'>
         A range of software services across multiple platforms - web, mobile and
         cloud. We're always looking for ways to improve our services, so if you
         can't see exactly what you need, contact us anyway to see if we can
         help.
       </p>
-      <div className='grid lg:grid-cols-3 gap-4 items-center text-white'>
+      <div className='grid md:grid-cols-2 lg:grid-cols-3 items-center text-white'>
         {whatWeDo.map((item, index) => (
-          <Zoom delay={index * 200}>
+          <Zoom delay={index * 100}>
             <div
-              className={`h-72 md:shadow-lg rounded-3xl justify-center px-8 items-center flex flex-col transition-all transform duration-500`}
+              className={`h-72 justify-center px-8 items-center flex flex-col transition-all transform duration-500`}
               key={index}
             >
-              <Fade top delay={index * 450}>
+              <Fade top delay={index * 45}>
                 <div className='p-4 rounded-full bg-gray-100 m-4'>
                   <FontAwesomeIcon
                     className='w-12 h-12 buzz-out-on-hover text-accent-1'
@@ -93,7 +94,7 @@ export const WhatWeDo = () => {
                 </div>
               </Fade>
               <div className='flex flex-row flex-wrap justify-evenly items-center'>
-                <Fade left delay={index * 300}>
+                <Fade left delay={index * 30}>
                   <h3
                     className={`text-3xl md:text-xl transition-all font-brand text-center text-accent-1`}
                   >
@@ -101,8 +102,8 @@ export const WhatWeDo = () => {
                   </h3>
                 </Fade>
               </div>
-              <Fade bottom delay={index * 500}>
-                <p className='mt-4 mb-2 text-prose text-center'>
+              <Fade bottom delay={index * 50}>
+                <p className='mt-4 mb-2 font-paragraph text-prose text-center'>
                   {item.subtitle}
                 </p>
               </Fade>

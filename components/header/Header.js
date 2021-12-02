@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 import { useScroll } from '../../hooks/useScroll'
-import { ContactUsButton } from '../buttons/ContactUsButton'
+import { StandardButton } from '../buttons/StandardButton'
 import Clouds from '../clouds/Clouds'
 
 const FADE_OUT_THRESHOLD = 480
@@ -11,20 +11,20 @@ const HIDE_THRESHOLD = 520
 
 const links = [
   {
-    name: 'What we do',
+    name: 'Our Services',
     href: '#wedo'
   },
   {
-    name: 'Our Skillset',
-    href: '#skillset'
+    name: 'Our Mission',
+    href: '#mission'
   },
   // {
   //   name: 'Our Process',
   //   href: '#process'
   // },
   {
-    name: 'Contact Us',
-    href: '#contact'
+    name: 'Our Skillset',
+    href: '#skillset'
   }
 ]
 
@@ -84,8 +84,26 @@ export const Header = () => {
             setIsMobileHeaderOpen={setIsMobileHeaderOpen}
             isMobileHeaderOpen={isMobileHeaderOpen}
           />
+          {isMobileHeaderOpen ? (
+            <div className='md:hidden block'>
+              <a onClick={() => setIsMobileHeaderOpen(false)} href={'#contact'}>
+                <p className='hover:bg-gray-100 hover:text-accent-1 transition-all text-3xl md:text-lg duration-500 ml-2 mr-2 p-2 pl-4 pr-4 rounded-xl'>
+                  Let's talk
+                </p>
+              </a>
+            </div>
+          ) : null}
           <div className='hidden md:block'>
-            <ContactUsButton />
+            <StandardButton
+              text="Let's talk"
+              onClick={() => {
+                const violation = document.getElementById('contact')
+                window.scrollTo({
+                  top: violation.offsetTop,
+                  behavior: 'smooth'
+                })
+              }}
+            />
           </div>
         </div>
       </header>
@@ -153,12 +171,7 @@ export const Header = () => {
         bottom-0 bg-white z-50 w-full px-5 py-4 flex justify-between items-center duration-500 transform transition-all`}
       >
         <div dangerouslySetInnerHTML={{ __html: clutchWidget }}></div>
-        <div className='flex justify-end items-center'>
-          <p className='hidden md:block transition-all opacity-0 md:opacity-100 font-paragraph font-semibold text-accent-3 text-right'>
-            See how we can help you with your project:
-          </p>
-          <ContactUsButton />
-        </div>
+        <div className='flex justify-end items-center'></div>
       </header>
     </>
   )
