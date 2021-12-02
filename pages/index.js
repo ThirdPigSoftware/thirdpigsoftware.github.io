@@ -10,7 +10,7 @@ export const CloudSection = ({ id, children, header }) => (
     <Clouds />
     <div className='bg-white'>
       <div className='pb-12 container mx-auto'>
-        <Zoom>{header}</Zoom>
+        {header}
         <div>{children}</div>
       </div>
     </div>
@@ -20,16 +20,20 @@ export const CloudSection = ({ id, children, header }) => (
 
 const OurHeading = ({ title }) => (
   <div className='select-none flex flex-row items-center justify-center'>
-    <h3
-      className={`text-2xl pr-2 pt-4  md:text-5xl uppercase font-brand text-center text-accent-1`}
-    >
-      Our
-    </h3>
-    <h3
-      className={`text-6xl font-brand pt-4 md:text-8xl uppercase text-center text-accent-1`}
-    >
-      {title}
-    </h3>
+    <Zoom>
+      <h3
+        className={`text-2xl pr-2 pt-4  md:text-5xl uppercase font-brand text-center text-accent-1`}
+      >
+        Our
+      </h3>
+    </Zoom>
+    <Zoom delay={500}>
+      <h3
+        className={`text-6xl font-brand pt-4 md:text-8xl uppercase text-center text-accent-1`}
+      >
+        {title}
+      </h3>
+    </Zoom>
   </div>
 )
 
