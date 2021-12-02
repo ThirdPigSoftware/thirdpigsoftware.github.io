@@ -72,7 +72,7 @@ export const WhatWeDo = () => {
   return (
     <div className='w-full select-none relative'>
       <div id='wedo' className='pt-48 -mt-48' />
-      <p className='text-center text-lg text-prose py-10 mx-2 px-12 pb-10  font-paragraph'>
+      <p className='text-center text-lg text-prose mx-2 px-12 pb-2  font-paragraph'>
         A range of software services across multiple platforms - web, mobile and
         cloud. We're always looking for ways to improve our services, so if you
         can't see exactly what you need, contact us anyway to see if we can

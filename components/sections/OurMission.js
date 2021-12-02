@@ -6,24 +6,24 @@ export const OurMission = () => {
   return (
     <div className='mt-2 text-black select-none flex flex-row flex-wrap justify-center items-start font-paragraph'>
       <div id='mission' className='pt-48 -mt-48' />
-      <div className='mt-2 m-10 mb-2 md:mb-0 md:m-0 md:pr-12'>
+      <div className='mb-2 md:mb-0 md:m-0 md:pr-12'>
         <Fade left>
           <img
             style={{ borderWidth: 10 }}
             src='/static/images/andy.jpeg'
-            className='rounded-full shadow-lg border-white'
+            className='rounded-full shadow-xl border-white'
             width={200}
           />
         </Fade>
       </div>
       <Zoom>
-        <div className='p-10 md:p-0 text-prose w-full md:w-1/2'>
+        <div className='p-10 md:p-0 leading-7 text-prose w-full md:w-1/2'>
           <p className='text-xl'>
             "Hi I'm Andy 👋, founder of Third Pig Software.
           </p>
           <p className='mt-2'>
-            It happens too often: software teams promise a dream, but deliver a
-            nightmare.
+            It happens too often:{' '}
+            <b>software teams promise a dream, but deliver a nightmare.</b>
           </p>
           <p className='mt-2'>
             You handover the reigns of your idea or concept to a team of
@@ -47,14 +47,14 @@ export const OurMission = () => {
             impact our revenue.
           </p>
           <p className='mt-2'>
-            We'll always highlight to you the simplest available solution and
+            <b>We'll always highlight the simplest solution available</b> and
             will always try to suggest something small over something that will
             allow us to invoice more.
           </p>
           <p className='mt-2'>
             Above all else we believe in making our customers successful."
           </p>
-          <p className='mt-2 text-accent-1 font-bold'>
+          <p className='mt-2 text-lg text-accent-1 font-bold'>
             - Andy Macdonald, Founder
           </p>
         </div>

@@ -1,9 +1,9 @@
+import Zoom from 'react-reveal/Zoom'
 import Clouds from '../components/clouds/Clouds'
 import { ContactSection } from '../components/sections/ContactSection'
 import { OurMission } from '../components/sections/OurMission'
 import { OurSkillSet } from '../components/sections/OurSkillSet'
 import { WhatWeDo } from '../components/sections/WhatWeDo'
-import Zoom from 'react-reveal/Zoom'
 
 export const CloudSection = ({ id, children, header }) => (
   <div id={id}>
@@ -19,7 +19,7 @@ export const CloudSection = ({ id, children, header }) => (
 )
 
 const OurHeading = ({ title }) => (
-  <div className='select-none flex flex-row items-center justify-center'>
+  <div className='select-none transform scale-75 flex flex-row items-center justify-center'>
     <Zoom>
       <h3
         className={`text-2xl pr-2 pt-4  md:text-5xl uppercase font-brand text-center text-accent-1`}

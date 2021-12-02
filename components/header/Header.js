@@ -55,10 +55,10 @@ export const Header = () => {
         className={`fixed top-0 bg-white z-50 w-full px-5 py-4 flex flex-col md:flex-row justify-between items-center duration-500 transform transition-all`}
       >
         <div className='flex flex-row w-full md:w-auto justify-between items-center'>
-          <div>
+          <div className='bg-gray-200 shadow-xl h-12 w-12 rounded-full flex items-center justify-center'>
             <a onClick={() => setIsMobileHeaderOpen(false)} href='#'>
               <img
-                className={`select-none buzz-out-on-hover w-12 md:w-14 ml-4 mr-2`}
+                className={`select-none buzz-out-on-hover w-12 md:w-14`}
                 src={'/static/logo.png'}
               />
             </a>

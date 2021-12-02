@@ -1,10 +1,11 @@
 import { ContactUsButton } from '../buttons/ContactUsButton'
 import Clouds from '../clouds/Clouds'
+import { ContactOptions } from '../contact/ContactOptions'
 
 export default function Footer () {
   return (
     <footer className='text-gray-600 font-paragraph'>
-      <div className='container px-5 py-24 mx-auto flex items-center md:flex-row md:flex-nowrap flex-wrap flex-col'>
+      <div className='container px-5 mx-auto flex items-center md:flex-row md:flex-nowrap flex-wrap flex-col'>
         <div className='flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center'>
           <div className='lg:w-1/4 md:w-1/2 w-full px-4'></div>
           <div className='lg:w-1/4 md:w-1/2 w-full px-4'></div>
@@ -27,26 +28,7 @@ export default function Footer () {
             </div>
             <div>
               <div className='mt-2 text-2xl flex flex-row justify-evenly items-center'>
-                <div>
-                  <a href='mailto:hello@thirdpigsoftware.com'>
-                    <i className='fa fa-envelope ml-2'></i>
-                  </a>
-                </div>
-                <div>
-                  <a href='tel:07956000356'>
-                    <i className='fa fa-phone ml-2'></i>
-                  </a>
-                </div>
-                <div>
-                  <a href='https://twitter.com/ThirdPigTech'>
-                    <i className='fab fa-twitter ml-2'></i>
-                  </a>
-                </div>
-                <div>
-                  <a href='https://www.linkedin.com/company/third-pig-software/'>
-                    <i className='fab fa-linkedin-in ml-2'></i>
-                  </a>
-                </div>
+                <ContactOptions />
               </div>
             </div>
             <div className='mt-4'>
