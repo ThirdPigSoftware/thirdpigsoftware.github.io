@@ -22,7 +22,7 @@ export const OurMission = () => {
         </p>
         <p className='mt-2'>
           You handover the reigns of your idea or concept to a team of technical
-          experts, who build and build and build, but miss the mark because they
+          experts, who build and build and build 🔨, but miss the mark because they
           failed to understand your business or the project requirements right
           at the beginning.
         </p>
