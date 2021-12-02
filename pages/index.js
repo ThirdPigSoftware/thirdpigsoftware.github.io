@@ -3,13 +3,14 @@ import { ContactSection } from '../components/sections/ContactSection'
 import { OurMission } from '../components/sections/OurMission'
 import { OurSkillSet } from '../components/sections/OurSkillSet'
 import { WhatWeDo } from '../components/sections/WhatWeDo'
+import Zoom from 'react-reveal/Zoom'
 
 export const CloudSection = ({ id, children, header }) => (
   <div id={id}>
     <Clouds />
     <div className='bg-white'>
       <div className='pb-12 container mx-auto'>
-        {header}
+        <Zoom>{header}</Zoom>
         <div>{children}</div>
       </div>
     </div>
@@ -45,9 +46,7 @@ export default function IndexPage () {
           </CloudSection>
         </div>
 
-        <CloudSection
-          header={<OurHeading title={'Mission'} />}
-        >
+        <CloudSection header={<OurHeading title={'Mission'} />}>
           <OurMission />
         </CloudSection>
         <div>
