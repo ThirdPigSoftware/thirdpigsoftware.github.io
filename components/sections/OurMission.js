@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Fade'
 export const OurMission = () => {
   return (
     <>
-      <div id='mission' className='pt-48 -mt-48' />
+      <div id='mission' className='pt-48 -mt-48 mb-5' />
       <div className='mt-2 text-black select-none flex flex-row flex-wrap items-start justify-center font-paragraph'>
         <Zoom>
           <div className='p-10 md:p-0 leading-7 md:text-right text-prose w-full md:w-1/2'>
@@ -47,7 +47,7 @@ export const OurMission = () => {
                 that will allow us to invoice more.
               </p>
             </div>
-            <p className='mt-2'>
+            <p className='mt-2 text-xl text-left font-semibold'>
               Above all else we believe in making our customers successful.
             </p>
             <p className='mt-2 text-lg text-accent-1 font-bold'>
@@ -58,15 +58,15 @@ export const OurMission = () => {
         <div className='md:pl-12 flex md:flex-col justify-center flex-wrap items-center'>
           <Fade left>
             <img
-              style={{ borderWidth: 10 }}
+              style={{ borderWidth: 8 }}
               src='/static/images/andy.jpeg'
-              className='rounded-full shadow-xl border-white h-32 w-32 md:h-52 md:w-52'
+              className='rounded-full shadow-xl border-white md:mt-5 h-32 w-32 md:h-64 md:w-64'
             />
           </Fade>
           <Fade left>
             <div
-              style={{ borderWidth: 10 }}
-              className='bg-gray-200 shadow-xl border-white md:mt-20 w-48 h-48 md:h-72 md:w-72 rounded-full flex items-center justify-center'
+              style={{ borderWidth: 8 }}
+              className='bg-gray-200 shadow-xl border-white md:mt-5 w-48 h-48 md:h-72 md:w-72 rounded-full flex items-center justify-center'
             >
               <img
                 className={`select-none buzz-out-on-hover w-48 md:w-72`}
