@@ -30,7 +30,7 @@ export const OurMission = () => {
                   We believe in getting to know your business at a deep level
                 </b>{' '}
                 - we want to know how things currently tick, your future goals
-                and your aspirations; then help you deliver the value you need
+                and your aspirations; then to help you quickly deliver the value you need
                 to achieve them 🚀.
               </p>
               <p className='mt-3'>
