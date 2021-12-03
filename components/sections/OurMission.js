@@ -9,7 +9,7 @@ export const OurMission = () => {
       <div className='text-black select-none flex flex-row flex-wrap items-center justify-center font-paragraph'>
         <Zoom>
           <div className='p-10 md:p-0 leading-7 md:text-right text-prose w-full md:w-2/3 md:pr-16'>
-            <p className='font-bold text-3xl text-accent-2'>
+            <p className='font-bold text-3xl'>
               Hi I'm Andy 👋, founder of Third Pig Software.
             </p>
             <p className='mt-2'>
