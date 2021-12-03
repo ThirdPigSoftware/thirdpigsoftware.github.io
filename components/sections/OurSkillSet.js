@@ -24,7 +24,7 @@ export const OurSkillSet = () => {
           .slice(0, showAll ? techSkills.length : 15)
           .map(techSkill => (
             <Fade left>
-              <div className='text-center md:h-48 w-1/2 select-none p-10 md:w-1/5 flex flex-col items-center justify-center'>
+              <div className='text-center md:h-36 w-1/2 select-none p-10 md:w-1/5 flex flex-col items-center justify-center'>
                 <img
                   className='buzz-out-on-hover'
                   width={60}
