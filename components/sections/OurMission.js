@@ -30,7 +30,7 @@ export const OurMission = () => {
         </Zoom>
         <Fade left>
           <img
-            style={{ borderWidth: 5 }}
+            style={{ borderWidth: 8 }}
             src='/static/images/andy.jpeg'
             className='rounded-full shadow-xl border-white h-32 w-32 mb-10 md:mb-0 md:-mt-2 md:h-48 md:w-48'
           />
@@ -38,7 +38,7 @@ export const OurMission = () => {
         <div className='flex flex-row flex-wrap items-center justify-center leading-7 md:text-right text-prose'>
           <Fade left>
             <div
-              style={{ borderWidth: 5 }}
+              style={{ borderWidth: 8 }}
               className='bg-gray-200 shadow-xl border-white w-48 h-48 rounded-full flex items-center justify-center'
             >
               <img
