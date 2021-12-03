@@ -19,7 +19,7 @@ export const OurSkillSet = () => {
           more:
         </p>
       </div>
-      <div className='pt-0 md:px-12 pb-0 flex flex-row flex-wrap justify-center items-center'>
+      <div className='md:pt-2 md:px-12 pb-0 flex flex-row flex-wrap justify-center items-center'>
         {techSkills
           .slice(0, showAll ? techSkills.length : 15)
           .map(techSkill => (
@@ -27,13 +27,11 @@ export const OurSkillSet = () => {
               <div className='text-center md:h-36 w-1/2 select-none p-10 md:w-1/5 flex flex-col items-center justify-center'>
                 <img
                   className='buzz-out-on-hover'
-                  width={60}
+                  width={50}
                   src={`/static/images/${techSkill.url}`}
                 />
                 <p
-                  className={`${
-                    techSkill.name.length >= 14 ? 'text-sm' : ''
-                  } m-2 w-full font-semibold`}
+                  className={`text-sm m-2 w-full text-prose font-semibold`}
                 >
                   {techSkill.name}
                 </p>
