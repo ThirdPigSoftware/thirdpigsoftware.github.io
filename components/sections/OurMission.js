@@ -32,14 +32,14 @@ export const OurMission = () => {
           <img
             style={{ borderWidth: 8 }}
             src='/static/images/andy.jpeg'
-            className='rounded-full shadow-xl border-white h-32 w-32 mb-10 md:mb-10 md:mt-10 md:h-48 md:w-48 hidden md:block'
+            className='rounded-full shadow-xl border-prose h-32 w-32 mb-10 md:mb-10 md:mt-10 md:h-48 md:w-48 hidden md:block'
           />
         </Fade>
         <div className='flex flex-row flex-wrap items-center justify-center leading-7 md:text-right text-prose'>
           <Fade left>
             <div
               style={{ borderWidth: 8 }}
-              className='bg-gray-200 shadow-xl border-white w-52 h-52 md:-mt-10 rounded-full flex items-center justify-center hidden md:flex'
+              className='bg-gray-200 shadow-xl border-accent-2 w-52 h-52 md:-mt-5 rounded-full flex items-center justify-center hidden md:flex'
             >
               <img
                 className={`select-none buzz-out-on-hover w-52`}
