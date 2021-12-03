@@ -8,7 +8,7 @@ export const OurMission = () => {
       <div id='mission' className='pt-48 -mt-48 mb-5' />
       <div className='mt-2 text-black select-none flex flex-row flex-wrap items-center justify-center font-paragraph'>
         <Zoom>
-          <div className='p-10 md:p-0 leading-7 md:text-right text-prose w-full md:w-2/3 md:pr-10'>
+          <div className='p-10 md:p-0 leading-7 md:text-right text-prose w-full md:w-2/3 md:pr-24'>
             <p className='font-bold text-3xl'>
               Hi I'm Andy 👋, founder of Third Pig Software.
             </p>
@@ -32,14 +32,14 @@ export const OurMission = () => {
           <img
             style={{ borderWidth: 8 }}
             src='/static/images/andy.jpeg'
-            className='rounded-full shadow-xl border-white h-32 w-32 mb-10 md:mb-0 md:-mt-2 md:h-48 md:w-48'
+            className='rounded-full shadow-xl border-white h-32 w-32 mb-10 md:mb-10 md:mt-10 md:h-48 md:w-48 hidden md:block'
           />
         </Fade>
         <div className='flex flex-row flex-wrap items-center justify-center leading-7 md:text-right text-prose'>
           <Fade left>
             <div
               style={{ borderWidth: 8 }}
-              className='bg-gray-200 shadow-xl border-white w-48 h-48 rounded-full flex items-center justify-center'
+              className='bg-gray-200 shadow-xl border-white w-48 h-48 rounded-full flex items-center justify-center hidden md:flex'
             >
               <img
                 className={`select-none buzz-out-on-hover w-48`}
@@ -48,7 +48,7 @@ export const OurMission = () => {
             </div>
           </Fade>
           <Fade right>
-            <div className='md:ml-10 px-10 md:px-0 my-5 text-left w-full md:w-2/3'>
+            <div className='md:ml-24 px-10 md:px-0 my-5 mb-10 text-left w-full md:w-2/3'>
               <p>
                 <b className='text-lg'>
                   We believe in getting to know your business at a deep level
@@ -75,8 +75,8 @@ export const OurMission = () => {
         </div>
         <Fade bottom>
           <div className='flex flex-col items-center justify-center py-2'>
-            <p className='text-3xl px-10 text-left text-prose font-semibold'>
-              Above all else we believe in making our customers successful.
+            <p className='text-2xl px-10 text-left text-prose'>
+              Above all else <i className="not-italic font-semibold">we believe in making our customers successful.</i>
             </p>
             <p className='mt-2 text-lg py-4 text-accent-1 font-bold'>
               - Andy Macdonald, Founder
