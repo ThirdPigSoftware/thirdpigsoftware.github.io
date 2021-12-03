@@ -6,7 +6,7 @@ export const OurMission = () => {
   return (
     <>
       <div id='mission' className='pt-52 -mt-52' />
-      <div className='text-black select-none flex flex-row flex-wrap items-center justify-center font-paragraph'>
+      <div className='select-none flex flex-row flex-wrap items-center justify-center font-paragraph'>
         <Zoom>
           <div className='p-10 md:p-0 leading-7 md:text-left text-prose w-full md:w-1/2 md:pr-16'>
             <p className='font-bold text-2xl'>
@@ -29,16 +29,15 @@ export const OurMission = () => {
         <Fade left>
           <div>
             <img
-              style={{ borderWidth: 4 }}
               src='/static/images/andy.jpeg'
-              className='rounded-full shadow-lg border-white md:mb-10 md:mt-10 md:h-48 md:w-48 hidden md:block'
+              className='rounded-full shadow-lg md:mb-10 md:mt-10 md:h-48 md:w-48 hidden md:block'
             />
           </div>
         </Fade>
         <div className='flex flex-row flex-wrap items-start justify-center leading-7 md:text-right text-prose'>
           <Fade left>
             <div
-              style={{ borderWidth: 4 }}
+
               className='bg-gray-200 shadow-lg border-white w-52 h-52 rounded-full items-center justify-center hidden md:flex'
             >
               <img

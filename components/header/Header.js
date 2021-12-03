@@ -79,6 +79,15 @@ const Banner = () => (
           </p>
         </div>
       </Fade>
+      <div className='m-2 text-lg'>
+        <StandardButton
+          icon="fas fa-cogs"
+          text='See what we do'
+          onClick={() => {
+            document.getElementById('wedo')?.scrollIntoView()
+          }}
+        />
+      </div>
     </div>
   </div>
 )
@@ -139,6 +148,7 @@ export const Header = () => {
           <div className='hidden md:block'>
             <StandardButton
               text="Let's talk"
+              icon="fas fa-comments"
               onClick={() => {
                 const violation = document.getElementById('contact')
                 window.scrollTo({

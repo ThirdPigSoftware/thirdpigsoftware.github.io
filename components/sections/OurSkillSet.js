@@ -9,12 +9,12 @@ export const OurSkillSet = () => {
     <div className='text-black flex flex-col items-center  font-paragraph'>
       <div id='skillset' className='pt-52 -mt-52' />
       <div className='mx-5 text-prose'>
-        <p className='text-center px-10 pb-2 text-lg'>
+        <p className='text-center px-10 md:px-32 pb-2 '>
           We're polyglots and not precious over using specific tools or
           languages. We adapt our services to you and the needs of the project,
           picking the right technology for the task at hand.
         </p>
-        <p className='text-center text-lg'>
+        <p className='text-center'>
           We have plenty of well-honed skills and are always willing to adopt
           more:
         </p>
@@ -30,9 +30,7 @@ export const OurSkillSet = () => {
                   width={50}
                   src={`/static/images/${techSkill.url}`}
                 />
-                <p
-                  className={`text-sm m-2 w-full font-brand text-prose`}
-                >
+                <p className={`text-sm m-2 w-full font-brand text-prose`}>
                   {techSkill.name}
                 </p>
               </div>
@@ -40,6 +38,7 @@ export const OurSkillSet = () => {
           ))}
       </div>
       <StandardButton
+        icon={`${showAll ? 'fas fa-chevron-circle-up' : 'fas fa-chevron-circle-down'}`}
         onClick={() => {
           setShowAll(!showAll)
           if (showAll) {

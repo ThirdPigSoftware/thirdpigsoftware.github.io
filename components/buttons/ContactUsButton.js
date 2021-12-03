@@ -23,6 +23,8 @@ export const ContactUsButton = ({ alt }) => {
       <Confetti active={isClicked} />
       <StandardButton
         alt={alt}
+        textSize={'text-3xl'}
+        icon="fas fa-comments"
         text={"Let's talk"}
         onClick={() => {
           setIsClicked(true)

@@ -1,10 +1,21 @@
-export const StandardButton = ({ text, onClick, alt }) => (
+export const StandardButton = ({
+  text,
+  onClick,
+  textSize = '',
+  alt,
+  border,
+  icon = false
+}) => (
   <button
-    className={`p-4 md:px-10 py-2 ml-2 ${
-      alt ? 'border-2 text-white' : 'bg-accent-1  text-white'
-    } font-bold rounded-2xl border-white buzz-out-on-hover`}
+    className={`pl-6 pr-4 py-2 ml-2 
+    ${alt ? 'border-2 text-white' : 'bg-accent-3 text-white hover:bg-accent-1'} 
+    font-bold 
+    ${border ? 'border-2' : ''} 
+    rounded-2xl border-white 
+    ${textSize} buzz-out-on-hover transition-all duration-200`}
     onClick={onClick}
   >
+    {icon ? <i className={`${icon} mr-2 -ml-2`}></i> : null}
     {text}
   </button>
 )

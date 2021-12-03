@@ -16,9 +16,9 @@ export default function Footer () {
 
       <Clouds />
       <div className='bg-white font-paragraph'>
-        <div className='container mx-auto py-4 px-5 flex items-center justify-center flex-wrap flex-col sm:flex-row'>
+        <div className='container mx-auto px-5 flex items-center justify-center flex-wrap flex-row sm:flex-row'>
           <p className='text-prose text-sm text-center'>
-            <div className='mt-2 text-xs'>
+            <div className='mt-4 text-xs flex items-center flex-col'>
               <p className='font-brand text-lg'>Third Pig Software Ltd</p>
               71-75 Shelton Street
               <br />
@@ -32,7 +32,7 @@ export default function Footer () {
               </div>
             </div>
             <div className='mt-4'>
-              <p className='text-xs font-paragraph mb-32'>
+              <p className='text-xs font-paragraph mb-24'>
                 © Third Pig Software Ltd. Registered in England &amp; Wales No.
                 13536155. VAT No. GB387162177.
               </p>

@@ -4,6 +4,7 @@ import {
   faChalkboardTeacher,
   faCloud,
   faCodeBranch,
+  faCogs,
   faInfinity,
   faLaptopCode,
   faMedkit,
@@ -23,7 +24,7 @@ const whatWeDo = [
       "We'll take your requirements and deliver an MLP (minimum 'loveable' product)!"
   },
   {
-    icon: faCodeBranch,
+    icon: faCogs,
     title: 'Platform & Infrastructure Development',
     subtitle:
       'World class services around platform and infrastructure development.'
@@ -83,10 +84,10 @@ export const WhatWeDo = () => {
     <div className='w-full select-none relative'>
       <div id='wedo' className='pt-72 -mt-72' />
       <Fade top>
-        <p className='text-center text-lg text-prose mx-2 px-12 pb-2  font-paragraph transition-all duration-500'>
+        <p className='text-center text-prose text-lg md:text-base mx-2 px-12 md:px-32 pb-2  font-paragraph transition-all duration-500'>
           A range of software services across multiple platforms - web, mobile
           and cloud. We're always looking for ways to improve our services, so
-          if you can't see exactly what you need, contact us anyway to see if we
+          if you can't see exactly what you need, <a className="font-semibold" href="#contact">contact us anyway</a> to see if we
           can help.
         </p>
       </Fade>
