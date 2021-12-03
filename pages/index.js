@@ -1,3 +1,4 @@
+import Fade from 'react-reveal/Fade'
 import Zoom from 'react-reveal/Zoom'
 import Clouds from '../components/clouds/Clouds'
 import { ContactSection } from '../components/sections/ContactSection'
@@ -5,11 +6,16 @@ import { OurMission } from '../components/sections/OurMission'
 import { OurSkillSet } from '../components/sections/OurSkillSet'
 import { WhatWeDo } from '../components/sections/WhatWeDo'
 
-export const CloudSection = ({ id, children, header }) => (
+export const CloudSection = ({
+  id,
+  children,
+  header,
+  withContainer = true
+}) => (
   <div id={id}>
     <Clouds />
     <div className='bg-white'>
-      <div className='pb-12 container mx-auto'>
+      <div className={`${withContainer ? 'pb-12 container mx-auto' : ''}`}>
         {header}
         <div>{children}</div>
       </div>
@@ -21,18 +27,18 @@ export const CloudSection = ({ id, children, header }) => (
 const OurHeading = ({ title }) => (
   <div className='select-none transform scale-75 flex flex-row items-center justify-center'>
     <Zoom>
-      <h3
-        className={`text-2xl pr-2 pt-4  md:text-5xl uppercase font-brand text-center text-accent-1`}
+      <span
+        className={`text-2xl pr-2 pt-4   md:text-5xl uppercase font-brand text-center text-accent-1`}
       >
         Our
-      </h3>
+      </span>
     </Zoom>
     <Zoom delay={500}>
-      <h3
+      <span
         className={`text-6xl font-brand pt-4 md:text-8xl uppercase text-center text-accent-1`}
       >
         {title}
-      </h3>
+      </span>
     </Zoom>
   </div>
 )
@@ -54,33 +60,35 @@ export default function IndexPage () {
           <OurMission />
         </CloudSection>
         <div>
-          <div className='py-20 px-20 md:px-96 container'>
-            <h3
-              style={{
-                zIndex: 9999999,
-                WebkitTextStrokeWidth: '2px',
-                WebkitTextStrokeColor: 'white'
-              }}
-              className='text-4xl font-bold uppercase text-center md:text-left'
-            >
-              More than just another piggin' consultancy.
-            </h3>
-            <p className='mt-5 text-accent-2 text-center md:text-left text-2xl font-paragraph'>
-              <b>Not just bums on seats</b>. We'll work to thoroughly understand
-              your business goals and act like a partner, not an outsourcer.
-            </p>
-          </div>
+          <Fade bottom>
+            <div className='py-20 px-20 md:px-96 container'>
+              <h3
+                style={{
+                  zIndex: 9999999,
+                  WebkitTextStrokeWidth: '2px',
+                  WebkitTextStrokeColor: 'white'
+                }}
+                className='text-3xl font-bold uppercase text-center md:text-left'
+              >
+                More than just another piggin' consultancy.
+              </h3>
+              <p className='mt-5 text-accent-2 text-center md:text-left text-xl font-paragraph'>
+                <b>Not just bums on seats</b>. We'll work to thoroughly
+                understand your business goals and act like a partner, not an
+                outsourcer.
+              </p>
+            </div>
+          </Fade>
         </div>
-        {/* <CloudSection
-          id='process'
-          header={<OurHeading title={'Process'} />}
-        ></CloudSection> */}
         <CloudSection header={<OurHeading title={'Skillset'} />}>
           <OurSkillSet />
         </CloudSection>
         <div className='pt-72 -mt-72' id='contact'>
           <ContactSection />
         </div>
+        {/* <CloudSection id='flyingpigs' withContainer={false}>
+          <FlyingPigs />
+        </CloudSection> */}
       </div>
     </div>
   )

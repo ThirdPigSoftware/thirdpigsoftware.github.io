@@ -43,6 +43,46 @@ const Navigation = ({ isMobileHeaderOpen, setIsMobileHeaderOpen }) =>
     </div>
   ))
 
+const Banner = () => (
+  <div
+    className={`flex mt-12 md:mt-auto transition-all transform md:h-screen flex-row flex-wrap items-center`}
+  >
+    <div
+      className={`buzz-out-on-hover flex items-center flex-col justify-center`}
+    >
+      <img
+        style={{ zIndex: 9999999 }}
+        className={`w-1/2 md:-mt-12 buzz-out-on-hover md:w-1/4 mb-10 md:mb-0`}
+        src={'/static/logo.png'}
+      />
+      <Fade delay={200}>
+        <h1
+          style={{
+            zIndex: 9999999
+          }}
+          className={`select-none font-brand text-accent-3 text-5xl md:text-7xl`}
+        >
+          Third Pig <i className='not-italic'>Software</i>
+        </h1>
+      </Fade>
+      <Fade delay={700}>
+        <div>
+          <p
+            style={{
+              zIndex: 9999999,
+              color: '#1a0041'
+            }}
+            className='p-2 md:p-0 text-xl transition-all duration-500 opacity-80 select-none'
+          >
+            Experts in the delivery of high quality, high-impact software
+            solutions.
+          </p>
+        </div>
+      </Fade>
+    </div>
+  </div>
+)
+
 export const Header = () => {
   const [isMobileHeaderOpen, setIsMobileHeaderOpen] = React.useState(false)
   const { scrollY } = useScroll()
@@ -121,41 +161,7 @@ export const Header = () => {
         style={{ zIndex: 9999999 }}
         className={`mt-24 w-full md:mt-12 transition-all text-2xl relative md:text-4xl text-center items-center flex flex-col transition-all transform`}
       >
-        <div
-          className={`flex mt-12 md:mt-auto transition-all transform md:h-screen flex-row flex-wrap items-center`}
-        >
-          <div
-            className={`buzz-out-on-hover flex items-center flex-col justify-center`}
-          >
-            <img
-              style={{ zIndex: 9999999 }}
-              className={`w-1/2 md:-mt-12 buzz-out-on-hover md:w-1/4 mb-10 md:mb-0`}
-              src={'/static/logo.png'}
-            />
-            <Fade delay={200}>
-              <h3
-                style={{
-                  zIndex: 9999999
-                }}
-                className={`select-none font-brand text-accent-3 text-5xl md:text-7xl`}
-              >
-                Third Pig <i className='not-italic'>Software</i>
-              </h3>
-            </Fade>
-            <Fade delay={700}>
-              <p
-                style={{
-                  zIndex: 9999999,
-                  color: '#1a0041'
-                }}
-                className='p-2 md:p-0 text-xl transition-all duration-500 opacity-80 select-none'
-              >
-                Experts in the delivery of high quality, high-impact software
-                solutions.
-              </p>
-            </Fade>
-          </div>
-        </div>
+        <Banner />
       </div>
       <div
         className={`fixed  ${

@@ -7,7 +7,7 @@ export const OurSkillSet = () => {
   const [showAll, setShowAll] = React.useState(false)
   return (
     <div className='text-black flex flex-col items-center  font-paragraph'>
-      <div id='skillset' className='pt-48 -mt-48' />
+      <div id='skillset' className='pt-52 -mt-52' />
       <div className='mx-5 text-prose'>
         <p className='text-center px-10 pb-2 text-lg'>
           We're polyglots and not precious over using specific tools or
@@ -19,7 +19,7 @@ export const OurSkillSet = () => {
           more:
         </p>
       </div>
-      <div className='md:pt-2 md:px-12 pb-0 flex flex-row flex-wrap justify-center items-center'>
+      <div className='md:pt-2 md:px-12 pb-2 flex flex-row flex-wrap justify-center items-center'>
         {techSkills
           .slice(0, showAll ? techSkills.length : 15)
           .map(techSkill => (
@@ -31,7 +31,7 @@ export const OurSkillSet = () => {
                   src={`/static/images/${techSkill.url}`}
                 />
                 <p
-                  className={`text-sm m-2 w-full text-prose font-semibold`}
+                  className={`text-sm m-2 w-full font-brand text-prose`}
                 >
                   {techSkill.name}
                 </p>
