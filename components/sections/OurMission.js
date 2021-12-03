@@ -48,7 +48,7 @@ export const OurMission = () => {
             </div>
           </Fade>
           <Fade right>
-            <div className='md:ml-24 px-10 md:px-0 my-5 mb-10 text-left w-full md:w-2/3'>
+            <div className='md:ml-24 px-10 md:px-0 mb-10 text-left w-full md:w-2/3'>
               <p>
                 <b className='text-lg'>
                   We believe in getting to know your business at a deep level
