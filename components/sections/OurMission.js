@@ -9,7 +9,7 @@ export const OurMission = () => {
       <div className='text-black select-none flex flex-row flex-wrap items-center justify-center font-paragraph'>
         <Zoom>
           <div className='p-10 md:p-0 leading-7 md:text-right text-prose w-full md:w-2/3 md:pr-16'>
-            <p className='font-bold text-3xl'>
+            <p className='font-bold text-3xl text-accent-2'>
               Hi I'm Andy 👋, founder of Third Pig Software.
             </p>
             <p className='mt-2'>
@@ -50,7 +50,7 @@ export const OurMission = () => {
           <Fade right>
             <div className='md:ml-16 md:mt-10 px-10 md:px-0 mb-10 text-left w-full md:w-2/3'>
               <p>
-                <b className='text-lg'>
+                <b className='text-lg text-accent-2'>
                   We believe in getting to know your business at a deep level
                 </b>{' '}
                 - we want to know how things currently tick, your future goals
@@ -58,13 +58,13 @@ export const OurMission = () => {
                 you need to achieve them 🚀.
               </p>
               <p className='mt-3'>
-                <b className='text-lg'>We aren't yes people</b> - we'll
+                <b className='text-lg text-accent-2'>We aren't yes people</b> - we'll
                 challenge you as much as you challenge us. When you work with
                 us, we'll try to do what's best for you as a customer and for
                 the project, regardless of how that would impact our revenue.
               </p>
               <p className='mt-3'>
-                <b className='text-lg'>
+                <b className='text-lg text-accent-2'>
                   We'll always highlight the simplest solution available
                 </b>{' '}
                 - we will always try to suggest something small over something
