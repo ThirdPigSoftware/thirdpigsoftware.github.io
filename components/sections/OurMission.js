@@ -8,7 +8,7 @@ export const OurMission = () => {
       <div id='mission' className='pt-48 -mt-48' />
       <div className='text-black select-none flex flex-row flex-wrap items-center justify-center font-paragraph'>
         <Zoom>
-          <div className='p-10 md:p-0 leading-7 md:text-right text-prose w-full md:w-2/3 md:pr-24'>
+          <div className='p-10 md:p-0 leading-7 md:text-right text-prose w-full md:w-2/3 md:pr-16'>
             <p className='font-bold text-3xl'>
               Hi I'm Andy 👋, founder of Third Pig Software.
             </p>
@@ -39,16 +39,16 @@ export const OurMission = () => {
           <Fade left>
             <div
               style={{ borderWidth: 8 }}
-              className='bg-gray-200 shadow-xl border-white w-48 h-48 rounded-full flex items-center justify-center hidden md:flex'
+              className='bg-gray-200 shadow-xl border-white w-52 h-52 md:-mt-10 rounded-full flex items-center justify-center hidden md:flex'
             >
               <img
-                className={`select-none buzz-out-on-hover w-48`}
+                className={`select-none buzz-out-on-hover w-52`}
                 src={'/static/logo.png'}
               />
             </div>
           </Fade>
           <Fade right>
-            <div className='md:ml-24 px-10 md:px-0 mb-10 text-left w-full md:w-2/3'>
+            <div className='md:ml-16 md:mt-10 px-10 md:px-0 mb-10 text-left w-full md:w-2/3'>
               <p>
                 <b className='text-lg'>
                   We believe in getting to know your business at a deep level
