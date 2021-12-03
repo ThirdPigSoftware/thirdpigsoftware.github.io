@@ -32,7 +32,7 @@ export default function Footer () {
               </div>
             </div>
             <div className='mt-4'>
-              <p className='text-xs font-paragraph'>
+              <p className='text-xs font-paragraph mb-32'>
                 © Third Pig Software Ltd. Registered in England &amp; Wales No.
                 13536155. VAT No. GB387162177.
               </p>

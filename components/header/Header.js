@@ -6,7 +6,7 @@ import { useScroll } from '../../hooks/useScroll'
 import { StandardButton } from '../buttons/StandardButton'
 import Clouds from '../clouds/Clouds'
 
-const FADE_OUT_THRESHOLD = 480
+const FADE_OUT_THRESHOLD = 400
 const HIDE_THRESHOLD = 520
 
 const links = [
@@ -55,7 +55,10 @@ export const Header = () => {
         className={`fixed top-0 bg-white z-50 w-full px-5 py-3 flex flex-col md:flex-row justify-between items-center duration-500 transform transition-all`}
       >
         <div className='flex flex-row w-full md:w-auto justify-between items-center'>
-          <div className='bg-gray-200 shadow-xl h-12 w-12 rounded-full flex items-center justify-center'>
+          <div
+            style={{ borderWidth: 2 }}
+            className='bg-gray-200 border-gray-100 shadow-xl h-12 w-12 rounded-full flex items-center justify-center'
+          >
             <a onClick={() => setIsMobileHeaderOpen(false)} href='#'>
               <img
                 className={`select-none buzz-out-on-hover w-12 md:w-14`}
@@ -165,9 +168,7 @@ export const Header = () => {
       </div>
       <header
         style={{ zIndex: 999999999 }}
-        className={`fixed ${scrollY > HIDE_THRESHOLD ? 'hidden' : ''} ${
-          scrollY > FADE_OUT_THRESHOLD ? 'opacity-0' : 'opacity-100'
-        } 
+        className={`fixed 
         bottom-0 bg-white z-50 w-full px-5 py-4 flex justify-between items-center duration-500 transform transition-all`}
       >
         <div dangerouslySetInnerHTML={{ __html: clutchWidget }}></div>
