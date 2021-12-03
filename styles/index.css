@@ -177,6 +177,11 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @font-face {
   font-family: 'nickname';
   src: url('/static/nickname.otf');
