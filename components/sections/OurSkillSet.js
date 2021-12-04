@@ -6,7 +6,7 @@ import { StandardButton } from '../buttons/StandardButton'
 export const OurSkillSet = () => {
   const [showAll, setShowAll] = React.useState(false)
   return (
-    <div className='text-black flex flex-col items-center  font-paragraph'>
+    <div className='text-black flex flex-col items-center font-paragraph'>
       <div id='skillset' className='pt-52 -mt-52' />
       <div className='mx-5 text-prose'>
         <p className='text-center px-10 md:px-32 pb-2 '>

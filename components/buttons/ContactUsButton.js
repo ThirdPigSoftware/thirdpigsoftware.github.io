@@ -21,22 +21,17 @@ export const ContactUsButton = ({ alt }) => {
   return (
     <>
       <Confetti active={isClicked} />
-      <StandardButton
-        alt={alt}
-        textSize={'text-3xl'}
-        icon="fas fa-comments"
-        text={"Let's talk"}
-        onClick={() => {
-          setIsClicked(true)
-          setTimeout(
-            () =>
-              window.open(
-                'https://share-eu1.hsforms.com/1Tk0yABENQ4uXugEOhJ4NUQezsvg'
-              ),
-            1000
-          )
-        }}
-      />
+      <a target="_blank" href='https://wa.me/447956000356?text=Hi%20there%2C%20I%27d%20like%20to%20know%20more%20about%20the%20services%20Third%20Pig%20Software%20can%20offer%20my%20project.'>
+        <StandardButton
+          alt={alt}
+          textSize={'text-3xl'}
+          icon='fas fa-comments'
+          text={"Let's talk"}
+          onClick={() => {
+            setIsClicked(true)
+          }}
+        />
+      </a>
     </>
   )
 }

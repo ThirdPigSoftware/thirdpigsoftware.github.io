@@ -9,7 +9,7 @@ const contactOptions = [
   },
   {
     href:
-      'https://web.whatsapp.com/send?phone=447956000356&text=Hi%20there%2C%20I%27d%20like%20to%20know%20more%20about%20the%20services%20Third%20Pig%20Software%20can%20offer%20my%20project.',
+      'https://wa.me/447956000356?text=Hi%20there%2C%20I%27d%20like%20to%20know%20more%20about%20the%20services%20Third%20Pig%20Software%20can%20offer%20my%20project.',
     icon: 'fab fa-whatsapp'
   },
   {
