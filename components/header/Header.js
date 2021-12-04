@@ -148,7 +148,7 @@ export const Header = () => {
           <div className='hidden md:block'>
             <StandardButton
               text="Let's talk"
-              icon="fas fa-comments"
+              icon="fab fa-whatsapp"
               onClick={() => {
                 const violation = document.getElementById('contact')
                 window.scrollTo({
