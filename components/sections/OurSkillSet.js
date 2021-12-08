@@ -7,7 +7,7 @@ export const OurSkillSet = () => {
   const [showAll, setShowAll] = React.useState(false)
   return (
     <div className='text-black flex flex-col items-center font-paragraph'>
-      <div id='skillset' className='pt-48 -mt-48' />
+      <div id='skillset' className='pt-40 -mt-40' />
       <div className='mx-5 text-prose'>
         <p className='text-center px-10 md:px-32 pb-2 '>
           We're polyglots and not precious over using specific tools or
