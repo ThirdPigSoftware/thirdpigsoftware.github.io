@@ -18,7 +18,7 @@ export const ContactSection = () => (
       <ContactUsButton />
     </div>
     <p
-      className={`p-5 text-2xl text-center md:text-center transform transition-all text-white`}
+      className={`p-5 text-2xl text-center font-paragraph md:text-center transform transition-all text-white`}
     >
       ...more ways to contact us below:
     </p>

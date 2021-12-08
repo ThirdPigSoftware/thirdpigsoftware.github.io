@@ -8,7 +8,7 @@ export const OurMission = () => {
       <div id='mission' className='pt-52 -mt-52' />
       <div className='select-none flex flex-row flex-wrap items-center justify-center font-paragraph'>
         <Zoom>
-          <div className='p-10 md:p-0 leading-7 md:text-left text-prose w-full md:w-1/2 md:pr-16'>
+          <div className='p-10 md:p-0 text-sm leading-7 md:text-left text-prose w-full md:w-1/2 md:pr-16'>
             <p className='font-bold text-2xl'>
               Hi I'm Andy 👋, founder of Third Pig Software.
             </p>
@@ -30,18 +30,18 @@ export const OurMission = () => {
           <div>
             <img
               src='/static/images/andy.jpeg'
-              className='rounded-full shadow-lg md:mb-10 md:mt-10 md:h-48 md:w-48 hidden md:block'
+              className='rounded-full shadow-lg md:mb-10 md:mt-0 md:h-48 md:w-48 hidden md:block'
             />
           </div>
         </Fade>
-        <div className='flex flex-row flex-wrap items-start justify-center leading-7 md:text-right text-prose'>
+        <div className='flex flex-row flex-wrap items-start justify-center text-sm leading-7 md:text-right text-prose'>
           <Fade left>
             <div
 
-              className='bg-gray-200 shadow-lg border-white w-52 h-52 rounded-full items-center justify-center hidden md:flex'
+              className='bg-gray-200 shadow-lg border-white w-48 h-48 rounded-full items-center justify-center hidden md:flex'
             >
               <img
-                className={`select-none buzz-out-on-hover w-52`}
+                className={`select-none buzz-out-on-hover w-48`}
                 src={'/static/logo.png'}
               />
             </div>
@@ -75,7 +75,7 @@ export const OurMission = () => {
         </div>
         <Fade bottom>
           <div className='flex flex-col items-center justify-center py-2'>
-            <p className='text-2xl px-10 text-left text-prose'>
+            <p className='text-xl px-10 text-left text-prose'>
               Above all else{' '}
               <i className='not-italic font-semibold'>
                 we believe in making our customers successful.

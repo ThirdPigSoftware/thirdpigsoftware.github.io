@@ -81,7 +81,7 @@ const Banner = () => (
       </Fade>
       <div className='m-2 text-lg'>
         <StandardButton
-          icon="fas fa-cogs"
+          icon='fas fa-cogs'
           text='See what we do'
           onClick={() => {
             document.getElementById('wedo')?.scrollIntoView()
@@ -114,6 +114,9 @@ export const Header = () => {
                 src={'/static/logo.png'}
               />
             </a>
+          </div>
+          <div className="hidden md:block ml-5">
+            <div dangerouslySetInnerHTML={{ __html: clutchWidget }}></div>
           </div>
           <div className='flex md:hidden'>
             <button
@@ -148,7 +151,7 @@ export const Header = () => {
           <div className='hidden md:block'>
             <StandardButton
               text="Let's talk"
-              icon="fab fa-whatsapp"
+              icon='fab fa-whatsapp'
               onClick={() => {
                 const violation = document.getElementById('contact')
                 window.scrollTo({
@@ -185,7 +188,7 @@ export const Header = () => {
       <header
         style={{ zIndex: 999999999 }}
         className={`fixed 
-        bottom-0 bg-white z-50 w-full px-5 py-4 flex justify-between items-center duration-500 transform transition-all`}
+        bottom-0 bg-white z-50 w-full px-5 py-4 flex md:hidden justify-between items-center duration-500 transform transition-all`}
       >
         <div dangerouslySetInnerHTML={{ __html: clutchWidget }}></div>
         <div className='flex justify-end items-center'></div>

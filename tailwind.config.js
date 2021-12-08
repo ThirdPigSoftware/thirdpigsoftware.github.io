@@ -16,7 +16,7 @@ module.exports = {
     fontFamily: {
       sans: ['Jost'],
       paragraph: ['Poppins'],
-      roboto: ['Roboto'],
+      montserrat: ['montserrat'],
       brand: ['nickname']
     },
     extend: {
