@@ -141,7 +141,7 @@ export const Header = () => {
               </a>
             </div>
           ) : null}
-          <div className='hidden md:block'>
+          <div className='ml-2 hidden md:block'>
             <StandardButton
               text="Let's talk"
               icon='fab fa-whatsapp'
