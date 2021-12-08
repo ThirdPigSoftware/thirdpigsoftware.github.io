@@ -15,7 +15,7 @@ export default function Footer () {
       </div>
 
       <Clouds />
-      <div className='bg-white font-paragraph'>
+      <div id="details" className='bg-white font-paragraph'>
         <div className='container mx-auto px-5 flex items-center justify-center flex-wrap flex-row sm:flex-row'>
           <p className='text-prose text-sm text-center'>
             <div className='mt-4 text-xs flex items-center flex-col'>

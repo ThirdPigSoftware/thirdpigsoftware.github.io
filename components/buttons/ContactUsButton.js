@@ -19,7 +19,7 @@ export const ContactUsButton = ({ alt }) => {
   }, [isClicked])
 
   return (
-    <>
+    <div className='flex justify-center items-center bg-white p-2 rounded-lg bg-accent-2'>
       <Confetti active={isClicked} />
       <a
         target='_blank'
@@ -34,7 +34,8 @@ export const ContactUsButton = ({ alt }) => {
             setIsClicked(true)
           }}
         />
+        <p className='m-2 text-center'>Talk to us over WhatsApp!</p>
       </a>
-    </>
+    </div>
   )
 }

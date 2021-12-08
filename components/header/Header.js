@@ -106,7 +106,7 @@ export const Header = () => {
         <div className='flex flex-row w-full md:w-auto justify-between items-center'>
           <div
             style={{ borderWidth: 2 }}
-            className='bg-gray-200 border-gray-100 shadow-xl h-12 w-12 rounded-full flex items-center justify-center'
+            className='bg-gray-200 border-gray-100 h-12 w-12 rounded-full flex items-center justify-center'
           >
             <a onClick={() => setIsMobileHeaderOpen(false)} href='#'>
               <img

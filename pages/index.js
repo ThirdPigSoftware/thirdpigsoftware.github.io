@@ -83,7 +83,7 @@ export default function IndexPage () {
         <CloudSection header={<OurHeading title={'Skillset'} />}>
           <OurSkillSet />
         </CloudSection>
-        <div className='pt-72 -mt-72' id='contact'>
+        <div>
           <ContactSection />
         </div>
         {/* <CloudSection id='flyingpigs' withContainer={false}>
