@@ -22,24 +22,20 @@ export const OurMission = () => {
               they failed to understand your business right from the start.
             </p>
             <p>
-              Third Pig was founded because I believe it doesn't have to be like this.
+              Third Pig was founded because I believe it doesn't have to be like
+              this.
             </p>
           </div>
         </Zoom>
         <Fade left>
-          <div>
-            <img
-              src='/static/images/andy.jpeg'
-              className='rounded-full shadow-lg md:mb-10 md:mt-0 md:h-48 md:w-48 hidden md:block'
-            />
-          </div>
+          <img
+            src='/static/images/andy.jpeg'
+            className='rounded-full shadow-lg md:mb-10 md:mt-0 md:h-36 md:w-36 hidden md:block'
+          />
         </Fade>
-        <div className='flex flex-row flex-wrap items-start justify-center text-sm leading-7 md:text-right text-prose'>
+        <div className='flex flex-row flex-wrap md:m-8 items-start justify-center text-sm leading-7 md:text-right text-prose'>
           <Fade left>
-            <div
-
-              className='bg-gray-200 shadow-lg border-white w-48 h-48 rounded-full items-center justify-center hidden md:flex'
-            >
+            <div className='bg-gray-200 shadow-lg border-white w-48 h-48 rounded-full items-center justify-center hidden md:flex'>
               <img
                 className={`select-none buzz-out-on-hover w-48`}
                 src={'/static/logo.png'}
@@ -72,20 +68,20 @@ export const OurMission = () => {
               </p>
             </div>
           </Fade>
+          <Fade bottom>
+            <div className='flex flex-col items-center justify-center'>
+              <p className='text-xl px-10 text-left text-prose'>
+                Above all else{' '}
+                <i className='not-italic font-semibold'>
+                  we believe in making our customers successful.
+                </i>
+              </p>
+              <p className='mt-2 text-lg text-accent-1 font-bold'>
+                - Andy Macdonald, Founder
+              </p>
+            </div>
+          </Fade>
         </div>
-        <Fade bottom>
-          <div className='flex flex-col items-center justify-center py-2'>
-            <p className='text-xl px-10 text-left text-prose'>
-              Above all else{' '}
-              <i className='not-italic font-semibold'>
-                we believe in making our customers successful.
-              </i>
-            </p>
-            <p className='mt-2 text-lg py-4 text-accent-1 font-bold'>
-              - Andy Macdonald, Founder
-            </p>
-          </div>
-        </Fade>
       </div>
     </>
   )

@@ -36,7 +36,7 @@ const Navigation = ({ isMobileHeaderOpen, setIsMobileHeaderOpen }) =>
       } md:opacity-100 md:h-auto md:w-auto select-none rounded-2xl transition-all`}
     >
       <a onClick={() => setIsMobileHeaderOpen(false)} href={link.href}>
-        <p className='hover:bg-gray-100 hover:text-accent-1 transition-all text-3xl md:text-base duration-500 ml-2 mr-2 p-2 pl-4 pr-4 rounded-xl'>
+        <p className='hover:bg-gray-100 hover:text-accent-1 transition-all text-3xl md:text-lg duration-500 ml-2 mr-2 p-2 pl-4 pr-4 rounded-xl'>
           {link.name}
         </p>
       </a>
@@ -115,20 +115,13 @@ export const Header = () => {
               />
             </a>
           </div>
-          <div className="hidden md:block ml-5">
+          <div className='hidden md:block ml-5'>
             <div dangerouslySetInnerHTML={{ __html: clutchWidget }}></div>
           </div>
-          <div className='flex md:hidden'>
-            <button
-              className='bg-gray-200 p-3 rounded-lg'
-              onClick={() => setIsMobileHeaderOpen(!isMobileHeaderOpen)}
-            >
-              <FontAwesomeIcon
-                className='buzz-out-on-hover w-5 h-5 hover:text-accent-1 text-accent-1'
-                icon={faBars}
-              />
-            </button>
-          </div>
+          <MobileHeaderButton
+            setIsMobileHeaderOpen={setIsMobileHeaderOpen}
+            isMobileHeaderOpen={isMobileHeaderOpen}
+          />
         </div>
         <div
           className={`flex flex-col ${
@@ -148,7 +141,7 @@ export const Header = () => {
               </a>
             </div>
           ) : null}
-          <div className='ml-2 hidden md:block'>
+          <div className='hidden md:block'>
             <StandardButton
               text="Let's talk"
               icon='fab fa-whatsapp'
@@ -194,5 +187,20 @@ export const Header = () => {
         <div className='flex justify-end items-center'></div>
       </header>
     </>
+  )
+}
+const MobileHeaderButton = ({ setIsMobileHeaderOpen, isMobileHeaderOpen }) => {
+  return (
+    <div className='flex md:hidden'>
+      <button
+        className='bg-gray-200 p-3 rounded-lg'
+        onClick={() => setIsMobileHeaderOpen(!isMobileHeaderOpen)}
+      >
+        <FontAwesomeIcon
+          className='buzz-out-on-hover w-5 h-5 hover:text-accent-1 text-accent-1'
+          icon={faBars}
+        />
+      </button>
+    </div>
   )
 }
