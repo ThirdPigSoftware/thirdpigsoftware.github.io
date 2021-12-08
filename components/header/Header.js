@@ -12,11 +12,13 @@ const HIDE_THRESHOLD = 520
 const links = [
   {
     name: 'Our Services',
-    href: '#wedo'
+    href: '#wedo',
+    icon: 'fas fa-cogs'
   },
   {
     name: 'Our Mission',
-    href: '#mission'
+    href: '#mission',
+    icon: 'fas fa-rocket'
   },
   // {
   //   name: 'Our Process',
@@ -24,7 +26,8 @@ const links = [
   // },
   {
     name: 'Our Skillset',
-    href: '#skillset'
+    href: '#skillset',
+    icon: 'fas fa-hat-wizard'
   }
 ]
 
@@ -36,9 +39,10 @@ const Navigation = ({ isMobileHeaderOpen, setIsMobileHeaderOpen }) =>
       } md:opacity-100 md:h-auto md:w-auto select-none rounded-2xl transition-all`}
     >
       <a onClick={() => setIsMobileHeaderOpen(false)} href={link.href}>
-        <p className='hover:bg-gray-100 hover:text-accent-1 transition-all text-3xl md:text-base duration-500 ml-2 mr-2 p-2 pl-4 pr-4 rounded-xl'>
+        <div className='hover:bg-gray-100 hover:text-accent-1 transition-all text-center text-3xl md:text-base duration-500 ml-2 mr-4 p-2 pl-4 pr-2 flex flex-row items-center justify-center rounded-xl'>
+          <i className={`${link.icon} mr-2 -ml-2`}></i>
           {link.name}
-        </p>
+        </div>
       </a>
     </div>
   ))
@@ -136,7 +140,7 @@ export const Header = () => {
             <div className='md:hidden block'>
               <a onClick={() => setIsMobileHeaderOpen(false)} href={'#contact'}>
                 <p className='hover:bg-gray-100 hover:text-accent-1 transition-all text-3xl md:text-lg duration-500 ml-2 mr-2 p-2 pl-4 pr-4 rounded-xl'>
-                  Let's talk
+                <i className={`fab fa-whatsapp mr-2 -ml-2`}></i>Let's talk
                 </p>
               </a>
             </div>
