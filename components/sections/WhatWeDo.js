@@ -112,7 +112,7 @@ export const WhatWeDo = () => {
               <div className='flex flex-row flex-wrap justify-evenly items-center'>
                 <Fade left delay={index * 30}>
                   <h3
-                    className={`text-3xl px-5 md:px-0 md:text-base transition-all font-brand text-center text-accent-1`}
+                    className={`text-2xl px-10 md:w-32 md:px-0 md:text-base transition-all font-brand text-center text-accent-1`}
                   >
                     {item.title}
                   </h3>
