@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Fade'
 export const OurMission = () => {
   return (
     <>
-      <div id='mission' className='pt-52 -mt-52' />
+      <div id='mission' className='pt-48 -mt-48' />
       <div className='select-none flex flex-row flex-wrap items-center justify-center font-paragraph'>
         <Zoom>
           <div className='p-10 md:p-0 text-sm leading-7 md:text-left text-prose w-full md:w-1/2 md:pr-16'>

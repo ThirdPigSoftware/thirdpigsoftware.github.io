@@ -82,7 +82,7 @@ export const WhatWeDo = () => {
 
   return (
     <div className='w-full select-none relative'>
-      <div id='wedo' className='pt-64 -mt-64' />
+      <div id='wedo' className='pt-48 -mt-48' />
       <Fade top>
         <p className='text-center text-prose text-lg md:text-base mx-2 px-12 md:px-32 pb-2  font-paragraph transition-all duration-500'>
           A range of software services across multiple platforms - web, mobile
