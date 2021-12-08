@@ -28,14 +28,14 @@ const OurHeading = ({ title }) => (
   <div className='select-none transform scale-75 flex flex-row items-center justify-center'>
     <Zoom>
       <span
-        className={`text-2xl pr-2 pt-4   md:text-5xl uppercase font-brand text-center text-accent-1`}
+        className={`text-2xl pr-2 pt-4 md:text-4xl uppercase font-brand text-center text-accent-1`}
       >
         Our
       </span>
     </Zoom>
     <Zoom delay={500}>
       <span
-        className={`text-6xl font-brand pt-4 md:text-8xl uppercase text-center text-accent-1`}
+        className={`text-6xl font-brand pt-4 md:text-6xl uppercase text-center text-accent-1`}
       >
         {title}
       </span>
