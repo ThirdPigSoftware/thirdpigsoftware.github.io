@@ -19,12 +19,12 @@ export const OurSkillSet = () => {
           more:
         </p>
       </div>
-      <div className='md:pt-2 md:px-12 pb-2 flex flex-row flex-wrap justify-center items-center'>
+      <div className='md:pt-2 md:px-24 pb-2 flex flex-row flex-wrap justify-center items-center'>
         {techSkills
           .slice(0, showAll ? techSkills.length : 15)
           .map(techSkill => (
             <Fade left>
-              <div className='text-center md:h-36 w-1/2 select-none p-10 md:w-1/5 flex flex-col items-center justify-center'>
+              <div className='text-center md:h-32 w-1/2 select-none p-10 md:w-1/5 flex flex-col items-center justify-center'>
                 <img
                   className='buzz-out-on-hover'
                   width={50}
