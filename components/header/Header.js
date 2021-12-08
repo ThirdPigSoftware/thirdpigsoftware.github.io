@@ -36,7 +36,7 @@ const Navigation = ({ isMobileHeaderOpen, setIsMobileHeaderOpen }) =>
       } md:opacity-100 md:h-auto md:w-auto select-none rounded-2xl transition-all`}
     >
       <a onClick={() => setIsMobileHeaderOpen(false)} href={link.href}>
-        <p className='hover:bg-gray-100 hover:text-accent-1 transition-all text-3xl md:text-lg duration-500 ml-2 mr-2 p-2 pl-4 pr-4 rounded-xl'>
+        <p className='hover:bg-gray-100 hover:text-accent-1 transition-all text-3xl md:text-base duration-500 ml-2 mr-2 p-2 pl-4 pr-4 rounded-xl'>
           {link.name}
         </p>
       </a>
