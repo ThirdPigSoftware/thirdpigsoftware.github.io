@@ -39,8 +39,8 @@ export const Navigation = ({ isMobileHeaderOpen, setIsMobileHeaderOpen }) =>
       } md:opacity-100 md:h-auto md:w-auto select-none rounded-2xl transition-all`}
     >
       <a onClick={() => setIsMobileHeaderOpen(false)} href={link.href}>
-        <div className='hover:bg-gray-100 hover:text-accent-1 transition-all text-center text-3xl md:text-base duration-500 ml-2 mr-4 p-2 pl-4 pr-2 flex flex-row items-center justify-center rounded-xl'>
-          <i className={`${link.icon} mr-2 -ml-2`}></i>
+        <div className='hover:bg-gray-100 hover:text-accent-1 transition-all text-center font-brand text-3xl md:text-base duration-500 ml-2 mr-4 p-2 pl-4 pr-2 flex flex-row items-center justify-center rounded-xl'>
+          <i className={`${link.icon} mr-2 -ml-2 opacity-50 text-2xl`}></i>
           {link.name}
         </div>
       </a>
@@ -100,7 +100,7 @@ export const Header = () => {
   const [isMobileHeaderOpen, setIsMobileHeaderOpen] = React.useState(false)
   const { scrollY } = useScroll()
   const clutchWidget =
-    '<div class="clutch-widget" style="overflow-y:hidden;" data-url="https://widget.clutch.co" data-widget-type="2" data-height="50" data-clutchcompany-id="1884678"></div>'
+    '<div class="clutch-widget" style="overflow-y:hidden;" data-url="https://widget.clutch.co" data-widget-type="1" data-height="40" data-clutchcompany-id="1884678"></div>'
   return (
     <>
       <header
