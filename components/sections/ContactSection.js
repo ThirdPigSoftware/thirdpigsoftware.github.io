@@ -1,31 +1,24 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ContactUsButton } from '../buttons/ContactUsButton'
 
 export const ContactSection = () => (
-  <div className='select-none overflow-hidden md:mx-48 p-10 pb-0 flex flex-col items-center text-center justify-center md:rounded-2xl'>
-    <div className='pt-64 -mt-64' id='contact' />
-    <p
-      className={`text-2xl font-brand text-center md:text-center md:text-5xl transform transition-all text-white`}
-    >
-      Looking for a solution for your project?
-    </p>
-    <p
-      className={`p-5 text-lg text-center font-paragraph font-semibold md:text-center transform transition-all text-white`}
-    >
-      We can provide you a quote within 36 hours.
-    </p>
-    <div>
-      <ContactUsButton />
+  <>
+    <div id='contact' className='container mx-auto'>
+      <div className='rounded-lg select-none text-white p-8 my-12 flex flex-col md:flex-row space-between items-center justify-between relative overflow-hidden'>
+        <div className='flex flex-col lg:ml-14 xl:ml-28 max-w-sm lg:max-w-xl z-10'>
+          <h4 className='text-5xl text-center md:text-left font-bold font-alegreya text-white md:pb-2'>
+            Want to get started?
+          </h4>
+          <p class='text-center md:text-left font-alegreya text-lg  font-semibold text-white opacity-70 md:pb-6'>
+            We can provide a quote within <b>36 hours</b>.
+          </p>
+        </div>
+
+        <div className='pt-8 md:pt-0 justify-center lg:ml-auto z-10'>
+          <ContactUsButton />
+        </div>
+
+        <div className='absolute bg-purple-400 opacity-60 w-96 h-96 -top-12 -right-16 md:w-[800px] md:h-[800px] md:left-[45%] md:top-[-150%] rounded-full z-0'></div>
+      </div>
     </div>
-    <p
-      className={`p-5 text-center font-paragraph text-center transform transition-all text-white`}
-    >
-      ... or plenty more ways to contact us below:
-    </p>
-    <div className='text-3xl animate-bounce'>
-      <a href='#details'>
-        <i className={`fas fa-chevron-circle-down`}></i>
-      </a>
-    </div>
-  </div>
+  </>
 )

@@ -17,7 +17,8 @@ module.exports = {
       sans: ['Jost'],
       paragraph: ['Poppins'],
       montserrat: ['montserrat'],
-      brand: ['nickname']
+      alegreya: ['Alegreya'],
+      brand: ['nickname'],
     },
     extend: {
       colors: {

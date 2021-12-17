@@ -11,12 +11,12 @@ const HIDE_THRESHOLD = 520
 
 const links = [
   {
-    name: 'Our Services',
+    name: 'Services',
     href: '#wedo',
     icon: 'fas fa-cogs'
   },
   {
-    name: 'Our Mission',
+    name: 'Mission',
     href: '#mission',
     icon: 'fas fa-rocket'
   },
@@ -25,13 +25,13 @@ const links = [
   //   href: '#process'
   // },
   {
-    name: 'Our Skillset',
+    name: 'Skillset',
     href: '#skillset',
     icon: 'fas fa-hat-wizard'
   }
 ]
 
-const Navigation = ({ isMobileHeaderOpen, setIsMobileHeaderOpen }) =>
+export const Navigation = ({ isMobileHeaderOpen, setIsMobileHeaderOpen }) =>
   links.map(link => (
     <div
       className={`${
@@ -130,7 +130,7 @@ export const Header = () => {
         <div
           className={`flex flex-col ${
             isMobileHeaderOpen ? 'h-3/4' : 'h-auto'
-          } md:h-auto md:flex-row items-center text-center justify-evenly text-accent-3 font-semibold`}
+          } md:h-auto md:flex-row items-center text-center justify-evenly text-accent-3`}
         >
           <Navigation
             setIsMobileHeaderOpen={setIsMobileHeaderOpen}

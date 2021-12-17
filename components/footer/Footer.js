@@ -1,44 +1,52 @@
 import { ContactUsButton } from '../buttons/ContactUsButton'
 import Clouds from '../clouds/Clouds'
 import { ContactOptions } from '../contact/ContactOptions'
+import { Navigation } from '../header/Header'
 
 export default function Footer () {
+  const clutchWidget =
+    '<div class="clutch-widget" style="overflow-y:hidden; overflow-x:hidden;" data-url="https://widget.clutch.co" data-widget-type="7" data-height="65" data-clutchcompany-id="1884678"></div>'
   return (
-    <footer className='text-gray-600 font-paragraph'>
-      <div className='container px-5 mx-auto flex items-center md:flex-row md:flex-nowrap flex-wrap flex-col'>
-        <div className='flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center'>
-          <div className='lg:w-1/4 md:w-1/2 w-full px-4'></div>
-          <div className='lg:w-1/4 md:w-1/2 w-full px-4'></div>
-          <div className='lg:w-1/4 md:w-1/2 w-full px-4'></div>
-        </div>
-        <div className='w-64 font-paragraph flex-shrink-0 md:mx-0 mx-auto text-center md:text-right'></div>
-      </div>
-
-      <Clouds />
-      <div id="details" className='bg-white font-paragraph'>
-        <div className='container mx-auto px-5 flex items-center justify-center flex-wrap flex-row sm:flex-row'>
-          <p className='text-prose text-sm text-center'>
-            <div className='mt-4 text-xs flex items-center flex-col'>
-              <p className='font-brand text-lg'>Third Pig Software Ltd</p>
+    <footer class='bg-gray-50 select-none text-gray-600 px-6 lg:px-8 py-8 font-paragraph'>
+      <div class='max-w-screen-xl mx-auto '>
+        <div class='grid grid-cols-8 md:grid-cols-9  lg:grid-cols-8  divide-gray-200 divide-y-2 md:divide-x-2 md:divide-y-0 md:-mx-8'>
+          <div class='col-span-8 md:col-span-3 lg:col-span-2 md:px-8 py-4 md:py-0'>
+            <h5 class='text-xl font-brand text-gray-700'>
+              Third Pig Software
+              <img
+                style={{ zIndex: 9999999 }}
+                className={`h-6 buzz-out-on-hover ml-2`}
+                src={'/static/logo.png'}
+              />
+            </h5>
+            <nav class='mt-0 font-paragraph text-xs'>
               71-75 Shelton Street
               <br />
               LONDON
               <br />
               WC2H 9JQ
-            </div>
-            <div>
-              <div className='mt-2 text-2xl flex flex-row justify-evenly items-center'>
-                <ContactOptions />
-              </div>
-            </div>
-            <div className='mt-4'>
-              <p className='text-xs font-paragraph mb-24 md:mb-5'>
-                © Third Pig Software Ltd. Registered in England &amp; Wales No.
-                13536155. VAT No. GB387162177.
-              </p>
-            </div>
-          </p>
+            </nav>
+          </div>
+          <div class='col-span-8 md:col-span-3 lg:col-span-3 md:px-8 py-4 md:py-0'>
+            <div
+              className='mt-4 flex flex-row items-center justify-center w-full'
+              dangerouslySetInnerHTML={{ __html: clutchWidget }}
+            ></div>
+          </div>
+          <div class='col-span-8 md:col-span-3 lg:col-span-3 text-sm md:px-8 py-4 md:py-0'>
+            <h5 class='text-lg font-semibold text-gray-700 '>Contact us</h5>
+            Plenty of ways to get in touch!
+            <nav class='mt-4 flex flex-row text-2xl items-center justify-between'>
+              <ContactOptions />
+            </nav>
+          </div>
         </div>
+      </div>
+      <div class='max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 mt-8 border-t-2 border-gray-200 pt-6'>
+        <p class='text-xs text-center md:text-left font-paragraph'>
+          © Third Pig Software Ltd. Registered in England &amp; Wales No.
+          13536155. VAT No. GB387162177.
+        </p>
       </div>
     </footer>
   )
