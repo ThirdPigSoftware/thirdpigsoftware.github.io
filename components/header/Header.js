@@ -100,7 +100,7 @@ export const Header = () => {
   const [isMobileHeaderOpen, setIsMobileHeaderOpen] = React.useState(false)
   const { scrollY } = useScroll()
   const clutchWidget =
-    '<div class="clutch-widget" style="overflow-y:hidden;" data-url="https://widget.clutch.co" data-widget-type="1" data-height="40" data-clutchcompany-id="1884678"></div>'
+    '<div class="clutch-widget" style="overflow-y:hidden;" data-url="https://widget.clutch.co" data-widget-type="1" data-height="45" data-clutchcompany-id="1884678"></div>'
   return (
     <>
       <header
