@@ -173,8 +173,14 @@ export const Header = () => {
         className={`mt-24 w-full md:mt-12 transition-all text-2xl relative md:text-4xl text-center items-center flex flex-col transition-all transform`}
       >
         <Banner />
-
       </div>
+      <div
+        style={{ zIndex: 999999999 }}
+        className={`absolute bottom-0 p-5 -pr-2 w-48 opacity-0 transition-all duration-300 ${
+          scrollY > 20 ? '' : 'md:opacity-100'
+        }`}
+        dangerouslySetInnerHTML={{ __html: clutchWidget }}
+      ></div>
       <div
         className={`fixed  ${
           scrollY > HIDE_THRESHOLD ? 'hidden' : ''
@@ -187,7 +193,7 @@ export const Header = () => {
       <header
         style={{ zIndex: 999999999 }}
         className={`fixed 
-        bottom-0 bg-white z-50 w-full px-5 py-4 flex md:hidden rounded-full justify-between items-center duration-500 transform transition-all`}
+        bottom-0 bg-white z-50 w-full px-5 py-4 flex md:hidden justify-between items-center duration-500 transform transition-all`}
       >
         <div dangerouslySetInnerHTML={{ __html: clutchWidget }}></div>
       </header>
