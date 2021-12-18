@@ -18,7 +18,9 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-dom-confetti": "^0.2.0",
-    "react-reveal": "^1.2.2"
+    "react-particles-js": "^3.6.0",
+    "react-reveal": "^1.2.2",
+    "tsparticles": "^1.37.5"
   },
   "devDependencies": {
     "autoprefixer": "10.0.2",

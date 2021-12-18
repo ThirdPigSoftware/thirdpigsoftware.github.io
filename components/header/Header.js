@@ -3,8 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 import { useScroll } from '../../hooks/useScroll'
+import { useWindowSize } from '../../hooks/useWindowSize'
 import { StandardButton } from '../buttons/StandardButton'
 import Clouds from '../clouds/Clouds'
+import Particles from 'react-particles-js'
+import techSkills from '../sections/techSkills.json'
 
 const FADE_OUT_THRESHOLD = 400
 const HIDE_THRESHOLD = 520
@@ -32,6 +35,12 @@ const links = [
   }
 ]
 
+let techSkillsMapped = techSkills.map(skill => ({
+  src: `/static/images/${skill.url}`,
+  height: 60,
+  width: 60
+}))
+
 export const Navigation = ({ isMobileHeaderOpen, setIsMobileHeaderOpen }) =>
   links.map(link => (
     <div
@@ -48,58 +57,60 @@ export const Navigation = ({ isMobileHeaderOpen, setIsMobileHeaderOpen }) =>
     </div>
   ))
 
-const Banner = () => (
-  <div
-    className={`flex mt-12 md:mt-auto transition-all transform md:h-screen flex-row flex-wrap items-center`}
-  >
+const Banner = ({ height }) => (
+  <>
     <div
-      className={`buzz-out-on-hover flex items-center flex-col justify-center`}
+      className={`flex mt-12 md:mt-auto transition-all transform md:h-screen flex-row flex-wrap items-center`}
     >
-      <img
-        style={{ zIndex: 9999999 }}
-        className={`w-1/2 md:-mt-12 buzz-out-on-hover md:w-1/4 mb-10 md:mb-0`}
-        src={'/static/logo.png'}
-      />
-      <Fade delay={200}>
-        <h1
-          style={{
-            zIndex: 9999999
-          }}
-          className={`select-none font-brand text-accent-3 text-5xl md:text-7xl`}
-        >
-          Third Pig <i className='not-italic'>Software</i>
-        </h1>
-      </Fade>
-      <Fade delay={700}>
-        <div>
-          <p
-            className='md:p-0 px-10 text-center flex flex-col items-center mb-4 text-xl transition-all font-paragraph duration-500 opacity-80 select-none'
-          >
-            <i className='text-xl text-accent-3 font-semibold not-italic px-6'>
-              Experts in the delivery of{' '}
-              <i className='font-bold not-italic'>
-                high quality, high-impact software solutions.
-              </i>
-            </i>
-          </p>
-        </div>
-      </Fade>
-      <div className='m-2 text-lg'>
-        <StandardButton
-          icon='fas fa-cogs'
-          text='See what we do'
-          onClick={() => {
-            document.getElementById('wedo')?.scrollIntoView()
-          }}
+      <div
+        className={`buzz-out-on-hover flex items-center flex-col justify-center`}
+      >
+        <img
+          style={{ zIndex: 9999999 }}
+          className={`w-1/2 md:-mt-12 buzz-out-on-hover md:w-1/4 mb-10 md:mb-0`}
+          src={'/static/logo.png'}
         />
+
+        <Fade delay={200}>
+          <h1
+            style={{
+              zIndex: 9999999
+            }}
+            className={`select-none font-brand text-accent-3 text-5xl md:text-7xl`}
+          >
+            Third Pig <i className='not-italic'>Software</i>
+          </h1>
+        </Fade>
+        <Fade delay={700}>
+          <div>
+            <p className='md:p-0 px-10 text-center flex flex-col items-center mb-4 text-xl transition-all font-paragraph duration-500 opacity-80 select-none'>
+              <i className='text-xl text-accent-3 font-semibold not-italic px-6'>
+                Experts in the delivery of{' '}
+                <i className='font-bold not-italic'>
+                  high quality, high-impact software solutions.
+                </i>
+              </i>
+            </p>
+          </div>
+        </Fade>
+        <div className='m-2 text-lg'>
+          <StandardButton
+            icon='fas fa-cogs'
+            text='See what we do'
+            onClick={() => {
+              document.getElementById('wedo')?.scrollIntoView()
+            }}
+          />
+        </div>
       </div>
     </div>
-  </div>
+  </>
 )
 
 export const Header = () => {
   const [isMobileHeaderOpen, setIsMobileHeaderOpen] = React.useState(false)
   const { scrollY } = useScroll()
+  const [_, height] = useWindowSize()
   const clutchWidget =
     '<div class="clutch-widget" style="overflow-y:hidden;" data-url="https://widget.clutch.co" data-widget-type="1" data-height="45" data-clutchcompany-id="1884678"></div>'
   return (
@@ -168,19 +179,67 @@ export const Header = () => {
       >
         <Clouds flip />
       </div>
+      <div>
+        <Particles
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            height: height * 10,
+            zIndex: 0,
+            marginTop: 80,
+            opacity: 1
+          }}
+          params={{
+            particles: {
+              number: {
+                value: techSkillsMapped.length * 1.2
+              },
+              collisions: {
+                enable: false
+              },
+              line_linked: {
+                enable: true
+              },
+              move: {
+                speed: 3,
+                out_mode: 'out',
+                direction: 'left'
+              },
+              shape: {
+                type: ['images'],
+                images: techSkillsMapped
+              },
+              size: {
+                value: 35,
+                random: true,
+                anim: {
+                  enable: true,
+                  speed: 8,
+                  size_min: 20,
+                  sync: false
+                }
+              }
+            },
+            interactivity: {
+              events: {
+                onhover: {
+                  enable: false
+                }
+              },
+              modes: {}
+            },
+            retina_detect: true
+          }}
+        />
+      </div>
       <div
         style={{ zIndex: 9999999 }}
         className={`mt-24 w-full md:mt-12 transition-all text-2xl relative md:text-4xl text-center items-center flex flex-col transition-all transform`}
       >
         <Banner />
       </div>
-      <div
-        style={{ zIndex: 999999999 }}
-        className={`absolute bottom-0 p-5 -pr-2 w-48 opacity-0 transition-all duration-300 ${
-          scrollY > 20 ? '' : 'md:opacity-100'
-        }`}
-        dangerouslySetInnerHTML={{ __html: clutchWidget }}
-      ></div>
+
       <div
         className={`fixed  ${
           scrollY > HIDE_THRESHOLD ? 'hidden' : ''
@@ -190,6 +249,13 @@ export const Header = () => {
       >
         <Clouds />
       </div>
+      <div
+        style={{ zIndex: 999999999 }}
+        className={`absolute bottom-0 p-5 -pr-2 w-48 opacity-0 transition-all duration-300 ${
+          scrollY > 20 ? '' : 'md:opacity-100'
+        }`}
+        dangerouslySetInnerHTML={{ __html: clutchWidget }}
+      ></div>
       <header
         style={{ zIndex: 999999999 }}
         className={`fixed 
