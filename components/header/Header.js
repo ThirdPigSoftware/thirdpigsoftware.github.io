@@ -8,6 +8,7 @@ import { StandardButton } from '../buttons/StandardButton'
 import Clouds from '../clouds/Clouds'
 import Particles from 'react-particles-js'
 import techSkills from '../sections/techSkills.json'
+import useMobileDetect from 'use-mobile-detect-hook'
 
 const FADE_OUT_THRESHOLD = 400
 const HIDE_THRESHOLD = 520
@@ -111,6 +112,7 @@ export const Header = () => {
   const [isMobileHeaderOpen, setIsMobileHeaderOpen] = React.useState(false)
   const { scrollY } = useScroll()
   const [_, height] = useWindowSize()
+  const detectMobile = useMobileDetect()
   const clutchWidget =
     '<div class="clutch-widget" style="overflow-y:hidden;" data-url="https://widget.clutch.co" data-widget-type="1" data-height="45" data-clutchcompany-id="1884678"></div>'
   return (
@@ -193,13 +195,15 @@ export const Header = () => {
           params={{
             particles: {
               number: {
-                value: techSkillsMapped.length * 1.2
+                value: detectMobile.isMobile()
+                  ? techSkillsMapped.length
+                  : techSkillsMapped.length * 1.2
               },
               collisions: {
                 enable: false
               },
               line_linked: {
-                enable: true
+                enable: !detectMobile.isMobile()
               },
               move: {
                 speed: 3,
@@ -211,12 +215,12 @@ export const Header = () => {
                 images: techSkillsMapped
               },
               size: {
-                value: 35,
+                value: detectMobile.isMobile() ? 20 : 35,
                 random: true,
                 anim: {
                   enable: true,
                   speed: 8,
-                  size_min: 20,
+                  size_min: detectMobile.isMobile() ? 5 : 20,
                   sync: false
                 }
               }
