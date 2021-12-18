@@ -7,9 +7,8 @@ export const StandardButton = ({
   icon = false
 }) => (
   <button
-    className={`pl-6 pr-4 py-2 
+    className={`pl-6 pr-4 py-2 font-brand
     ${alt ? 'border-2 text-white' : 'bg-accent-3 text-white hover:bg-accent-1'} 
-    font-bold 
     ${border ? 'border-2' : ''} 
     rounded-2xl border-white 
     ${textSize} buzz-out-on-hover transition-all duration-200`}
