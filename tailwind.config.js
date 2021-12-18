@@ -15,7 +15,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Jost'],
-      paragraph: ['Poppins'],
+      paragraph: ['Nunito'],
       montserrat: ['montserrat'],
       alegreya: ['Alegreya'],
       brand: ['nickname'],

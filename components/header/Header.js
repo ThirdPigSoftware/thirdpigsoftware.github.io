@@ -73,14 +73,14 @@ const Banner = () => (
       <Fade delay={700}>
         <div>
           <p
-            style={{
-              zIndex: 9999999,
-              color: '#1a0041'
-            }}
-            className='p-2 md:p-0 mb-4 text-xl transition-all duration-500 opacity-80 select-none'
+            className='p-2 md:p-0 mb-4 text-xl transition-all font-paragraph duration-500 opacity-80 select-none'
           >
-            Experts in the delivery of high quality, high-impact software
-            solutions.
+            <i className='text-xl text-accent-3 font-semibold not-italic p-2 px-6'>
+              Experts in the delivery of{' '}
+              <i className='font-bold not-italic'>
+                high quality, high-impact software solutions.
+              </i>
+            </i>
           </p>
         </div>
       </Fade>

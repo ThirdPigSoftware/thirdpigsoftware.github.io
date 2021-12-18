@@ -130,7 +130,7 @@ export const WhatWeDo = () => {
                 in={servicesIndex === index}
               >
                 <div className='w-full md:w-96 px-10 md:px-0'>
-                  <h3 className='text-prose text-left md:text-center'>{item.subtitle}</h3>
+                  <h3 className='text-prose font-paragraph text-left md:text-center'>{item.subtitle}</h3>
                 </div>
               </Zoom>
             </div>
