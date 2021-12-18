@@ -106,7 +106,7 @@ export const Header = () => {
     <>
       <header
         style={{ zIndex: 999999999 }}
-        className={`fixed top-0 bg-white z-50 w-full px-5 py-3 flex flex-col md:flex-row justify-evenly items-center duration-500 transform transition-all`}
+        className={`fixed top-0 bg-white z-50 w-full px-5 py-3 flex flex-col md:flex-row justify-between items-center duration-500 transform transition-all`}
       >
         <div className='flex flex-row w-full md:w-auto justify-between items-center'>
           <div
