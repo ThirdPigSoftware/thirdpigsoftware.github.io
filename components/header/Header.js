@@ -21,8 +21,9 @@ const links = [
     icon: 'fas fa-rocket'
   },
   // {
-  //   name: 'Our Process',
-  //   href: '#process'
+  //   name: 'Process',
+  //   href: '#process',
+  //   icon: 'fas fa-rocket'
   // },
   {
     name: 'Skillset',
@@ -76,7 +77,7 @@ const Banner = () => (
               zIndex: 9999999,
               color: '#1a0041'
             }}
-            className='p-2 md:p-0 text-xl transition-all duration-500 opacity-80 select-none'
+            className='p-2 md:p-0 mb-4 text-xl transition-all duration-500 opacity-80 select-none'
           >
             Experts in the delivery of high quality, high-impact software
             solutions.
@@ -105,28 +106,26 @@ export const Header = () => {
     <>
       <header
         style={{ zIndex: 999999999 }}
-        className={`fixed top-0 bg-white z-50 w-full px-5 py-3 flex flex-col md:flex-row justify-between items-center duration-500 transform transition-all`}
+        className={`fixed top-0 bg-white z-50 w-full px-5 py-3 flex flex-col md:flex-row justify-evenly items-center duration-500 transform transition-all`}
       >
         <div className='flex flex-row w-full md:w-auto justify-between items-center'>
           <div
             style={{ borderWidth: 2 }}
-            className='bg-gray-200 border-gray-100 h-12 w-12 rounded-full flex items-center justify-center'
+            className='bg-gray-200 md:absolute border-gray-100 w-14 h-14 md:h-20 md:w-20 rounded-full flex items-center justify-center md:top-2'
           >
             <a onClick={() => setIsMobileHeaderOpen(false)} href='#'>
               <img
-                className={`select-none buzz-out-on-hover w-12 md:w-14`}
+                className={`select-none buzz-out-on-hover w-12 md:w-20`}
                 src={'/static/logo.png'}
               />
             </a>
-          </div>
-          <div className='hidden md:block ml-5'>
-            <div dangerouslySetInnerHTML={{ __html: clutchWidget }}></div>
           </div>
           <MobileHeaderButton
             setIsMobileHeaderOpen={setIsMobileHeaderOpen}
             isMobileHeaderOpen={isMobileHeaderOpen}
           />
         </div>
+
         <div
           className={`flex flex-col ${
             isMobileHeaderOpen ? 'h-3/4' : 'h-auto'
@@ -136,15 +135,17 @@ export const Header = () => {
             setIsMobileHeaderOpen={setIsMobileHeaderOpen}
             isMobileHeaderOpen={isMobileHeaderOpen}
           />
+
           {isMobileHeaderOpen ? (
             <div className='md:hidden block'>
               <a onClick={() => setIsMobileHeaderOpen(false)} href={'#contact'}>
-                <p className='hover:bg-gray-100 hover:text-accent-1 transition-all text-3xl md:text-lg duration-500 ml-2 mr-2 p-2 pl-4 pr-4 rounded-xl'>
-                <i className={`fab fa-whatsapp mr-2 -ml-2`}></i>Let's talk
+                <p className='hover:bg-gray-100 hover:text-accent-1 transition-all font-brand text-3xl md:text-lg duration-500 ml-2 mr-2 p-2 pl-4 pr-4 rounded-xl'>
+                  <i className={`fab fa-whatsapp mr-2 -ml-2`}></i>Let's talk
                 </p>
               </a>
             </div>
           ) : null}
+
           <div className='ml-2 hidden md:block'>
             <StandardButton
               text="Let's talk"
@@ -172,6 +173,7 @@ export const Header = () => {
         className={`mt-24 w-full md:mt-12 transition-all text-2xl relative md:text-4xl text-center items-center flex flex-col transition-all transform`}
       >
         <Banner />
+
       </div>
       <div
         className={`fixed  ${
@@ -185,10 +187,9 @@ export const Header = () => {
       <header
         style={{ zIndex: 999999999 }}
         className={`fixed 
-        bottom-0 bg-white z-50 w-full px-5 py-4 flex md:hidden justify-between items-center duration-500 transform transition-all`}
+        bottom-0 bg-white z-50 w-full px-5 py-4 flex md:hidden rounded-full justify-between items-center duration-500 transform transition-all`}
       >
         <div dangerouslySetInnerHTML={{ __html: clutchWidget }}></div>
-        <div className='flex justify-end items-center'></div>
       </header>
     </>
   )

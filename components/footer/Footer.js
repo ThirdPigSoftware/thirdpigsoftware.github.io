@@ -1,7 +1,4 @@
-import { ContactUsButton } from '../buttons/ContactUsButton'
-import Clouds from '../clouds/Clouds'
 import { ContactOptions } from '../contact/ContactOptions'
-import { Navigation } from '../header/Header'
 
 export default function Footer () {
   const clutchWidget =
@@ -9,8 +6,8 @@ export default function Footer () {
   return (
     <footer class='bg-gray-50 select-none text-gray-600 px-6 lg:px-8 py-8 font-paragraph'>
       <div class='max-w-screen-xl mx-auto '>
-        <div class='grid grid-cols-8 md:grid-cols-9  lg:grid-cols-8  divide-gray-200 divide-y-2 md:divide-x-2 md:divide-y-0 md:-mx-8'>
-          <div class='col-span-8 md:col-span-3 lg:col-span-2 md:px-8 py-4 md:py-0'>
+        <div class='grid grid-cols-8 md:grid-cols-9 lg:grid-cols-8 divide-gray-200 divide-y-2 md:divide-x-2 md:divide-y-0 md:-mx-8'>
+          <div class='col-span-8 md:col-span-3 lg:col-span-2 md:px-8 py-4 md:py-0 text-center md:text-left'>
             <h5 class='text-xl font-brand text-gray-700'>
               Third Pig Software
               <img
@@ -26,6 +23,7 @@ export default function Footer () {
               <br />
               WC2H 9JQ
             </nav>
+            <p className='font-semibold font-sans mt-2'><a href="mailto:hello@thirdpigsoftware.com">hello@thirdpigsoftware.com</a></p>
           </div>
           <div class='col-span-8 md:col-span-3 lg:col-span-3 md:px-8 py-4 md:py-0'>
             <div
@@ -42,7 +40,7 @@ export default function Footer () {
           </div>
         </div>
       </div>
-      <div class='max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 mt-8 border-t-2 border-gray-200 pt-6'>
+      <div class='max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 mt-8 border-t-2 border-gray-200 pt-6 mb-24 md:mb-0'>
         <p class='text-xs text-center md:text-left font-paragraph'>
           © Third Pig Software Ltd. Registered in England &amp; Wales No.
           13536155. VAT No. GB387162177.

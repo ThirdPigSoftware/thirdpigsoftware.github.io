@@ -69,17 +69,10 @@ const whatWeDo = [
     title: 'DevOps Consultancy',
     subtitle:
       'Consultation services to help you shorten your software development life cycle.'
-  },
-  {
-    icon: faBinoculars,
-    title: 'Technical Leadership',
-    subtitle:
-      'Providing support for your organisation to help make better technical decisions.'
   }
 ]
 export const WhatWeDo = () => {
-
-
+  const [servicesIndex, setServicesIndex] = React.useState(null)
   return (
     <div className='w-full select-none relative'>
       <div id='wedo' className='pt-48 -mt-48' />
@@ -87,15 +80,22 @@ export const WhatWeDo = () => {
         <p className='text-center text-prose text-lg md:text-base mx-2 px-12 md:px-32 pb-2  font-paragraph transition-all duration-500'>
           A range of software services across multiple platforms - web, mobile
           and cloud. We're always looking for ways to improve our services, so
-          if you can't see exactly what you need, <a className="font-semibold" href="#contact">contact us anyway</a> to see if we
-          can help.
+          if you can't see exactly what you need,{' '}
+          <a className='font-semibold' href='#contact'>
+            contact us anyway
+          </a>{' '}
+          to see if we can help.
         </p>
       </Fade>
-      <div className='grid md:grid-cols-3 lg:grid-cols-5 gap-5 items-center justify-center text-white'>
+      <div className='grid md:grid-cols-3 lg:grid-cols-3 items-center gap-5 md:gap-0 text-white mt-5 transition-all duration-500'>
         {whatWeDo.map((item, index) => (
-          <Zoom delay={index * 100}>
+          <div className='flex flex-col items-start md:items-center justify-center text-accent-2 hover:text-accent-1 transition-all duration-500'>
             <div
-              className={`justify-center items-center flex flex-col transition-all transform duration-500`}
+              onTouchStart={() => setServicesIndex(index)}
+              onTouchEnd={() => setServicesIndex(null)}
+              onMouseEnter={() => setServicesIndex(index)}
+              onMouseLeave={() => setServicesIndex(null)}
+              className={`justify-start md:justify-center items-center flex flex-row transition-all transform duration-500`}
               key={index}
             >
               <Fade top delay={index * 45}>
@@ -104,22 +104,38 @@ export const WhatWeDo = () => {
                   className='p-4 rounded-full border-white shadow-sm bg-gray-100 m-4'
                 >
                   <FontAwesomeIcon
-                    className='w-8 h-8 buzz-out-on-hover text-accent-1'
+                    className={`${
+                      servicesIndex === index ? 'h-14 w-14' : 'w-8 h-8'
+                    } transition-all duration-600  buzz-out-on-hover text-accent-1`}
                     icon={item.icon}
                   />
                 </div>
               </Fade>
-              <div className='flex flex-row flex-wrap justify-evenly items-center'>
-                <Fade left delay={index * 30}>
+              <div>
+                <Fade bottom delay={index * 30}>
                   <h3
-                    className={`text-2xl px-10 md:w-32 md:px-0 md:text-base transition-all font-brand text-center text-accent-1`}
+                    className={`text-xl px-10 md:w-32 md:px-0 md:text-base transition-all font-brand text-left `}
                   >
                     {item.title}
                   </h3>
                 </Fade>
               </div>
             </div>
-          </Zoom>
+            <div
+              className={`h-0 ${
+                servicesIndex === index ? 'h-auto py-10 md:py-0 md:h-24' : ''
+              } transition-all duration-400`}
+            >
+              <Zoom
+                out={!servicesIndex || servicesIndex !== index}
+                in={servicesIndex === index}
+              >
+                <div className='w-full md:w-96 px-10 md:px-0'>
+                  <h3 className='text-prose text-left md:text-center'>{item.subtitle}</h3>
+                </div>
+              </Zoom>
+            </div>
+          </div>
         ))}
       </div>
     </div>
