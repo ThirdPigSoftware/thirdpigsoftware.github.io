@@ -73,9 +73,9 @@ const Banner = () => (
       <Fade delay={700}>
         <div>
           <p
-            className='p-2 md:p-0 mb-4 text-xl transition-all font-paragraph duration-500 opacity-80 select-none'
+            className='md:p-0 px-10 text-center flex flex-col items-center mb-4 text-xl transition-all font-paragraph duration-500 opacity-80 select-none'
           >
-            <i className='text-xl text-accent-3 font-semibold not-italic p-2 px-6'>
+            <i className='text-xl text-accent-3 font-semibold not-italic px-6'>
               Experts in the delivery of{' '}
               <i className='font-bold not-italic'>
                 high quality, high-impact software solutions.
