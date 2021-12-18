@@ -36,7 +36,7 @@ const links = [
   }
 ]
 
-let techSkillsMapped = techSkills.map(skill => ({
+const techSkillsMapped = techSkills.map(skill => ({
   src: `/static/images/${skill.url}`,
   height: 60,
   width: 60
@@ -110,9 +110,27 @@ const Banner = ({ height }) => (
 
 export const Header = () => {
   const [isMobileHeaderOpen, setIsMobileHeaderOpen] = React.useState(false)
+  const [
+    isSkillBackgroundVisible,
+    setIsSkillBackgroundVisible
+  ] = React.useState(false)
   const { scrollY } = useScroll()
   const [_, height] = useWindowSize()
   const detectMobile = useMobileDetect()
+
+  React.useEffect(() => {
+    let skillBackgroundTimer = setTimeout(
+      () => setIsSkillBackgroundVisible(true),
+      1000
+    )
+
+    // this will clear Timeout
+    // when component unmount like in willComponentUnmount
+    // and show will not change to true
+    return () => {
+      clearTimeout(skillBackgroundTimer)
+    }
+  }, [])
   const clutchWidget =
     '<div class="clutch-widget" style="overflow-y:hidden;" data-url="https://widget.clutch.co" data-widget-type="1" data-height="45" data-clutchcompany-id="1884678"></div>'
   return (
@@ -181,7 +199,11 @@ export const Header = () => {
       >
         <Clouds flip />
       </div>
-      <div>
+      <div
+        className={`transition-all duration-500 ${
+          isSkillBackgroundVisible ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
         <Particles
           style={{
             position: 'absolute',
