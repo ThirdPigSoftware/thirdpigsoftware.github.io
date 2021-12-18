@@ -212,7 +212,6 @@ export const Header = () => {
             height: height * 10,
             zIndex: 0,
             marginTop: 80,
-            opacity: 1
           }}
           params={{
             particles: {
@@ -235,6 +234,16 @@ export const Header = () => {
               shape: {
                 type: ['images'],
                 images: techSkillsMapped
+              },
+              opacity: {
+                value: 1,
+                random: true,
+                anim: {
+                  enable: true,
+                  speed: 1,
+                  opacity_min: 0.65,
+                  sync: true
+                }
               },
               size: {
                 value: detectMobile.isMobile() ? 20 : 35,
