@@ -92,7 +92,6 @@ export const WhatWeDo = () => {
           <div className='flex flex-col items-start md:items-center justify-center text-accent-2 hover:text-accent-1 transition-all duration-500'>
             <div
               onTouchStart={() => setServicesIndex(index)}
-              onTouchEnd={() => setServicesIndex(null)}
               onMouseEnter={() => setServicesIndex(index)}
               onMouseLeave={() => setServicesIndex(null)}
               className={`justify-start md:justify-center items-center flex flex-row transition-all transform duration-500`}
