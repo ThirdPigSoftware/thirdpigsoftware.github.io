@@ -220,7 +220,7 @@ export const Header = () => {
                 anim: {
                   enable: true,
                   speed: 8,
-                  size_min: detectMobile.isMobile() ? 5 : 20,
+                  size_min: detectMobile.isMobile() ? 8 : 22,
                   sync: false
                 }
               }
