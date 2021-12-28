@@ -25,17 +25,17 @@ export const CloudSection = ({
 )
 
 const OurHeading = ({ title }) => (
-  <div className='select-none transform scale-75 flex font-brand flex-row items-center justify-center'>
+  <div className='select-none transform flex font-brand flex-row items-center justify-center'>
     <Zoom>
       <span
-        className={`text-2xl pr-2 pt-4 md:text-4xl uppercase font-semibold text-center text-accent-1`}
+        className={`text-2xl pr-2 md:text-xl uppercase text-center text-accent-1`}
       >
         Our
       </span>
     </Zoom>
     <Zoom delay={500}>
       <span
-        className={`text-6xl font-semibold pt-4 md:text-6xl uppercase text-center text-accent-1`}
+        className={`text-6xl md:text-4xl uppercase text-center text-accent-1`}
       >
         {title}
       </span>
@@ -51,12 +51,12 @@ export default function IndexPage () {
           className={`transition-all transform transform transition-all duration-500`}
           style={{ zIndex: -999 }}
         >
-          <CloudSection header={<OurHeading title={'Services'} />}>
+          <CloudSection header={<div className='pt-2' />}>
             <WhatWeDo />
           </CloudSection>
         </div>
 
-        <CloudSection header={<OurHeading title={'Mission'} />}>
+        <CloudSection header={<div className='pt-2' />}>
           <OurMission />
         </CloudSection>
         <div>
@@ -80,15 +80,12 @@ export default function IndexPage () {
             </div>
           </Fade>
         </div>
-        <CloudSection header={<OurHeading title={'Skillset'} />}>
+        <CloudSection withContainer={false} header={<div className='pt-2' />}>
           <OurSkillSet />
         </CloudSection>
         <div>
           <ContactSection />
         </div>
-        {/* <CloudSection id='flyingpigs' withContainer={false}>
-          <FlyingPigs />
-        </CloudSection> */}
       </div>
     </div>
   )

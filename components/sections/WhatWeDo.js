@@ -1,10 +1,7 @@
 import {
-  faBinoculars,
   faBomb,
   faChalkboardTeacher,
-  faCloud,
-  faCodeBranch,
-  faCogs,
+  faCloud, faCogs,
   faInfinity,
   faLaptopCode,
   faMedkit,
@@ -75,17 +72,25 @@ export const WhatWeDo = () => {
   const [servicesIndex, setServicesIndex] = React.useState(null)
   return (
     <div className='w-full select-none relative'>
-      <div id='wedo' className='pt-48 -mt-48' />
+      <div id='wedo' className='pt-32 -mt-32' />
       <Fade top>
-        <p className='text-center text-prose text-lg md:text-base mx-2 px-12 md:px-32 pb-2  font-paragraph transition-all duration-500'>
-          A range of software services across multiple platforms - web, mobile
-          and cloud. We're always looking for ways to improve our services, so
-          if you can't see exactly what you need,{' '}
-          <a className='font-semibold' href='#contact'>
-            contact us anyway
-          </a>{' '}
-          to see if we can help.
-        </p>
+        <div className='text-center'>
+          <h2 className='text-base text-accent-1 font-semibold tracking-wide uppercase'>
+            Our Services
+          </h2>
+          <p className='mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
+            Accelerate your delivery. 🏎️
+          </p>
+          <p className='mt-4 max-w-2xl text-lg text-prose lg:mx-auto'>
+            A range of software services across multiple platforms - web, mobile
+            and cloud. We're always looking for ways to improve our services, so
+            if you can't see exactly what you need,{' '}
+            <a className='font-semibold' href='#contact'>
+              contact us anyway
+            </a>{' '}
+            to see if we can help.
+          </p>
+        </div>
       </Fade>
       <div className='grid md:grid-cols-3 lg:grid-cols-3 items-center gap-5 md:gap-0 text-white mt-5 transition-all duration-500'>
         {whatWeDo.map((item, index) => (
@@ -130,7 +135,9 @@ export const WhatWeDo = () => {
                 in={servicesIndex === index}
               >
                 <div className='w-full md:w-96 px-10 md:px-0'>
-                  <h3 className='text-prose font-paragraph text-left md:text-center'>{item.subtitle}</h3>
+                  <h3 className='text-prose font-paragraph text-left md:text-center'>
+                    {item.subtitle}
+                  </h3>
                 </div>
               </Zoom>
             </div>

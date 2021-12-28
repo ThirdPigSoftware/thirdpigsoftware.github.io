@@ -1,88 +1,84 @@
+import {
+  BeakerIcon,
+  EmojiHappyIcon,
+  LightningBoltIcon,
+  ThumbUpIcon
+} from '@heroicons/react/outline'
 import React from 'react'
-import Zoom from 'react-reveal/Zoom'
 import Fade from 'react-reveal/Fade'
+
+const features = [
+  {
+    name: 'Good at what we do.',
+    description:
+      "With many successful projects under our belts and a wealth of technical skills, you're in safe hands with us.",
+    icon: ThumbUpIcon
+  },
+  {
+    name: 'Easy to work with.',
+    description:
+      "We're easygoing and friendly. We love to hear your ideas, we love to share ours and we try to have fun every step of the way.",
+    icon: EmojiHappyIcon
+  },
+  {
+    name: 'Flexible.',
+    description:
+      'The hardest part of any software project can making changes. We take that pain away with our agile and test-driven development approaches.',
+    icon: BeakerIcon
+  },
+  {
+    name: 'No bullsh*t.',
+    description:
+      "Software can be complicated enough as it is. We're straight talking and straight to the point.",
+    icon: LightningBoltIcon
+  }
+]
 
 export const OurMission = () => {
   return (
     <>
-      <div id='mission' className='pt-48 -mt-48' />
-      <div className='select-none flex flex-row flex-wrap items-center justify-center font-paragraph'>
-        <Zoom>
-          <div className='p-10 md:p-0 text-sm leading-7 md:text-left text-prose w-full md:w-1/2 md:pr-16'>
-            <p className='font-bold text-2xl'>
-              Hi I'm Andy 👋, founder of Third Pig Software.
+      <div id='mission' className='pt-32 -mt-32' />
+      <div className='py-12 bg-white'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='lg:text-center'>
+            <h2 className='text-base text-accent-1 font-semibold tracking-wide uppercase'>
+              Our Mission
+            </h2>
+            <p className='mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
+              Build the right thing. Build it right. 🔨
             </p>
-            <p>
-              It happens too often:{' '}
-              <b>software teams promise a dream, but deliver a nightmare.</b>
-            </p>
-            <p>
-              You handover the reigns of your idea to a team of technical
-              experts, who build and build and build, but miss the mark because
-              they failed to understand your business right from the start.
-            </p>
-            <p>
-              Third Pig was founded because I believe it doesn't have to be like
-              this.
+            <p className='mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto'>
+              We believe in getting to know your business at a deep level. We
+              want to know how things currently tick, your future goals and your
+              aspirations; then to help you quickly deliver the value you need
+              to achieve them 🚀.
             </p>
           </div>
-        </Zoom>
-        <Fade left>
-          <img
-            src='/static/images/andy.jpeg'
-            className='rounded-full shadow-lg md:mb-10 md:mt-0 md:h-36 md:w-36 hidden md:block'
-          />
-        </Fade>
-        <div className='flex flex-row flex-wrap md:m-8 items-start justify-center text-sm leading-7 md:text-right text-prose'>
-          <Fade left>
-            <div className='bg-gray-200 shadow-lg border-white w-48 h-48 rounded-full items-center justify-center hidden md:flex'>
-              <img
-                className={`select-none buzz-out-on-hover w-48`}
-                src={'/static/logo.png'}
-              />
-            </div>
-          </Fade>
-          <Fade right>
-            <div className='md:ml-16 px-10 md:px-0 mb-10 text-left w-full md:w-1/2'>
-              <p>
-                <b className='text-lg text-accent-2'>
-                  We believe in getting to know your business at a deep level
-                </b>{' '}
-                - we want to know how things currently tick, your future goals
-                and your aspirations; then to help you quickly deliver the value
-                you need to achieve them 🚀.
-              </p>
-              <p className='mt-2'>
-                <b className='text-lg text-accent-2'>We aren't yes people</b> -
-                we'll challenge you as much as you challenge us. When you work
-                with us, we'll try to do what's best for you as a customer and
-                for the project, regardless of how that would impact our
-                revenue.
-              </p>
-              <p className='mt-2'>
-                <b className='text-lg text-accent-2'>
-                  We'll always highlight the simplest solution available
-                </b>{' '}
-                - we will always try to suggest something small over something
-                that will allow us to invoice more.
-              </p>
-            </div>
-          </Fade>
-          <Fade bottom>
-            <div className='flex flex-col items-center justify-center'>
-              <p className='text-xl px-10 text-left text-prose'>
-                Above all else{' '}
-                <i className='not-italic font-semibold'>
-                  we believe in making our customers successful.
-                </i>
-              </p>
-              <p className='mt-2 text-lg text-accent-1 font-bold'>
-                - Andy Macdonald, Founder
-              </p>
-            </div>
-          </Fade>
+
+          <div className='mt-10'>
+            <dl className='space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10'>
+              {features.map((feature, index) => (
+                <div key={feature.name} className='relative'>
+                  <Fade delay={index * 200} left>
+                    <dt>
+                      <div className='absolute flex items-center justify-center h-12 w-12 rounded-md bg-accent-1 text-white'>
+                        <feature.icon className='h-6 w-6' aria-hidden='true' />
+                      </div>
+                      <p className='ml-16 text-lg leading-6 font-medium text-gray-900'>
+                        {feature.name}
+                      </p>
+                    </dt>
+                    <dd className='mt-2 ml-16 text-base text-gray-500'>
+                      {feature.description}
+                    </dd>
+                  </Fade>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
       </div>
+   
     </>
   )
 }

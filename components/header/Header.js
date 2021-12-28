@@ -1,14 +1,14 @@
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import Particles from 'react-particles-js'
 import Fade from 'react-reveal/Fade'
+import useMobileDetect from 'use-mobile-detect-hook'
 import { useScroll } from '../../hooks/useScroll'
 import { useWindowSize } from '../../hooks/useWindowSize'
 import { StandardButton } from '../buttons/StandardButton'
 import Clouds from '../clouds/Clouds'
-import Particles from 'react-particles-js'
 import techSkills from '../sections/techSkills.json'
-import useMobileDetect from 'use-mobile-detect-hook'
 
 const FADE_OUT_THRESHOLD = 400
 const HIDE_THRESHOLD = 520
@@ -58,7 +58,7 @@ export const Navigation = ({ isMobileHeaderOpen, setIsMobileHeaderOpen }) =>
     </div>
   ))
 
-const Banner = ({ height }) => (
+const Banner = () => (
   <>
     <div
       className={`flex mt-12 md:mt-auto transition-all transform md:h-screen flex-row flex-wrap items-center`}
@@ -85,7 +85,7 @@ const Banner = ({ height }) => (
         <Fade delay={700}>
           <div>
             <p className='md:p-0 px-10 text-center flex flex-col items-center mb-4 text-xl transition-all font-paragraph duration-500 opacity-80 select-none'>
-              <i className='text-xl text-accent-3 font-semibold not-italic px-6'>
+              <i className='text-xl py-2 text-accent-3 font-semibold not-italic px-6'>
                 Experts in the delivery of{' '}
                 <i className='font-bold not-italic'>
                   high quality, high-impact software solutions.
@@ -236,22 +236,22 @@ export const Header = () => {
                 images: techSkillsMapped
               },
               opacity: {
-                value: 1,
+                value: 0.65,
                 random: true,
                 anim: {
                   enable: true,
                   speed: 1,
-                  opacity_min: 0.65,
+                  opacity_min: 0.34,
                   sync: true
                 }
               },
               size: {
-                value: detectMobile.isMobile() ? 20 : 35,
+                value: detectMobile.isMobile() ? 20 : 25,
                 random: true,
                 anim: {
                   enable: true,
                   speed: 8,
-                  size_min: detectMobile.isMobile() ? 8 : 22,
+                  size_min: detectMobile.isMobile() ? 8 : 18,
                   sync: false
                 }
               }
