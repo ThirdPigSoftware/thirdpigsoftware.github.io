@@ -21,7 +21,7 @@
     "react-dom-confetti": "^0.2.0",
     "react-particles-js": "^3.6.0",
     "react-reveal": "^1.2.2",
-    "tsparticles": "^1.37.5",
+    "tsparticles": "1.37.5",
     "use-mobile-detect-hook": "^1.0.4"
   },
   "devDependencies": {
