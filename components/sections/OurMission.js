@@ -23,7 +23,7 @@ const features = [
   {
     name: 'Flexible.',
     description:
-      'The hardest part of any software project can making changes. We take that pain away with our agile and test-driven development approaches.',
+      'The hardest part of any software project can be making changes. We take that pain away with our agile and test-driven development approaches.',
     icon: BeakerIcon
   },
   {
