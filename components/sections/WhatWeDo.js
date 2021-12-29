@@ -104,13 +104,12 @@ export const WhatWeDo = () => {
             >
               <Fade top delay={index * 45}>
                 <div
-                  style={{ borderWidth: 4 }}
-                  className='p-4 rounded-full border-white shadow-sm bg-gray-100 m-4'
+                  className='p-4 rounded-md bg-accent-1 m-4'
                 >
                   <FontAwesomeIcon
                     className={`${
-                      servicesIndex === index ? 'h-14 w-14' : 'w-8 h-8'
-                    } transition-all duration-600  buzz-out-on-hover text-accent-1`}
+                      servicesIndex === index ? 'h-8 w-8' : 'w-6 h-6'
+                    } rounded-md bg-accent-1 text-white transition-all duration-600  buzz-out-on-hover text-white`}
                     icon={item.icon}
                   />
                 </div>
@@ -118,7 +117,7 @@ export const WhatWeDo = () => {
               <div>
                 <Fade bottom delay={index * 30}>
                   <h3
-                    className={`text-xl px-10 md:w-32 md:px-0 md:text-base transition-all font-brand text-left `}
+                    className={`text-xl px-10 md:w-32 md:px-0 md:text-base transition-all font-bold font-paragraph  text-left text-lg leading-6 font-medium text-gray-900`}
                   >
                     {item.title}
                   </h3>
@@ -134,7 +133,7 @@ export const WhatWeDo = () => {
                 out={!servicesIndex || servicesIndex !== index}
                 in={servicesIndex === index}
               >
-                <div className='w-full md:w-96 px-10 md:px-0'>
+                <div className='w-full md:w-96 px-5 md:px-0'>
                   <h3 className='text-prose font-paragraph text-left md:text-center'>
                     {item.subtitle}
                   </h3>
