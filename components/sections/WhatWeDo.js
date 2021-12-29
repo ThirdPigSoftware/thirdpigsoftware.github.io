@@ -74,14 +74,14 @@ export const WhatWeDo = () => {
     <div className='w-full select-none relative'>
       <div id='wedo' className='pt-32 -mt-32' />
       <Fade top>
-        <div className='text-center'>
+        <div className='text-left md:text-center max-w-7xl mx-auto px-4 sm:px-6 md:px-0'>
           <h2 className='text-base text-accent-1 font-semibold tracking-wide uppercase'>
             Our Services
           </h2>
           <p className='mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
             Accelerate your delivery. 🏎️
           </p>
-          <p className='mt-4 max-w-2xl text-lg text-prose lg:mx-auto'>
+          <p className='mt-4 max-w-2xl  text-lg text-prose lg:mx-auto'>
             A range of software services across multiple platforms - web, mobile
             and cloud. We're always looking for ways to improve our services, so
             if you can't see exactly what you need,{' '}
