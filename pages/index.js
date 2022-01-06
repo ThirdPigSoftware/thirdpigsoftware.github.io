@@ -1,10 +1,10 @@
 import Fade from 'react-reveal/Fade'
-import Zoom from 'react-reveal/Zoom'
 import Clouds from '../components/clouds/Clouds'
 import { ContactSection } from '../components/sections/ContactSection'
 import { OurMission } from '../components/sections/OurMission'
 import { OurSkillSet } from '../components/sections/OurSkillSet'
 import { WhatWeDo } from '../components/sections/WhatWeDo'
+
 
 export const CloudSection = ({
   id,
@@ -21,25 +21,6 @@ export const CloudSection = ({
       </div>
     </div>
     <Clouds flip />
-  </div>
-)
-
-const OurHeading = ({ title }) => (
-  <div className='select-none transform flex font-brand flex-row items-center justify-center'>
-    <Zoom>
-      <span
-        className={`text-2xl pr-2 md:text-xl uppercase text-center text-accent-1`}
-      >
-        Our
-      </span>
-    </Zoom>
-    <Zoom delay={500}>
-      <span
-        className={`text-6xl md:text-4xl uppercase text-center text-accent-1`}
-      >
-        {title}
-      </span>
-    </Zoom>
   </div>
 )
 

@@ -4,7 +4,7 @@ export default function Footer () {
   const clutchWidget =
     '<div class="clutch-widget" style="overflow-y:hidden; overflow-x:hidden;" data-url="https://widget.clutch.co" data-widget-type="7" data-height="65" data-clutchcompany-id="1884678"></div>'
   return (
-    <footer class='bg-gray-50 select-none text-gray-600 px-6 lg:px-8 py-8 font-paragraph'>
+    <footer class='bg-white select-none text-gray-600 px-6 lg:px-8 py-8 font-paragraph'>
       <div class='max-w-screen-xl mx-auto '>
         <div class='grid grid-cols-8 md:grid-cols-9 lg:grid-cols-8 divide-gray-200 divide-y-2 md:divide-x-2 md:divide-y-0 md:-mx-8'>
           <div class='col-span-8 md:col-span-3 lg:col-span-2 md:px-8 py-4 md:py-0 text-center md:text-left'>

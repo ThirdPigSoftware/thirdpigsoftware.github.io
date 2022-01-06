@@ -12,17 +12,17 @@ function App ({ Component, pageProps }) {
         <link
           rel='preload'
           href='https://indestructibletype.com/fonts/Jost.css'
-          as="style"
+          as='style'
         />
-         <link
+        <link
           href='https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap'
           rel='preload'
-          as="style"
+          as='style'
         />
         <link
           href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap'
           rel='preload'
-          as="style"
+          as='style'
         />
         <link
           rel='stylesheet'
@@ -39,13 +39,39 @@ function App ({ Component, pageProps }) {
           rel='stylesheet'
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+          href='https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap'
           rel='stylesheet'
         />
         <link
           rel='stylesheet'
           href='https://use.fontawesome.com/releases/v5.11.2/css/all.css'
         />
+        <link rel='icon' type='image/png' href='/static/favicon.ico' />
+        <link
+          rel='apple-touch-icon'
+          sizes='180x180'
+          href='/static/apple-touch-icon.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='32x32'
+          href='/static/favicon-32x32.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='16x16'
+          href='/static/favicon-16x16.png'
+        />
+        <link rel='manifest' href='/static/site.webmanifest' />
+        <link
+          rel='mask-icon'
+          href='/static/safari-pinned-tab.svg'
+          color='#5bbad5'
+        />
+        <meta name='msapplication-TileColor' content='#da532c' />
+        <meta name='theme-color' content='#ffffff'></meta>
         <script
           type='text/javascript'
           src='https://widget.clutch.co/static/js/widget.js'

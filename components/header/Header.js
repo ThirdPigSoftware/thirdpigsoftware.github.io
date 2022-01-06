@@ -216,9 +216,7 @@ export const Header = () => {
           params={{
             particles: {
               number: {
-                value: detectMobile.isMobile()
-                  ? techSkillsMapped.length
-                  : techSkillsMapped.length * 1.2
+                value:  techSkillsMapped.length
               },
               collisions: {
                 enable: false
