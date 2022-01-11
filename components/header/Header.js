@@ -77,7 +77,7 @@ const Banner = () => (
             style={{
               zIndex: 9999999
             }}
-            className={`select-none font-brand text-accent-3 text-5xl md:text-7xl`}
+            className={`md:mt-2 select-none font-brand text-accent-3 text-5xl md:text-7xl`}
           >
             Third Pig <i className='not-italic text-purple-900'>Software</i>
           </h1>
