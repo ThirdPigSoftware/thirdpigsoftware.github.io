@@ -18,17 +18,17 @@ export const OurProcess = () => (
             </p>
           </div>
         </div>
-        <div className='max-w-6xl mx-auto mt-10 mb-10'>
+        <div className='max-w-6xl mx-auto mt-10 select-none'>
           <dl className='rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-4'>
-            <div className='flex flex-col items-center justify-center border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r'>
-              <dt className='order-2 mt-2 text-lg leading-6 text-gray-500'>
-                A consultation to talk about your concept, problem or
+            <a href="#contact" className='flex flex-col items-center justify-center border-b border-accent-3 bg-accent-1 p-6 text-center sm:border-0 sm:border-r rounded-l-lg'>
+              <dt className='order-2 mt-2 text-base leading-6 text-white'>
+                A consultation to talk about your problem, concept or
                 requirements.
               </dt>
-              <dd className='order-1 text-2xl font-extrabold text-accent-1'>
+              <dd className='order-1 text-2xl font-extrabold text-white'>
                 Let's Talk 💬
               </dd>
-            </div>
+            </a>
             <div className='flex flex-col items-center justify-center border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r'>
               <dt className='order-2 mt-2 text-lg leading-6 text-gray-500'>
                 We'll come back with a proposal.
@@ -46,7 +46,7 @@ export const OurProcess = () => (
               </dd>
             </div>
             <div className='flex flex-col items-center justify-center border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l'>
-              <dt className='order-2 mt-2 text-lg leading-6 text-gray-500'>
+              <dt className='order-2 mt-2 text-base leading-6 text-gray-500'>
                 Multiple cycles of iteration on your concept, as many as you
                 need.
               </dt>
