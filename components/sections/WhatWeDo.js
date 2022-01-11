@@ -1,7 +1,8 @@
 import {
   faBomb,
   faChalkboardTeacher,
-  faCloud, faCogs,
+  faCloud,
+  faCogs,
   faInfinity,
   faLaptopCode,
   faMedkit,
@@ -53,7 +54,7 @@ const whatWeDo = [
     icon: faChalkboardTeacher,
     title: 'Agile Coaching',
     subtitle:
-      'Want to become more agile, adaptable and responsive to your users needs? We will help you take your organisation to the next level.'
+      'Want to become more adaptable and responsive to your users needs? We can help.'
   },
   {
     icon: faBomb,
@@ -92,56 +93,37 @@ export const WhatWeDo = () => {
           </p>
         </div>
       </Fade>
-      <div className='grid md:grid-cols-3 lg:grid-cols-3 items-center gap-5 md:gap-0 text-white mt-5 transition-all duration-500'>
-        {whatWeDo.map((item, index) => (
-          <div className='flex flex-col items-start md:items-center justify-center text-accent-2 hover:text-accent-1 transition-all duration-500'>
+      <div className='mt-10 px-5 md:px-16'>
+        <div className='space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-5'>
+          {whatWeDo.map((item, index) => (
             <div
               onTouchStart={() => setServicesIndex(index)}
               onMouseEnter={() => setServicesIndex(index)}
               onMouseLeave={() => setServicesIndex(null)}
-              className={`justify-start md:justify-center items-center flex flex-row transition-all transform duration-500`}
               key={index}
             >
-              <Fade top delay={index * 45}>
-                <div
-                  className='p-4 rounded-md bg-accent-1 m-4'
-                >
-                  <FontAwesomeIcon
-                    className={`${
-                      servicesIndex === index ? 'h-8 w-8' : 'w-6 h-6'
-                    } rounded-md bg-accent-1 text-white transition-all duration-600  buzz-out-on-hover text-white`}
-                    icon={item.icon}
-                  />
-                </div>
-              </Fade>
-              <div>
-                <Fade bottom delay={index * 30}>
-                  <h3
-                    className={`text-xl px-10 md:w-32 md:px-0 md:text-base transition-all font-bold font-paragraph  text-left text-lg leading-6 font-medium text-gray-900`}
-                  >
-                    {item.title}
-                  </h3>
+              <div key={item.title} className='relative'>
+                <Fade delay={index * 200} left>
+                  <dt>
+                    <div className='absolute flex items-center justify-center h-12 w-12 rounded-md bg-accent-1 text-white'>
+                      <FontAwesomeIcon
+                        className='p-3'
+                        size={20}
+                        icon={item.icon}
+                      />
+                    </div>
+                    <p className='ml-16 text-lg leading-6 font-medium text-gray-900'>
+                      {item.title}
+                    </p>
+                  </dt>
+                  <dd className='mt-2 ml-16 text-base text-gray-500'>
+                    {item.subtitle}
+                  </dd>
                 </Fade>
               </div>
             </div>
-            <div
-              className={`h-0 ${
-                servicesIndex === index ? 'h-auto py-10 md:py-0 md:h-24' : ''
-              } transition-all duration-400`}
-            >
-              <Zoom
-                out={!servicesIndex || servicesIndex !== index}
-                in={servicesIndex === index}
-              >
-                <div className='w-full md:w-96 px-5 md:px-0'>
-                  <h3 className='text-prose font-paragraph text-left md:text-center'>
-                    {item.subtitle}
-                  </h3>
-                </div>
-              </Zoom>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   )

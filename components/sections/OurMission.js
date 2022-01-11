@@ -44,7 +44,7 @@ const features = [
   {
     name: 'Minimise your Time to Validate.',
     description:
-      "Once you've agreed with our proposal. You'll have your first demo within 2 weeks or less.",
+      "Once you've agreed with our proposal, you'll have your first demo within 2 weeks or less.",
     icon: LightningBoltIcon
   }
 ]
@@ -70,7 +70,7 @@ export const OurMission = () => {
             </p>
           </div>
 
-          <div className='mt-10 md:px-16'>
+          <div className='mt-10'>
             <dl className='space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-5'>
               {features.map((feature, index) => (
                 <div key={feature.name} className='relative'>
@@ -86,7 +86,7 @@ export const OurMission = () => {
                           />
                         )}
                       </div>
-                      <p className='ml-16 text-lg leading-6 font-medium text-gray-900'>
+                      <p className='ml-16 text-xl leading-6 font-medium text-gray-900'>
                         {feature.name}
                       </p>
                     </dt>
