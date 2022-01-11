@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   BeakerIcon,
   EmojiHappyIcon,
@@ -23,13 +24,27 @@ const features = [
   {
     name: 'Flexible.',
     description:
-      'The hardest part of any software project can be making changes. We take that pain away with our agile and test-driven development approaches.',
+      'We take the pain of making changes away with our agile and test-driven development approaches.',
     icon: BeakerIcon
   },
   {
     name: 'No bullsh*t.',
     description:
       "Software can be complicated enough as it is. We're straight talking and straight to the point.",
+    isFontAwesome: true,
+    icon: 'fas fa-poop'
+  },
+  {
+    name: 'Shippable Increments.',
+    description:
+      "We'll focus on continuously producing releasable increments of work so you don't have to wait long to start seeing value.",
+    isFontAwesome: true,
+    icon: 'fas fa-shipping-fast'
+  },
+  {
+    name: 'Minimise your Time to Validate.',
+    description:
+      "Once you've agreed with our proposal. You'll have your first demo within 2 weeks or less.",
     icon: LightningBoltIcon
   }
 ]
@@ -37,7 +52,7 @@ const features = [
 export const OurMission = () => {
   return (
     <>
-      <div id='mission' className='pt-32 -mt-32' />
+      <div id='mission' className='pt-20 -mt-20' />
       <div className='py-12 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='lg:text-center'>
@@ -56,13 +71,20 @@ export const OurMission = () => {
           </div>
 
           <div className='mt-10 md:px-16'>
-            <dl className='space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10'>
+            <dl className='space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-5'>
               {features.map((feature, index) => (
                 <div key={feature.name} className='relative'>
                   <Fade delay={index * 200} left>
                     <dt>
                       <div className='absolute flex items-center justify-center h-12 w-12 rounded-md bg-accent-1 text-white'>
-                        <feature.icon className='h-6 w-6' aria-hidden='true' />
+                        {feature.isFontAwesome ? (
+                          <i className={`${feature.icon} text-white`}></i>
+                        ) : (
+                          <feature.icon
+                            className='h-6 w-6'
+                            aria-hidden='true'
+                          />
+                        )}
                       </div>
                       <p className='ml-16 text-lg leading-6 font-medium text-gray-900'>
                         {feature.name}
@@ -78,7 +100,6 @@ export const OurMission = () => {
           </div>
         </div>
       </div>
-   
     </>
   )
 }

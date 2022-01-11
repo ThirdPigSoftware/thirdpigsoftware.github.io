@@ -24,11 +24,11 @@ const links = [
     href: '#mission',
     icon: 'fas fa-rocket'
   },
-  // {
-  //   name: 'Process',
-  //   href: '#process',
-  //   icon: 'fas fa-rocket'
-  // },
+  {
+    name: 'Process',
+    href: '#process',
+    icon: 'fas fa-puzzle-piece'
+  },
   {
     name: 'Skillset',
     href: '#skillset',
@@ -79,20 +79,8 @@ const Banner = () => (
             }}
             className={`select-none font-brand text-accent-3 text-5xl md:text-7xl`}
           >
-            Third Pig <i className='not-italic'>Software</i>
+            Third Pig <i className='not-italic text-purple-900'>Software</i>
           </h1>
-        </Fade>
-        <Fade delay={700}>
-          <div>
-            <p className='md:p-0 px-10 text-center flex flex-col items-center mb-4 text-xl transition-all font-paragraph duration-500 opacity-80 select-none'>
-              <i className='text-xl py-2 text-accent-3 font-semibold not-italic px-6'>
-                Experts in the delivery of{' '}
-                <i className='font-bold not-italic'>
-                  high quality, high-impact software solutions.
-                </i>
-              </i>
-            </p>
-          </div>
         </Fade>
         <div className='m-2 text-lg'>
           <StandardButton

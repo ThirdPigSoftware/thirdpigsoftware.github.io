@@ -2,9 +2,9 @@ import Fade from 'react-reveal/Fade'
 import Clouds from '../components/clouds/Clouds'
 import { ContactSection } from '../components/sections/ContactSection'
 import { OurMission } from '../components/sections/OurMission'
+import { OurProcess } from '../components/sections/OurProcess'
 import { OurSkillSet } from '../components/sections/OurSkillSet'
 import { WhatWeDo } from '../components/sections/WhatWeDo'
-
 
 export const CloudSection = ({
   id,
@@ -53,7 +53,7 @@ export default function IndexPage () {
               >
                 More than just another piggin' consultancy.
               </h3>
-              <p className='mt-5 text-accent-2 text-center md:text-left text-xl font-paragraph'>
+              <p className='mt-5 text-accent-3 text-center md:text-left text-xl font-paragraph'>
                 <b>Not just bums on seats</b>. We'll work to thoroughly
                 understand your business goals and act like a partner, not an
                 outsourcer.
@@ -61,6 +61,9 @@ export default function IndexPage () {
             </div>
           </Fade>
         </div>
+        <CloudSection withContainer={false} header={<div className='pt-2' />}>
+          <OurProcess />
+        </CloudSection>
         <CloudSection withContainer={false} header={<div className='pt-2' />}>
           <OurSkillSet />
         </CloudSection>
