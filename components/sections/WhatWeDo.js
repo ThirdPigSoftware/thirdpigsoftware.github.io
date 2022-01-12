@@ -1,69 +1,57 @@
-import {
-  faBomb,
-  faChalkboardTeacher,
-  faCloud,
-  faCogs,
-  faInfinity,
-  faLaptopCode,
-  faMedkit,
-  faRocket,
-  faVials
-} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import Fade from 'react-reveal/Fade'
-import Zoom from 'react-reveal/Zoom'
+
 
 const whatWeDo = [
   {
-    icon: faLaptopCode,
+    icon: "fas fa-laptop-code",
     title: 'Bespoke Software Development',
     subtitle:
       "We'll take your requirements and deliver an MLP (minimum 'loveable' product)!"
   },
   {
-    icon: faCogs,
+    icon: "fas fa-cogs",
     title: 'Platform & Infrastructure Development',
     subtitle:
       'World class services around platform and infrastructure development.'
   },
   {
-    icon: faMedkit,
+    icon: "fas fa-medkit",
     title: 'Project Rescue',
     subtitle:
       'Time sensitive project in need of a helping hand? See how we can help get you back on track.'
   },
 
   {
-    icon: faRocket,
+    icon: "fas fa-rocket",
     title: 'Mobile Development',
     subtitle: 'Take your idea to market quickly with a bespoke mobile app.'
   },
   {
-    icon: faVials,
+    icon: "fas fa-vials",
     title: 'Automated Testing Frameworks',
     subtitle:
       'Get a solid testing harness for your existing product or platform.'
   },
   {
-    icon: faCloud,
+    icon: "fas fa-cloud",
     title: 'Cloud Migrations',
     subtitle: 'Reach new heights with your platform in the cloud.'
   },
   {
-    icon: faChalkboardTeacher,
+    icon: "fas fa-chalkboard-teacher",
     title: 'Agile Coaching',
     subtitle:
       'Want to become more adaptable and responsive to your users needs? We can help.'
   },
   {
-    icon: faBomb,
+    icon: "fas fa-bomb",
     title: 'Site Reliability Engineering',
     subtitle:
       "We'll help you create scalable and highly reliable software systems."
   },
   {
-    icon: faInfinity,
+    icon: "fas fa-infinity",
     title: 'DevOps Consultancy',
     subtitle:
       'Consultation services to help you shorten your software development life cycle.'
@@ -106,11 +94,7 @@ export const WhatWeDo = () => {
                 <Fade delay={index * 200} left>
                   <dt>
                     <div className='absolute flex items-center justify-center h-12 w-12 rounded-md bg-accent-1 text-white'>
-                      <FontAwesomeIcon
-                        className='p-3'
-                        size={20}
-                        icon={item.icon}
-                      />
+                     <i className={item.icon}></i>
                     </div>
                     <p className='ml-16 text-lg leading-6 font-medium text-gray-900'>
                       {item.title}

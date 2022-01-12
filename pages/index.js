@@ -15,7 +15,7 @@ export const CloudSection = ({
   <div id={id}>
     <Clouds />
     <div className='bg-white'>
-      <div className={`${withContainer ? 'pb-12 container mx-auto' : ''}`}>
+      <div className={`${withContainer ? '-mt-2 md:-mt-0 pb-12 container mx-auto' : ''}`}>
         {header}
         <div>{children}</div>
       </div>

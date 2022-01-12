@@ -20,7 +20,7 @@ export const OurProcess = () => (
         </div>
         <div className='max-w-6xl mx-auto mt-10 select-none'>
           <dl className='rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-4'>
-            <a href="#contact" className='flex flex-col items-center justify-center border-b border-accent-3 bg-accent-1 p-6 text-center sm:border-0 sm:border-r rounded-l-lg'>
+            <a href="#contact" className='flex flex-col items-center justify-center border-b border-accent-3 bg-accent-1 p-6 text-center sm:border-0 sm:border-r md:rounded-l-lg'>
               <dt className='order-2 mt-2 text-base leading-6 text-white'>
                 A consultation to talk about your problem, concept or
                 requirements.

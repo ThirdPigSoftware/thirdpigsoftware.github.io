@@ -44,7 +44,9 @@ function App ({ Component, pageProps }) {
         />
         <link
           rel='stylesheet'
-          href='https://use.fontawesome.com/releases/v5.11.2/css/all.css'
+          href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'
+          integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU'
+          crossorigin='anonymous'
         />
         <link rel='icon' type='image/png' href='/static/favicon.ico' />
         <link
