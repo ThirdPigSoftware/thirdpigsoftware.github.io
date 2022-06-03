@@ -63,9 +63,7 @@ const Banner = () => (
     <div
       className={`flex mt-12 md:mt-auto transition-all transform md:h-screen flex-row flex-wrap items-center`}
     >
-      <div
-        className={`flex items-center flex-col justify-center`}
-      >
+      <div className={`flex items-center flex-col justify-center`}>
         <img
           style={{ zIndex: 9999999 }}
           className={`w-1/2 md:-mt-12 buzz-out-on-hover md:w-1/4 mb-10 md:mb-0`}
@@ -82,24 +80,25 @@ const Banner = () => (
             Third Pig <i className='not-italic text-purple-900'>Software</i>
           </h1>
         </Fade>
-        <div className='m-2 flex items-center justify-center text-lg'>
+        <div className='m-2 flex flex-col w-full md:flex-row items-center justify-center text-lg'>
           <StandardButton
+            fullWidth
             icon='fas fa-cogs'
             text='See what we do'
             onClick={() => {
               document.getElementById('wedo')?.scrollIntoView()
             }}
           />
-          <div className='ml-2'>
-            <StandardButton
-              alt
-              icon='fas fa-circle-question'
-              text='Get a quote'
-              onClick={() => {
-                document.getElementById('contact')?.scrollIntoView()
-              }}
-            />
-          </div>
+
+          <StandardButton
+            alt
+            fullWidth
+            icon='fas fa-circle-question'
+            text='Get a quote'
+            onClick={() => {
+              document.getElementById('contact')?.scrollIntoView()
+            }}
+          />
         </div>
       </div>
     </div>
