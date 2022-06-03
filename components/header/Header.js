@@ -64,7 +64,7 @@ const Banner = () => (
       className={`flex mt-12 md:mt-auto transition-all transform md:h-screen flex-row flex-wrap items-center`}
     >
       <div
-        className={`buzz-out-on-hover flex items-center flex-col justify-center`}
+        className={`flex items-center flex-col justify-center`}
       >
         <img
           style={{ zIndex: 9999999 }}
@@ -82,7 +82,7 @@ const Banner = () => (
             Third Pig <i className='not-italic text-purple-900'>Software</i>
           </h1>
         </Fade>
-        <div className='m-2 text-lg'>
+        <div className='m-2 flex items-center justify-center text-lg'>
           <StandardButton
             icon='fas fa-cogs'
             text='See what we do'
@@ -90,6 +90,16 @@ const Banner = () => (
               document.getElementById('wedo')?.scrollIntoView()
             }}
           />
+          <div className='ml-2'>
+            <StandardButton
+              alt
+              icon='fas fa-circle-question'
+              text='Get a quote'
+              onClick={() => {
+                document.getElementById('contact')?.scrollIntoView()
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -199,12 +209,12 @@ export const Header = () => {
             left: 0,
             height: height * 10,
             zIndex: 0,
-            marginTop: 80,
+            marginTop: 80
           }}
           params={{
             particles: {
               number: {
-                value:  techSkillsMapped.length
+                value: techSkillsMapped.length
               },
               collisions: {
                 enable: false

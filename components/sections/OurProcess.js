@@ -5,20 +5,20 @@ export const OurProcess = () => (
       <div className='py-16 bg-white overflow-hidden lg:py-24'>
         <div className='relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl'>
           <div className='relative'>
-            <h2 className='text-base text-center text-accent-1 font-semibold tracking-wide uppercase'>
+            <h2 className='text-base md:text-center text-accent-1 font-semibold tracking-wide uppercase'>
               Our Process
             </h2>
-            <h2 className='text-center mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
+            <h2 className='md:text-center mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
               Spot the Value. Deliver. Repeat. 🔁
             </h2>
-            <p className='mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500'>
+            <p className='mt-4 max-w-3xl mx-auto md:text-center text-xl text-gray-500'>
               Don't bet on a "big bang" launch 💥. We'll take your concept, help
               you subtract as many parts from it as possible until what remains
-              is the most purest and most valuable thing.
+              is the most valuable thing.
             </p>
           </div>
         </div>
-        <div className='max-w-6xl mx-auto mt-10 select-none'>
+        <div className='md:max-w-6xl mx-auto mt-10 select-none'>
           <dl className='rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-4'>
             <a href="#contact" className='flex flex-col items-center justify-center border-b border-accent-3 bg-accent-1 p-6 text-center sm:border-0 sm:border-r md:rounded-l-lg'>
               <dt className='order-2 mt-2 text-base leading-6 text-white'>

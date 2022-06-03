@@ -2,6 +2,34 @@ import React from 'react'
 import Fade from 'react-reveal/Fade'
 import techSkills from './techSkills.json'
 
+const SkillBox = ({ techSkill }) => (
+  <>
+    <Fade left>
+      <div
+        key={techSkill.email}
+        className='relative rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500'
+      >
+        <div className='flex-shrink-0'>
+          <img
+            className='h-10 w-10 rounded-full'
+            src={`/static/images/${techSkill.url}`}
+            alt=''
+          />
+        </div>
+        <div className='flex-1 min-w-0'>
+          <a className='focus:outline-none'>
+            <span className='absolute inset-0' aria-hidden='true' />
+            <p className='text-sm font-medium text-gray-900 truncate'>
+              {techSkill.name}
+            </p>
+            <p className='text-sm text-gray-500 truncate'>{techSkill.type}</p>
+          </a>
+        </div>
+      </div>
+    </Fade>
+  </>
+)
+
 export const OurSkillSet = () => {
   return (
     <>
@@ -23,42 +51,20 @@ export const OurSkillSet = () => {
               more.
             </p>
           </div>
-          <div>
-            <div className='mt-10 md:mt-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 md:gap-0'>
+          <div className='mt-5'>
+            <div className='mt-10 md:mt-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-5 md:gap-3'>
               {techSkills.slice(0, techSkills.length / 3).map(techSkill => (
-                <Fade left>
-                  <div className='text-center h-auto md:h-32 w-24 ml-auto mr-auto select-none flex flex-col items-center justify-center'>
-                    <img
-                      className='buzz-out-on-hover'
-                      width={40}
-                      src={`/static/images/${techSkill.url}`}
-                    />
-                    <p className={`text-sm m-2 w-full font-brand text-prose`}>
-                      {techSkill.name}
-                    </p>
-                  </div>
-                </Fade>
+                <SkillBox techSkill={techSkill} />
               ))}
             </div>
           </div>
         </div>
-        <div className='md:ml-0 w-full md:w-1/2 md:p-10'>
-          <div className='mt-10 md:mt-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10 md:gap-0'>
+        <div className='md:ml-0 w-full md:w-1/2 px-4 md:px-10'>
+          <div className='mt-5 md:mt-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-5 md:gap-3'>
             {techSkills
               .slice(techSkills.length / 3 + 1, techSkills.length)
               .map(techSkill => (
-                <Fade left>
-                  <div className='text-center h-auto md:h-32 w-24 ml-auto mr-auto select-none flex flex-col items-center justify-center'>
-                    <img
-                      className='buzz-out-on-hover'
-                      width={40}
-                      src={`/static/images/${techSkill.url}`}
-                    />
-                    <p className={`text-sm m-2 w-full font-brand text-prose`}>
-                      {techSkill.name}
-                    </p>
-                  </div>
-                </Fade>
+                <SkillBox techSkill={techSkill} />
               ))}
           </div>
         </div>

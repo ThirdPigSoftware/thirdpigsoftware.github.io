@@ -9,8 +9,8 @@ export const ContactSection = () => (
           <h4 className='text-5xl text-center md:text-left text-3xl font-extrabold tracking-tight sm:text-4xl text-white md:pb-2'>
             Want to get started?
           </h4>
-          <p class='text-center md:text-left text-xl  font-semibold text-white opacity-70 md:pb-6'>
-            We can provide a quote within <b>36 hours</b>.
+          <p class='text-center md:text-left text-xl font-semibold text-white md:pb-6'>
+            We can provide a quote within <b>36 hours</b> <i className='not-italic fas fa-clock text-xl' />
           </p>
         </div>
 

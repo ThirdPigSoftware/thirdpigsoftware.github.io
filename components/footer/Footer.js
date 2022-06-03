@@ -33,7 +33,6 @@ export default function Footer () {
           </div>
           <div class='col-span-8 md:col-span-3 lg:col-span-3 text-sm md:px-8 py-4 md:py-0'>
             <h5 class='text-lg font-semibold text-gray-700 '>Contact us</h5>
-            Plenty of ways to get in touch!
             <nav class='mt-4 flex flex-row text-2xl items-center justify-between'>
               <ContactOptions />
             </nav>
